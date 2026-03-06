@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+    @theme {
+        --font-primary: 'Bebas Neue', sans-serif;
+        --color-primary: #F0B100;
+        --breakpoint-3xl: 1660px;
+        --container-mx-width: 1600px;
+    }
+        /* Scrollbar width */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /* Track (background) */
+    ::-webkit-scrollbar-track {
+        background: #000000;
+    }
+
+    /* Scrollbar handle */
+    ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 6px;
+    }
+
+    /* Hover effect */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #ffd54a;
+    }
+}
+
+@Layer utilities {
+    .Hero-bg {
+        background-image: url('../Images/Hero-background.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .About-bg {
+        background-image: url('../Images/About-background.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .Nav-style {
+        @apply bg-black/40 flex lg:flex-row md:flex-row sm:flex-row sm:gap-10 items-center justify-between py-8 px-10 fixed w-full z-10 transition-all duration-300 after:content-[''] after:absolute after:w-full after:h-px after:bg-gray-500/90 after:bottom-0 after:left-0;
+    }
+    .Nav-link {
+        @apply text-white hover:text-gray-300 text-2xl font-light scroll-smooth transition-all duration-300;
+    }
+    .Form-style {
+        @apply w-full max-w-5xl text-white p-10 shadow-lg border-2 border-primary space-y-6 bg-black/60 [clip-path:polygon(0%_0%,90%_0%,200%_100%,0%_99%)];
+    }
+    .Services-Card {
+        @apply bg-black/80 border-2 border-yellow-500 p-4 sm:p-6 rounded-sm shadow-lg transition-all duration-300 hover:scale-105 skew-y-2;
+    }
+}
+@Layer components {
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 50,
+    }
+}

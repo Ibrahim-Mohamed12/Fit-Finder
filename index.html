@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="./css/output.css" rel="stylesheet">
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="mainNav" class="Nav-style">
+    
+        <img src="Images/White_Logo.png" alt="Logo" class="h-10 w-auto relative bottom-1 transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        
+        <!-- Hamburger for small screens -->
+        <div class="lg:hidden">
+            <button id="burgerBtn" class="focus:outline-none cursor-pointer transition-transform duration-300 transform hover:scale-110">
+                <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <ul id="navLinks" class="hidden lg:flex lg:space-x-10 lg:flex-row md:flex-row sm:flex-col sm:gap-6 sm:items-center">
+            <li><a href="#mainBody" class="font-primary Nav-link">Home</a></li>
+            <li><a href="#services" class="font-primary Nav-link">Services</a></li>
+            <li><a href="#about" class="font-primary Nav-link">About</a></li>
+            <li><a href="#contact" class="font-primary Nav-link">Contact</a></li>
+        </ul>
+        <ul id="ctaLinks" class="hidden lg:flex justify-center items-center space-x-4">
+
+            <li><a href="login.html" class="font-primary hover:text-primary hover:bg-gray-600/80 text-2xl rounded-sm py-2 px-4 bg-primary text-black">Start now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="mainBody" class="w-full min-h-screen bg-cover bg-center relative Hero-bg">
+        <section class="flex justify-center lg:justify-start items-center min-h-screen bg-linear-to-br from-black/85 to-black/40 pt-20 px-6 lg:px-0">
+            
+            <div class="text-center lg:text-left lg:max-w-2xl max-w-xl lg:ml-20">
+                
+                <h1
+                    class="font-primary text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium text-white">
+                    Ready to get fit ?
+                </h1>
+
+                <h1 class="font-primary text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium text-primary mb-4">
+                    Join Us
+                </h1>
+
+                <p class="text-base sm:text-lg md:text-xl font-light text-gray-300 mb-10 tracking-wide">
+                    Gym workouts offer an organized method of training that improves body strength,
+                    builds resilience, and promotes a healthier lifestyle.
+                </p>
+
+                <a href="login.html" class="font-primary inline-block border border-primary text-primary text-lg sm:text-xl md:text-2xl font-medium hover:bg-primary hover:text-gray-900 py-4 px-8 rounded-sm transition shadow-lg hover:scale-105">
+                    Get Started
+                </a>
+
+                <!-- Stats -->
+                <div class="record flex flex-col sm:flex-row items-center divide-y sm:divide-y-0 sm:divide-x divide-gray-500 mt-12">
+                    
+                    <div class="text-center sm:pr-12 py-4 transform hover:scale-105">
+                        <h2 class="font-primary text-3xl sm:text-4xl font-medium text-primary">10+</h2>
+                        <p class="text-gray-300 text-base sm:text-lg">Years of Experience</p>
+                    </div>
+
+                    <div class="text-center sm:px-12 py-4">
+                        <h2 class="font-primary text-3xl sm:text-4xl font-medium text-primary">10K+</h2>
+                        <p class="text-gray-300 text-base sm:text-lg">Members Joined</p>
+                    </div>
+
+                    <div class="text-center sm:px-12 py-4">
+                        <h2 class="font-primary text-3xl sm:text-4xl font-medium text-primary">9K+</h2>
+                        <p class="text-gray-300 text-base sm:text-lg">Happy Clients</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Services Section -->
+    <section id="services" class="w-full h-fit bg-linear-to-br from-black/95 to-black/89 pt-30 pb-20">
+
+        <h1 class="font-primary text-5xl sm:text-6xl md:text-7xl text-white font-medium text-center">
+            <span class="text-primary">Our</span> Services
+        </h1>
+
+        <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-300 font-light text-center max-w-3xl mx-auto">
+            Helping you find the perfect gym and manage your fitness journey effortlessly
+        </p>
+
+        <div class="cards grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mt-20 lg:max-w-mx-width mx-auto px-4">
+
+            <div class="Services-Card">
+                <h2 class="font-primary text-2xl sm:text-3xl text-primary font-medium mb-3 sm:mb-4">
+                    Gym Discovery
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-lg">
+                    Explore a wide range of gyms based on your location, workout style, available equipment, or membership type to find the perfect fit for your lifestyle.
+                </p>
+            </div>
+
+            <div class="Services-Card">
+                <h2 class="font-primary text-2xl sm:text-3xl text-primary font-medium mb-3 sm:mb-4">
+                    Detailed Gym Profiles
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-lg">
+                    Each gym has a dedicated profile with photos, descriptions, hours, membership plans, facilities, and available classes so you can make informed choices.
+                </p>
+            </div>
+
+            <div class="Services-Card">
+                <h2 class="font-primary text-2xl sm:text-3xl text-primary font-medium mb-3 sm:mb-4">
+                    Reviews & Ratings
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-lg">
+                    Read honest feedback from other users to understand the quality, cleanliness, and overall experience before visiting any gym.
+                </p>
+            </div>
+
+            <div class="Services-Card">
+                <h2 class="font-primary text-2xl sm:text-3xl text-primary font-medium mb-3 sm:mb-4">
+                    Search & Filter
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-lg">
+                    Quickly find gyms with specific features such as swimming pools, personal training, group fitness classes, or special amenities with advanced filters.
+                </p>
+            </div>
+
+            <div class="Services-Card">
+                <h2 class="font-primary text-2xl sm:text-3xl text-primary font-medium mb-3 sm:mb-4">
+                    Gym Management Dashboard
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-lg">
+                    Gym owners can manage their gym details, including facilities, pricing, class schedules, and high-quality images, all from a user-friendly dashboard.
+                </p>
+            </div>
+
+            <div class="Services-Card">
+                <h2 class="font-primary text-2xl sm:text-3xl text-primary font-medium mb-3 sm:mb-4">
+                    Track User Engagement
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-lg">
+                    Monitor how many users viewed your gym profile, bookmarked it, or left reviews, providing valuable insights into user interest and engagement.
+                </p>
+            </div>
+
+            <div class="Services-Card">
+                <h2 class="font-primary text-2xl sm:text-3xl text-primary font-medium mb-3 sm:mb-4">
+                    Manage Classes & Events
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-lg">
+                    Schedule and manage group fitness classes, personal training sessions, or special events directly from your dashboard for easy booking and participation.
+                </p>
+            </div>
+
+            <div class="Services-Card">
+                <h2 class="font-primary text-2xl sm:text-3xl text-primary font-medium mb-3 sm:mb-4">
+                    Reports & Insights
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-lg">
+                    Access analytics on your gym’s performance, including member visits, popular services, and membership growth, helping you make data-driven decisions.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="w-full h-fit About-bg relative">
+
+        <div class="flex flex-col min-h-screen bg-linear-to-br from-black/90 to-black/60 pt-30 pb-20">
+
+            <h1 class="font-primary text-7xl text-white font-medium text-center">About<span class="text-primary"> Us</span></h1>
+            
+            <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-300 font-light text-center max-w-3xl mx-auto">
+                Helping you find the perfect gym and manage your fitness journey effortlessly
+            </p>
+
+            <div class="text-start flex lg:flex-row md:flex-col sm:flex-col items-center justify-around mt-20 w-full px-4">
+
+                <div class="text-white 2xl:max-w-3xl max-w-2xl text-lg sm:text-xl md:text-xl font-light mb-6 p-6 rounded-sm shadow-lg text-justify divide-y divide-primary/40 sm:border-2 sm:border-primary border-2 border-primary  lg:bg-transparent">
+
+                    <p class="py-8 transition-transform duration-300 transform hover:scale-101">
+                        Our platform is designed to simplify the way people discover and connect with fitness centers. We provide a modern digital solution that helps users easily find gyms that match their preferences, whether they are looking for specific facilities, training programs, locations, or membership plans.
+                    </p>
+                    <p class="py-8 transition-transform duration-300 transform hover:scale-101">
+                        For fitness enthusiasts, our website makes the process of choosing the right gym faster and more convenient. Users can browse different gyms, explore detailed information about their services, compare options, and select the one that best fits their fitness goals and lifestyle.
+                    </p>
+                    <p class="py-8 transition-transform duration-400 transform hover:scale-101">
+                        For gym owners, we offer powerful management tools that allow them to showcase their gyms, update their services, manage memberships, and attract new members through increased online visibility. Our platform acts as a bridge between gyms and potential members, helping fitness businesses grow while giving users a better fitness discovery experience.
+                    </p>
+
+                </div>
+
+                <div class="max-w-2xl h-fit mt-10 shadow-lg border-2 border-primary rounded-sm skew-y-2 3xl:flex hidden">
+
+                    <img src="Images/Background2.jpg" alt="About Us" class="relative bottom-10 right-10 w-full h-auto transform hover:skew-0 transition-transform duration-300 brightness-80 shadow-lg rounded-sm">
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+<section id="contact" class="w-full h-fit bg-linear-to-br from-black/95 to-black/89 relative pb-14">
+
+    <div class="flex flex-col min-h-screen pt-30 pb-20 px-4">
+
+        <h1 class="font-primary text-7xl text-white font-medium text-center">
+            Contact<span class="text-primary"> Us</span>
+        </h1>
+
+        <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-300 font-light text-center max-w-3xl mx-auto">
+            Helping you find the perfect gym and manage your fitness journey effortlessly
+        </p>
+
+        <!-- Form + Contact Info -->
+        <div class="flex flex-col lg:flex-row justify-center items-start lg:gap-20 gap-0 mt-20 w-full max-w-mx-width mx-auto">
+
+            <!-- Form -->
+            <form action="index.html" class="Form-style w-full lg:w-1/2"> 
+
+                <div class="flex flex-col">
+                    <label class="mb-2 text-2xl font-primary text-primary">Full Name</label>
+                    <input 
+                    type="text"
+                    placeholder="Enter your name"
+                    class="p-3 rounded-sm bg-black/40 border border-gray-500 focus:border-primary outline-none transition">
+                </div>
+
+                <div class="flex flex-col mt-6">
+                    <label class="mb-2 text-2xl font-primary text-primary">Email</label>
+                    <input 
+                    type="email"
+                    placeholder="Enter your email"
+                    class="p-3 rounded-sm bg-black/40 border border-gray-500 focus:border-primary outline-none transition">
+                </div>
+
+                <div class="flex flex-col mt-6">
+                    <label class="mb-2 text-2xl font-primary text-primary">Message</label>
+                    <textarea 
+                    rows="5"
+                    placeholder="Write your message..."
+                    class="p-3 rounded-sm bg-black/40 border border-gray-500 focus:border-primary outline-none transition resize-none"></textarea>
+                </div>
+
+                <div class="flex justify-center pt-6">
+                    <button type="submit" class="bg-black w-full text-primary px-8 py-3 border border-primary hover:bg-primary hover:text-black font-primary text-2xl rounded-sm font-medium hover:scale-102 transition shadow-lg cursor-pointer">
+                        Send Message
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- Contact Info -->
+            <div class="w-full lg:w-1/2 text-white space-y-8 flex justify-center flex-col h-150">
+
+                <div class="border border-primary p-6 rounded-sm bg-black/40 transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-primary text-3xl text-primary mb-2">Email</h3>
+                    <p class="text-gray-300 text-lg">contact@fitnessexplorer.com</p>
+                </div>
+
+                <div class="border border-primary p-6 rounded-sm bg-black/40 transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-primary text-3xl text-primary mb-2">Phone</h3>
+                    <p class="text-gray-300 text-lg">+20 100 123 4567</p>
+                </div>
+
+                <div class="border border-primary p-6 rounded-sm bg-black/40 transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-primary text-3xl text-primary mb-2">Location</h3>
+                    <p class="text-gray-300 text-lg">Cairo, Egypt</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="w-full h-fit bg-black/90 py-6 text-center text-gray-400 text-sm">
+        <div class="flex flex-col justify-center gap-12 relative">
+            <img src="./Images/White_Logo.png" alt="FitFinder Logo" class="h-18 w-auto mx-auto mb-2">
+
+            <ul class="flex justify-center items-center gap-6 mb-16 lg:space-x-10 lg:flex-row md:flex-row flex-col sm:gap-6 sm:items-center after:content-[''] after:absolute after:w-full after:h-px after:bg-gray-500/90 after:bottom-0 after:left-0 after:mb-6">
+                <li><a href="#mainBody" class="font-primary Nav-link">Home</a></li>
+                <li><a href="#services" class="font-primary Nav-link">Services</a></li>
+                <li><a href="#about" class="font-primary Nav-link">About</a></li>
+                <li><a href="#contact" class="font-primary Nav-link">Contact</a></li>
+                <a href="login.html" class="font-primary hover:text-primary hover:bg-gray-600/80 text-2xl rounded-sm py-2 px-4 bg-primary text-black">Start now</a>
+            </ul>
+        </div>
+        &copy; 2026 FitFinder. All rights reserved.
+    </footer>
+
+    <a id="backToTopFixed" href="#mainBody">
+        <div class="BackToTop fixed bottom-5 right-5 text-black bg-primary p-4 rounded-md shadow-lg hover:bg-yellow-600 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </div>
+    </a>
+
+    <script src="Js/index.js"></script>
+</body>
+</html>
