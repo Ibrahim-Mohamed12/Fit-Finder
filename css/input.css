@@ -3,9 +3,11 @@
 @layer base {
     @theme {
         --font-primary: 'Bebas Neue', sans-serif;
+        --font-secondary: "Fjalla One", sans-serif;
         --color-primary: #F0B100;
         --breakpoint-3xl: 1660px;
         --container-mx-width: 1600px;
+        --breakpoint-login: 1550px;
     }
         /* Scrollbar width */
     ::-webkit-scrollbar {
@@ -27,6 +29,23 @@
     ::-webkit-scrollbar-thumb:hover {
         background: #ffd54a;
     }
+
+
+    @keyframes floatY {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .BackToTop {
+        animation: floatY 1.2s ease-out infinite;
+    }
 }
 
 @Layer utilities {
@@ -39,6 +58,21 @@
         background-image: url('../Images/About-background.jpg');
         background-size: cover;
         background-position: center;
+    }
+    .Login-bg {
+        background-image: url('../Images/Login-background.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    select {
+        background-color: #000;
+        color: white;
+        border: 1px solid #F0B100;
+    }
+
+    select option {
+        background-color: #111;
+        color: white;
     }
     .Nav-style {
         @apply bg-black/40 flex lg:flex-row md:flex-row sm:flex-row sm:gap-10 items-center justify-between py-8 px-10 fixed w-full z-10 transition-all duration-300 after:content-[''] after:absolute after:w-full after:h-px after:bg-gray-500/90 after:bottom-0 after:left-0;

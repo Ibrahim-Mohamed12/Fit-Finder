@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Signup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+<link href="./css/output.css" rel="stylesheet">
 </head>
-<body>
-    
+
+<body class="bg-black text-white font-primary">
+
+<div class="min-h-screen flex flex-col lg:flex-row bg-linear-to-br from-black/94 to-black/90">
+
+    <!-- Left: Form Section -->
+    <div class="flex-1 flex flex-col items-center justify-center p-6 lg:p-16">
+        
+        <a href="index.html" class="mb-8 self-start">
+            <img src="../Images/White_Logo.png" alt="Logo" class="h-10 w-auto transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        </a>
+
+        <div class="w-full max-w-2xl bg-black/30 p-8 lg:p-10 rounded-lg shadow-lg">
+
+            <form action="index.html" class="space-y-6">
+
+                <h1 class="text-4xl sm:text-5xl font-semibold text-primary text-center">Welcome Back</h1>
+
+                <p class="text-white/70 text-center tracking-wide text-xl sm:text-2xl">Access your account and manage your gym experience</p>
+
+                <!-- Name & Email -->
+                <div class="flex-1 flex flex-col">
+                    <label class="mb-2 text-2xl tracking-wide text-primary">Email <span class="text-red-600 text-sm">*</span></label>
+                    <input type="email" placeholder="Enter your email"
+                    class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
+                </div>
+
+                <!-- Password & Confirm -->
+                <div class="flex-1 flex flex-col">
+                    <label class="mb-2 text-2xl tracking-wide text-primary">Password <span class="text-red-600 text-sm">*</span></label>
+                    <input type="password" placeholder="Enter your password"
+                    class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
+                </div>
+                    
+                <!-- Submit Button -->
+                <button type="submit"
+                class="w-full bg-black text-primary border border-primary hover:bg-primary hover:text-black font-medium text-2xl py-3 rounded-sm transition transform hover:scale-102 shadow-lg cursor-pointer">
+                Submit
+                </button>
+
+                <!-- Login Link -->
+                <p class="text-center text-primary tracking-wide text-lg sm:text-xl">don't have an Account? <a href="signup.html" class="text-white hover:underline text-lg sm:text-2xl"> Sign Up</a></p>
+            </form>
+
+        <!-- OR Divider -->
+        <div class="flex items-center justify-center gap-4 my-6">
+            <div class="flex-1 h-px bg-gray-500"></div>
+                <span class="text-primary text-2xl tracking-wide">OR</span>
+            <div class="flex-1 h-px bg-gray-500"></div>
+        </div>
+
+            <!-- Social Buttons -->
+            <div class="space-y-4">
+                <button class="flex items-center justify-center gap-2 w-full bg-black/40 border border-gray-500 hover:border-primary text-white/80 px-4 py-3 rounded-sm font-medium text-2xl hover:scale-102 transition shadow-lg">  
+                    <img src="../Images/google.png" alt="Google Icon" class="h-7 w-7">
+                    Login with Google
+                </button>
+
+                <button class="flex items-center justify-center gap-2 w-full bg-black/40 border border-gray-500 hover:border-primary text-white/80 px-4 py-3 rounded-sm font-medium text-2xl hover:scale-102 transition shadow-lg">
+                    <img src="../Images/facebook.png" alt="Facebook Icon" class="h-7 w-7">
+                    Login with Facebook
+                </button>
+                <button class="flex items-center justify-center gap-2 w-full bg-black/40 border border-gray-500 hover:border-primary text-white/80 px-4 py-3 rounded-sm font-medium text-2xl hover:scale-102 transition shadow-lg">
+                    <img src="../Images/apple.png" alt="Apple Icon" class="h-8 w-8">
+                    Login with Apple
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right: Image / Sidebar -->
+    <div class="hidden login:flex flex-1 bg-linear-to-br from-black/90 to-black/90 border-l border-primary z-10">
+        <div class="w-full h-full shadow-lg bg-cover bg-center" style="background-image: url('../Images/Login-background.jpg');"></div>
+    </div>
+
+</div>
 </body>
 </html>

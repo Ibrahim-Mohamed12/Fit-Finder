@@ -36,17 +36,56 @@ document.addEventListener("scroll", () => {
   }
 });
 
-    const burgerBtn = document.getElementById('burgerBtn');
-    const navLinks = document.getElementById('navLinks');
-    const ctaLinks = document.getElementById('ctaLinks');
-    const mainNav = document.getElementById('mainNav');
+const burgerBtn = document.getElementById('burgerBtn');
+const navLinks = document.getElementById('navLinks');
+const ctaLinks = document.getElementById('ctaLinks');
 
-    burgerBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('hidden');
-        ctaLinks.classList.toggle('hidden');
-        navLinks.classList.add('absolute', 'bg-black/80', 'w-full', 'left-0', 'top-full', 'text-center', 'py-4', 'pt-8', 'space-y-3');
-        ctaLinks.classList.add('absolute', 'bg-black/80', 'w-full', 'left-0', 'top-78.5', 'text-center', 'py-4');
-    });
+burgerBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('hidden');
+    ctaLinks.classList.toggle('hidden');
+
+    navLinks.classList.add(
+        'absolute','bg-black/80','w-full','left-0','top-full',
+        'text-center','py-4','pt-8','space-y-3'
+    );
+
+    ctaLinks.classList.add(
+        'absolute','bg-black/80','w-full','left-0','top-78.5','text-center','py-4'
+    );
+});
+
+
+/* Exit burger menu when screen is maximized */
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) {   // Tailwind lg breakpoint
+        navLinks.classList.remove('hidden');
+        ctaLinks.classList.remove('hidden');
+
+        navLinks.classList.remove(
+            'absolute','bg-black/80','w-full','left-0','top-full',
+            'text-center','py-4','pt-8','space-y-3'
+        );
+
+        ctaLinks.classList.remove(
+            'absolute','bg-black/80','w-full','left-0','top-78.5','text-center','py-4'
+        );
+    }
+    else{
+      navLinks.classList.add('hidden');
+        ctaLinks.classList.add('hidden');
+
+        navLinks.classList.add(
+            'absolute','bg-black/80','w-full','left-0','top-full',
+            'text-center','py-4','pt-8','space-y-3'
+        );
+
+        ctaLinks.classList.add(
+            'absolute','bg-black/80','w-full','left-0','top-78.5','text-center','py-4'
+        );
+    }
+});
+
+
 
 // const stats = document.querySelectorAll(".stats");
 
