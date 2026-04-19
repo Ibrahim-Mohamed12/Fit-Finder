@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="../css/output.css" rel="stylesheet">
+
+</head>
+<body class="relative">
+
+    <!-- Navigation Bar -->
+    <nav id="mainNav" class="User-Nav-style">
+        <div class="flex justify-start">
+            <img src="../Images/White_Logo.png" alt="Logo"
+                class="h-10 w-auto transition-transform duration-300 hover:scale-110 cursor-pointer">
+        </div>        
+        <!-- Hamburger for small screens -->
+        <div class="ml-auto lg:hidden">
+            <button id="burgerBtn"
+                class="focus:outline-none cursor-pointer transition-transform duration-300 hover:scale-110">
+                <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <ul id="navLinks" class="hidden lg:flex justify-center space-x-10">
+            <li><a href="UserHome.html" class="font-primary Nav-link">Home</a></li>
+            <li><a href="Gyms.html" class="font-primary Nav-link">Gyms</a></li>
+            <li><a href="Subscription.html" class="font-primary Nav-link">Subscriptions</a></li>
+            <li><a href="Payments.html" class="font-primary Nav-link">Payments</a></li>
+            <li><a href="Contacts.html" class="font-primary Nav-link">Contact us</a></li>
+        </ul>
+        <ul id="ctaLinks" class="hidden lg:flex justify-end items-center space-x-4">
+            <li>
+                <a href="profile.html">
+                    <div class="flex items-center cursor-pointer hover:scale-110 transition duration-300">
+                        <img src="../Images/Profile.jpg" class="h-10 w-10 rounded-full object-cover">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="role.html"
+                class="font-primary hover:text-primary hover:bg-gray-600/80 text-2xl rounded-sm py-2 px-4 bg-primary text-black">
+                    Logout
+                </a>
+            </li>
+        </ul>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="absolute top-full left-0 w-full bg-black/95 hidden flex flex-col items-center justify-center space-y-8 py-10 text-center transition-all duration-300 z-50">
+
+            <a href="#mainBody" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+                Home
+            </a>
+
+            <a href="#services" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+                Gyms
+            </a>
+
+            <a href="#services" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+                Subscriptions
+            </a>
+
+            <a href="#about" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+                Payments
+            </a>
+
+            <a href="profile.html" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+                Profile
+            </a>
+
+            <a href="role.html"
+            class="bg-primary text-black px-6 py-3 rounded-md text-xl font-primary">
+                Logout
+            </a>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="mainBody" class="w-full h-fit bg-cover bg-center relative User-Hero-bg">
+        <section class="min-h-screen flex items-center justify-center bg-linear-to-br from-black/85 to-black/40 px-6 py-20 box-border">
+
+            <div class="max-w-7xl w-full md:m-0 mt-20">
+
+                <!-- Title -->
+                <div class="text-center mb-12 fade-up" data-animate="title">
+                    <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold font-primary text-white tracking-wide mb-4">
+                        Contact <span class="text-primary">Us</span>
+                    </h2>
+                    <p class="text-base sm:text-lg md:text-xl font-light text-gray-300 mb-10 tracking-wide">
+                        We'd love to hear from you! Reach out to us with any questions or feedback.
+                    </p>
+
+                </div>
+
+                <!-- to-bottom -->
+                <a href="#footer" class="flex justify-center fade-up" data-animate="toBottom">
+                    <div class="toBottom text-black bg-primary p-4 rounded-md shadow-lg hover:bg-yellow-600 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="footer" class="w-full bg-black/95 text-gray-400 pt-20 pb-8 px-6 lg:px-20">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+
+            <!-- ================= ABOUT ================= -->
+            <div>
+                <h3 class="text-white text-2xl font-semibold mb-5 relative inline-block">
+                    About FitFinder
+                    <span class="block w-12 h-[2px] bg-primary mt-2"></span>
+                </h3>
+
+                <p class="text-md leading-relaxed mb-5 text-gray-400/70">
+                    <span class="text-primary font-semibold text-xl">Smart Gym <span class="text-white">Discovery</span></span><br>
+                    Find the best gyms near you based on your location, budget, and preferences.
+                </p>
+
+                <p class="text-md leading-relaxed mb-5 text-gray-400/70">
+                    <span class="text-primary font-semibold text-xl">Flexible <span class="text-white">Subscriptions</span></span><br>
+                    Manage all your gym memberships easily in one place.
+                </p>
+
+                <p class="text-md leading-relaxed text-gray-400/70">
+                    <span class="text-primary font-semibold text-xl">Exclusive <span class="text-white">Offers</span></span><br>
+                    Enjoy discounts, free trials, and personalized deals.
+                </p>
+            </div>
+
+            <!-- ================= CONTACT INFO ================= -->
+            <div>
+                <h3 class="text-white text-2xl font-semibold mb-5 relative inline-block">
+                    Contact Us
+                    <span class="block w-12 h-[2px] bg-primary mt-2"></span>
+                </h3>
+
+                <div class="space-y-4 text-sm text-gray-400/70 tracking-wide">
+
+                    <p class="flex items-center gap-2 text-xl ">
+                        <span class="text-primary material-symbols-outlined">location_on</span> 123 Fitness Ave, Cairo, Egypt
+                    </p>
+
+                    <p class="flex items-center gap-2 text-xl ">
+                        <span class="text-primary material-symbols-outlined">phone</span> +20 100 606 3107 / +20 122 345 6789
+                    </p>
+
+                    <p class="flex items-center gap-2 text-xl ">
+                        <span class="text-primary material-symbols-outlined">email</span> support@fitfinder.com / info@fitfinder.com
+                    </p>
+
+                </div>
+
+                <!-- Social -->
+                <div class="flex gap-4 mt-6 text-xl">
+
+                    <!-- Facebook -->
+                    <img src="../Images/001-facebook.png" alt="Facebook Icon" class="h-8 w-8">
+
+                    <!-- LinkedIn -->
+                    <img src="../Images/003-linkedin.png" alt="LinkedIn Icon" class="h-9 w-9">
+
+                    <!-- Twitter -->
+                    <img src="../Images/twitter.png" alt="Twitter Icon" class="h-9 w-9">
+
+                    <!-- Instagram -->
+                    <img src="../Images/002-instagram.png" alt="Instagram Icon" class="h-9 w-9">
+                </div>
+            </div>
+
+            <!-- ================= CONTACT FORM ================= -->
+            <div class="md:w-full">
+                <h3 class="text-white text-2xl font-semibold mb-5 relative inline-block">
+                    Get In Touch
+                    <span class="block w-12 h-[2px] bg-primary mt-2"></span>
+                </h3>
+
+                <form class="space-y-4">
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input type="text" placeholder="Full Name"
+                            class="w-full lg:w-1/2 bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary transition"/>
+
+                        <input type="email" placeholder="Email"
+                            class="w-full sm:w-1/2 bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary transition"/>
+                    </div>
+
+                    <textarea placeholder="Write your message..."
+                        class="w-full resize-none bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary h-32 transition"></textarea>
+
+                    <button
+                        class="bg-primary text-black px-8 py-3 font-primary rounded-lg font-medium text-2xl hover:opacity-90 transition w-full">
+                        Contact Us
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+
+        <!-- ================= BOTTOM ================= -->
+        <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+
+            <!-- Logo -->
+            <img src="../Images/White_Logo.png" class="h-12">
+
+            <!-- Links -->
+            <ul class="flex flex-wrap justify-center gap-5 text-gray-300">
+                <li><a href="UserHome.html" class="hover:text-primary transition">Home</a></li>
+                <li><a href="Gyms.html" class="hover:text-primary transition">Gyms</a></li>
+                <li><a href="Subscription.html" class="hover:text-primary transition">Subscriptions</a></li>
+                <li><a href="Payments.html" class="hover:text-primary transition">Payments</a></li>
+                <li><a href="profile.html" class="hover:text-primary transition">Profile</a></li>
+                <li><a href="Contacts.html" class="hover:text-primary transition">Contact</a></li>
+            </ul>
+
+            <!-- Copyright -->
+            <p class="text-gray-500 text-center">
+                © 2026 FitFinder. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <a id="backToTopFixed" href="#mainBody">
+        <div class="BackToTop fixed bottom-5 right-5 text-black bg-primary p-4 rounded-md shadow-lg hover:bg-yellow-600 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </div>
+    </a>
+
+    <script src="../Js/User/userHome.js"></script>
+</body>
+</html>

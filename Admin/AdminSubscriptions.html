@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Platform Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link href="../css/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-black text-white">
+
+    <div class="flex h-screen">
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="bg-[#020121] w-64 transition-all duration-300 flex flex-col">
+
+            <!-- Logo -->
+            <div class="flex items-center justify-between p-4 border-primary">
+
+                <img class="w-20 h-auto sidebar-text" src="../Images/White_Logo.png">
+
+                <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-10 cursor-pointer"><span class="material-symbols-outlined">menu</span></button>
+
+            </div>
+
+            <!-- Menu -->
+            <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wide flex-1">
+                <a href="AdminDashboard.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span class="sidebar-text">Dashboard</span>
+
+                </a>
+
+                <a href="AdminGyms.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">fitness_center</span>
+                    <span class="sidebar-text">Gyms</span>
+
+                </a>
+
+                <a href="AdminSubscriptions.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">workspace_premium</span>
+                    <span class="sidebar-text">Subscriptions</span>
+
+                </a>
+
+                <a href="AdminPayments.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">payments</span>
+                    <span class="sidebar-text">Payments</span>
+
+                </a>
+
+                <a href="AdminUsers.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">group</span>
+                    <span class="sidebar-text">Users</span>
+
+                </a>
+
+                <!-- Logout -->
+                <div class="mt-auto p-3">
+
+                    <button class="w-full flex items-center gap-3 p-3 text-white rounded hover:bg-gray-800 transition cursor-pointer">
+
+                        <span class="material-symbols-outlined">logout</span>
+                        <span class="sidebar-text">Logout</span>
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col bg-white">
+
+            <!-- Navbar -->
+            <header class="p-6 flex justify-between items-center bg-[#020121] text-white">
+
+                <h1 class="text-3xl tracking-wider font-medium font-primary">Admin Dashboard</h1>
+
+                <div class="flex items-center gap-3">
+
+                    <span class="material-symbols-outlined cursor-pointer">notifications</span>
+
+                    <img src="https://i.pravatar.cc/40" class="rounded-full">
+
+                </div>
+
+            </header>
+
+
+            <!-- Content -->
+            <main class="p-4 sm:p-6 flex-1 overflow-y-auto">
+
+                <div class="DashShadow rounded-xl p-6 mb-8">
+
+                    <h2 class="font-bold text-center text-3xl mb-6 text-DashNav font-primary tracking-wider">
+                        Subscriptions
+                    </h2>
+
+                    <div class="space-y-4">
+
+                        <!-- Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <!-- User -->
+                            <div class="lg:col-span-1">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">Gold Gym</p>
+                            </div>
+
+                            <!-- Plan -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Premium</p>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$100</p>
+                            </div>
+
+                            <!-- Start -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">01-01-2026</p>
+                            </div>
+
+                            <!-- End -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">01-02-2026</p>
+                            </div>
+
+                            <!-- Revenue -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$10</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                         <!-- Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <!-- User -->
+                            <div class="lg:col-span-1">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">Gold Gym</p>
+                            </div>
+
+                            <!-- Plan -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Premium</p>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$100</p>
+                            </div>
+
+                            <!-- Start -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">01-01-2026</p>
+                            </div>
+
+                            <!-- End -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">01-02-2026</p>
+                            </div>
+
+                            <!-- Revenue -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$10</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                         <!-- Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <!-- User -->
+                            <div class="lg:col-span-1">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">Gold Gym</p>
+                            </div>
+
+                            <!-- Plan -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Premium</p>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$100</p>
+                            </div>
+
+                            <!-- Start -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">01-01-2026</p>
+                            </div>
+
+                            <!-- End -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">01-02-2026</p>
+                            </div>
+
+                            <!-- Revenue -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$10</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                         <!-- Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <!-- User -->
+                            <div class="lg:col-span-1">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">Gold Gym</p>
+                            </div>
+
+                            <!-- Plan -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Premium</p>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$100</p>
+                            </div>
+
+                            <!-- Start -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">01-01-2026</p>
+                            </div>
+
+                            <!-- End -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">01-02-2026</p>
+                            </div>
+
+                            <!-- Revenue -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$10</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                         <!-- Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <!-- User -->
+                            <div class="lg:col-span-1">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">Gold Gym</p>
+                            </div>
+
+                            <!-- Plan -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Premium</p>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$100</p>
+                            </div>
+
+                            <!-- Start -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">01-01-2026</p>
+                            </div>
+
+                            <!-- End -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">01-02-2026</p>
+                            </div>
+
+                            <!-- Revenue -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$10</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                         <!-- Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <!-- User -->
+                            <div class="lg:col-span-1">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">Gold Gym</p>
+                            </div>
+
+                            <!-- Plan -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Premium</p>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$100</p>
+                            </div>
+
+                            <!-- Start -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">01-01-2026</p>
+                            </div>
+
+                            <!-- End -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">01-02-2026</p>
+                            </div>
+
+                            <!-- Revenue -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$10</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                         <!-- Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <!-- User -->
+                            <div class="lg:col-span-1">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">Gold Gym</p>
+                            </div>
+
+                            <!-- Plan -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Premium</p>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$100</p>
+                            </div>
+
+                            <!-- Start -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">01-01-2026</p>
+                            </div>
+
+                            <!-- End -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">01-02-2026</p>
+                            </div>
+
+                            <!-- Revenue -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$10</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                         <!-- Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <!-- User -->
+                            <div class="lg:col-span-1">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">Gold Gym</p>
+                            </div>
+
+                            <!-- Plan -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Premium</p>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$100</p>
+                            </div>
+
+                            <!-- Start -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">01-01-2026</p>
+                            </div>
+
+                            <!-- End -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">01-02-2026</p>
+                            </div>
+
+                            <!-- Revenue -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$10</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                         <!-- Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <!-- User -->
+                            <div class="lg:col-span-1">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">Gold Gym</p>
+                            </div>
+
+                            <!-- Plan -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Premium</p>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$100</p>
+                            </div>
+
+                            <!-- Start -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">01-01-2026</p>
+                            </div>
+
+                            <!-- End -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">01-02-2026</p>
+                            </div>
+
+                            <!-- Revenue -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$10</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                         <!-- Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <!-- User -->
+                            <div class="lg:col-span-1">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">Gold Gym</p>
+                            </div>
+
+                            <!-- Plan -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Premium</p>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$100</p>
+                            </div>
+
+                            <!-- Start -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">01-01-2026</p>
+                            </div>
+
+                            <!-- End -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">01-02-2026</p>
+                            </div>
+
+                            <!-- Revenue -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$10</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                         <!-- Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <!-- User -->
+                            <div class="lg:col-span-1">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">Gold Gym</p>
+                            </div>
+
+                            <!-- Plan -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Premium</p>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$100</p>
+                            </div>
+
+                            <!-- Start -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">01-01-2026</p>
+                            </div>
+
+                            <!-- End -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">01-02-2026</p>
+                            </div>
+
+                            <!-- Revenue -->
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$10</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <div>
+                                <p class="font-semibold text-gray-800">Sara Mohamed</p>
+                                <p class="text-sm text-gray-500">Power Gym</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Basic</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$60</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">10-01-2026</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">10-02-2026</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$6</p>
+                            </div>
+
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-red-100 text-red-600">
+                                    Expired
+                                </span>
+                            </div>
+
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <div>
+                                <p class="font-semibold text-gray-800">Sara Mohamed</p>
+                                <p class="text-sm text-gray-500">Power Gym</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Basic</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$60</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">10-01-2026</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">10-02-2026</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$6</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- Row 4 -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-4 items-center text-center">
+
+                            <div>
+                                <p class="font-semibold text-gray-800">Sara Mohamed</p>
+                                <p class="text-sm text-gray-500">Power Gym</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Plan</p>
+                                <p class="font-medium text-gray-500">Basic</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Price</p>
+                                <p class="font-medium text-gray-500">$60</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Start</p>
+                                <p class="font-medium text-gray-500">10-01-2026</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">End</p>
+                                <p class="font-medium text-gray-500">10-02-2026</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-800 font-semibold text-sm">Revenue</p>
+                                <p class="font-medium text-green-600">$6</p>
+                            </div>
+
+                            <!-- Status -->
+                            <div>
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <div class="flex gap-2 justify-center lg:justify-end">
+                                <button class="px-3 py-2 text-sm bg-blue-900 text-white rounded-lg hover:bg-blue-800">
+                                    View
+                                </button>
+                                <button class="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-500">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+
+            </main>
+
+        </div>
+
+    <script>
+
+    function toggleSidebar() {
+
+    const sidebar = document.getElementById("sidebar");
+    const texts = document.querySelectorAll(".sidebar-text");
+
+    sidebar.classList.toggle("w-64");
+    sidebar.classList.toggle("w-20");
+
+    texts.forEach(text => text.classList.toggle("hidden"));
+
+    }
+
+    </script>
+
+</body>
+</html>

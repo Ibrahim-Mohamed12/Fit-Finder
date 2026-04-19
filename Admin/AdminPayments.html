@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Platform Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link href="../css/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-black text-white">
+
+    <div class="flex h-screen">
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="bg-[#020121] w-64 transition-all duration-300 flex flex-col">
+
+            <!-- Logo -->
+            <div class="flex items-center justify-between p-4 border-primary">
+
+                <img class="w-20 h-auto sidebar-text" src="../Images/White_Logo.png">
+
+                <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-10 cursor-pointer"><span class="material-symbols-outlined">menu</span></button>
+
+            </div>
+
+            <!-- Menu -->
+            <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wide flex-1">
+                <a href="AdminDashboard.html" class="flex items-center gap-3 p-3 hover:bg-gray-800rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span class="sidebar-text">Dashboard</span>
+
+                </a>
+
+                <a href="AdminGyms.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">fitness_center</span>
+                    <span class="sidebar-text">Gyms</span>
+
+                </a>
+
+                <a href="AdminSubscriptions.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">workspace_premium</span>
+                    <span class="sidebar-text">Subscriptions</span>
+
+                </a>
+
+                <a href="AdminPayments.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">payments</span>
+                    <span class="sidebar-text">Payments</span>
+
+                </a>
+
+                <a href="AdminUsers.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">group</span>
+                    <span class="sidebar-text">Users</span>
+
+                </a>
+
+                <!-- Logout -->
+                <div class="mt-auto p-3">
+
+                    <button class="w-full flex items-center gap-3 p-3 text-white rounded hover:bg-gray-800 transition cursor-pointer">
+
+                        <span class="material-symbols-outlined">logout</span>
+                        <span class="sidebar-text">Logout</span>
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col bg-white">
+
+            <!-- Navbar -->
+            <header class="p-6 flex justify-between items-center bg-[#020121] text-white">
+
+                <h1 class="text-3xl tracking-wider font-medium font-primary">Admin Dashboard</h1>
+
+                <div class="flex items-center gap-3">
+
+                    <span class="material-symbols-outlined cursor-pointer">notifications</span>
+
+                    <img src="https://i.pravatar.cc/40" class="rounded-full">
+
+                </div>
+
+            </header>
+
+
+            <!-- Content -->
+            <main class="p-4 sm:p-6 flex-1 overflow-y-auto">
+
+                <div class="DashShadow p-6 rounded-xl mb-8">
+
+                    <h2 class="text-3xl font-semibold mb-6 text-DashNav font-primary tracking-wide text-center">
+                        Payments
+                    </h2>
+
+                    <!-- Summary -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 text-center">
+
+                        <div class="bg-white p-4 rounded-xl DashShadow">
+                            <p class="text-gray-500 text-sm">Total Revenue</p>
+                            <p class="text-xl font-bold text-green-600">$12,500</p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl DashShadow">
+                            <p class="text-gray-500 text-sm">Admin Profit</p>
+                            <p class="text-xl font-bold text-indigo-600">$1,250</p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl DashShadow">
+                            <p class="text-gray-500 text-sm">Transactions</p>
+                            <p class="text-xl font-bold text-gray-800">320</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Payments List -->
+                    <div class="space-y-3">
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col md:flex-row md:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">$100 Payment</p>
+                                <p class="text-sm text-gray-500">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center">
+                                <div class="flex gap-6 text-sm p-3 rounded-xl bg-gray-100">
+                                    <p><span class="text-gray-800 font-semibold">Admin:</span> <span class="text-green-600">$10</span></p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Gym:</span> $90</p>
+                                    <p class="text-gray-500"><span class="text-gray-800 font-semibold">Method:</span> Visa</p>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+                                <span class="px-2 py-1 text-md rounded-xl bg-green-100 text-green-600">
+                                    Paid
+                                </span>
+
+                                <button class="text-md text-blue-600 hover:underline">
+                                    Details
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    <script>
+
+    function toggleSidebar() {
+
+    const sidebar = document.getElementById("sidebar");
+    const texts = document.querySelectorAll(".sidebar-text");
+
+    sidebar.classList.toggle("w-64");
+    sidebar.classList.toggle("w-20");
+
+    texts.forEach(text => text.classList.toggle("hidden"));
+
+    }
+
+    </script>
+
+</body>
+</html>

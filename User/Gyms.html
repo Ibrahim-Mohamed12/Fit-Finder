@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="../css/output.css" rel="stylesheet">
+
+</head>
+<body class="relative">
+
+    <!-- Navigation Bar -->
+    <nav id="mainNav" class="User-Nav-style">
+        <div class="flex justify-start">
+            <img src="../Images/White_Logo.png" alt="Logo"
+                class="h-10 w-auto transition-transform duration-300 hover:scale-110 cursor-pointer">
+        </div>        
+        <!-- Hamburger for small screens -->
+        <div class="ml-auto lg:hidden">
+            <button id="burgerBtn"
+                class="focus:outline-none cursor-pointer transition-transform duration-300 hover:scale-110">
+                <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <ul id="navLinks" class="hidden lg:flex justify-center space-x-10">
+            <li><a href="UserHome.html" class="font-primary Nav-link">Home</a></li>
+            <li><a href="Gyms.html" class="font-primary Nav-link">Gyms</a></li>
+            <li><a href="Subscription.html" class="font-primary Nav-link">Subscriptions</a></li>
+            <li><a href="Payments.html" class="font-primary Nav-link">Payments</a></li>
+            <li><a href="Contacts.html" class="font-primary Nav-link">Contact us</a></li>
+        </ul>
+        <ul id="ctaLinks" class="hidden lg:flex justify-end items-center space-x-4">
+            <li>
+                <a href="profile.html">
+                    <div class="flex items-center cursor-pointer hover:scale-110 transition duration-300">
+                        <img src="../Images/Profile.jpg" class="h-10 w-10 rounded-full object-cover">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="role.html"
+                class="font-primary hover:text-primary hover:bg-gray-600/80 text-2xl rounded-sm py-2 px-4 bg-primary text-black">
+                    Logout
+                </a>
+            </li>
+        </ul>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="absolute top-full left-0 w-full bg-black/95 hidden flex flex-col items-center justify-center space-y-8 py-10 text-center transition-all duration-300 z-50">
+
+            <a href="#mainBody" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+                Home
+            </a>
+
+            <a href="#services" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+                Gyms
+            </a>
+
+            <a href="#services" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+                Subscriptions
+            </a>
+
+            <a href="#about" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+                Payments
+            </a>
+
+            <a href="profile.html" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+                Profile
+            </a>
+
+            <a href="role.html"
+            class="bg-primary text-black px-6 py-3 rounded-md text-xl font-primary">
+                Logout
+            </a>
+
+        </div>
+    </nav>
+
+    <!-- Gym -->
+    <section class="w-full py-16 text-center bg-linear-to-br from-black/95 to-black/90 pt-50">
+
+        <div class="mb-12 text-center fade-up">
+
+            <!-- TITLE -->
+            <h2 class="text-5xl sm:text-6xl md:text-7xl font-medium font-primary text-white mb-4">
+                Available <span class="text-primary">Gyms</span>
+            </h2>
+
+            <p class="text-base sm:text-lg md:text-xl font-light text-gray-300 tracking-wide mb-8">
+                Explore the best gyms in your area
+            </p>
+
+            <!-- SEARCH BAR -->
+            <div class="relative mb-6 fade-up w-[90%] sm:w-[80%] md:max-w-3xl mx-auto">
+
+                <input 
+                    type="text" 
+                    placeholder="Search gyms..."
+                    class="w-full bg-black/70 text-base md:text-xl border border-primary/50 focus:border-primary text-white placeholder-gray-400 
+                        pl-5 pr-12 py-3 md:py-5 rounded-xl outline-none transition"
+                />
+
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </span>
+
+            </div>
+
+            <!-- FILTERS -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10">
+
+                <div class="flex items-center px-8 py-2 gap-2 text-md rounded-md border border-primary/70 text-gray-300 hover:bg-primary hover:text-black cursor-pointer transition">
+                    <span class="material-symbols-outlined cursor-pointer">check_circle</span>
+                    <button class="cursor-pointer">
+                        Open Now
+                    </button>
+                </div>
+
+                <div class="flex items-center px-8 py-2 gap-2 text-md rounded-md border border-primary/70 text-gray-300 hover:bg-primary hover:text-black cursor-pointer transition">
+                    <span class="material-symbols-outlined cursor-pointer">star</span>
+                    <button class="cursor-pointer">
+                        Top Rated
+                    </button>
+                </div>
+
+                <div class="flex items-center px-8 py-2 gap-1 text-md rounded-md border border-primary/70 text-gray-300 hover:bg-primary hover:text-black cursor-pointer transition">
+                    <span class="material-symbols-outlined cursor-pointer">attach_money</span>
+                    <button class="cursor-pointer">
+                        Budget
+                    </button>
+                </div>
+
+                <div class="flex items-center px-8 py-2 gap-2 text-md rounded-md border border-primary/70 text-gray-300 hover:bg-primary hover:text-black cursor-pointer transition">
+                    <span class="material-symbols-outlined cursor-pointer">location_on</span>
+                    <button class="cursor-pointer">
+                        Near Me
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 px-6 lg:px-20">
+
+            <!-- Gym Card -->
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background2.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+                        <!-- Gym Card -->
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background5.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+                        <!-- Gym Card -->
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background3.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+                        <!-- Gym Card -->
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background3.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+                        <!-- Gym Card -->
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background3.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+                        <!-- Gym Card -->
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background3.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+                        <!-- Gym Card -->
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background3.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+                        <!-- Gym Card -->
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background3.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background2.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background9.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background3.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background5.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+
+                <!-- IMAGE -->
+                <div class="relative">
+                    <img src="../Images/Background3.jpg"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                        alt="Gym">
+
+                    <!-- Rating -->
+                    <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
+                        ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                    </div>
+
+                    <!-- Open status -->
+                    <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                        Open Now
+                    </div>
+                </div>
+
+                <div class="p-5 text-left">
+
+                    <!-- TITLE -->
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
+                        <span class="text-primary text-sm font-medium">$25/mo</span>
+                    </div>
+
+                    <!-- LOCATION + DISTANCE -->
+                    <p class="text-gray-400 text-sm mt-1">
+                        Downtown • 1.2 km away
+                    </p>
+
+                    <!-- QUICK STATS -->
+                    <div class="flex gap-2 flex-wrap mt-3">
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
+                        <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        Modern fitness center with premium equipment, certified trainers, and flexible training programs.
+                    </p>
+
+                    <!-- FEATURES (DECISION DRIVERS) -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
+                        <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex gap-3 mt-5">
+
+                        <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            View Details
+                        </button>
+
+                        <button class="flex-1 border border-primary text-primary py-2 rounded-lg text-sm font-semibold hover:bg-primary/10 transition">
+                            Book Trial
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Gym Detail Modal -->
+    <!-- <div id="gymModalOverlay"
+        class="fixed inset-0 bg-black/80 items-center justify-center z-50">
+
+        <div class="bg-black/95 border border-primary/30 rounded-2xl w-full max-w-3xl p-6 relative">
+
+            <button id="closeGymModal"
+                    class="absolute top-4 right-4 text-white hover:text-primary text-2xl">
+                &times;
+            </button>
+
+            <img id="modalGymImage"
+                src=""
+                class="w-full h-56 object-cover rounded-xl mb-4"
+                alt="Gym">
+
+            <h2 id="modalGymName" class="text-2xl font-semibold text-white mb-1"></h2>
+
+            <p id="modalGymLocation" class="text-gray-400 text-sm mb-4"></p>
+
+            <div class="grid grid-cols-2 gap-3 mb-4 text-sm">
+
+                <div class="bg-white/5 p-3 rounded-lg">
+                    <p class="text-gray-400">Rating</p>
+                    <p class="text-yellow-400 font-semibold">★ 4.8</p>
+                </div>
+
+                <div class="bg-white/5 p-3 rounded-lg">
+                    <p class="text-gray-400">Price</p>
+                    <p class="text-primary font-semibold">$25 / month</p>
+                </div>
+
+                <div class="bg-white/5 p-3 rounded-lg">
+                    <p class="text-gray-400">Distance</p>
+                    <p class="text-white font-semibold">1.2 km</p>
+                </div>
+
+                <div class="bg-white/5 p-3 rounded-lg">
+                    <p class="text-gray-400">Status</p>
+                    <p class="text-green-400 font-semibold">Open Now</p>
+                </div>
+
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-5">
+                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">24/7 Access</span>
+                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">PT Available</span>
+                <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Free Trial</span>
+            </div>
+
+            <p class="text-gray-400 text-sm mb-6">
+                Premium fitness center with modern equipment, certified trainers, and flexible training programs designed for all levels.
+            </p>
+
+            <div class="flex gap-3">
+
+                <button class="flex-1 bg-primary text-black py-3 rounded-lg font-semibold hover:opacity-90 transition">
+                    Book Trial
+                </button>
+
+                <button class="flex-1 border border-primary text-primary py-3 rounded-lg font-semibold hover:bg-primary/10 transition">
+                    View Full Details
+                </button>
+
+            </div>
+
+        </div>
+    </div> -->
+
+    <footer id="footer" class="w-full bg-black/95 text-gray-400 pt-20 pb-8 px-6 lg:px-20">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+
+            <!-- ================= ABOUT ================= -->
+            <div>
+                <h3 class="text-white text-2xl font-semibold mb-5 relative inline-block">
+                    About FitFinder
+                    <span class="block w-12 h-[2px] bg-primary mt-2"></span>
+                </h3>
+
+                <p class="text-md leading-relaxed mb-5 text-gray-400/70">
+                    <span class="text-primary font-semibold text-xl">Smart Gym <span class="text-white">Discovery</span></span><br>
+                    Find the best gyms near you based on your location, budget, and preferences.
+                </p>
+
+                <p class="text-md leading-relaxed mb-5 text-gray-400/70">
+                    <span class="text-primary font-semibold text-xl">Flexible <span class="text-white">Subscriptions</span></span><br>
+                    Manage all your gym memberships easily in one place.
+                </p>
+
+                <p class="text-md leading-relaxed text-gray-400/70">
+                    <span class="text-primary font-semibold text-xl">Exclusive <span class="text-white">Offers</span></span><br>
+                    Enjoy discounts, free trials, and personalized deals.
+                </p>
+            </div>
+
+            <!-- ================= CONTACT INFO ================= -->
+            <div>
+                <h3 class="text-white text-2xl font-semibold mb-5 relative inline-block">
+                    Contact Us
+                    <span class="block w-12 h-[2px] bg-primary mt-2"></span>
+                </h3>
+
+                <div class="space-y-4 text-sm text-gray-400/70 tracking-wide">
+
+                    <p class="flex items-center gap-2 text-xl ">
+                        <span class="text-primary material-symbols-outlined">location_on</span> 123 Fitness Ave, Cairo, Egypt
+                    </p>
+
+                    <p class="flex items-center gap-2 text-xl ">
+                        <span class="text-primary material-symbols-outlined">phone</span> +20 100 606 3107 / +20 122 345 6789
+                    </p>
+
+                    <p class="flex items-center gap-2 text-xl ">
+                        <span class="text-primary material-symbols-outlined">email</span> support@fitfinder.com / info@fitfinder.com
+                    </p>
+
+                </div>
+
+                <!-- Social -->
+                <div class="flex gap-4 mt-6 text-xl">
+
+                    <!-- Facebook -->
+                    <img src="../Images/001-facebook.png" alt="Facebook Icon" class="h-8 w-8">
+
+                    <!-- LinkedIn -->
+                    <img src="../Images/003-linkedin.png" alt="LinkedIn Icon" class="h-9 w-9">
+
+                    <!-- Twitter -->
+                    <img src="../Images/twitter.png" alt="Twitter Icon" class="h-9 w-9">
+
+                    <!-- Instagram -->
+                    <img src="../Images/002-instagram.png" alt="Instagram Icon" class="h-9 w-9">
+                </div>
+            </div>
+
+            <!-- ================= CONTACT FORM ================= -->
+            <div class="md:w-full">
+                <h3 class="text-white text-2xl font-semibold mb-5 relative inline-block">
+                    Get In Touch
+                    <span class="block w-12 h-[2px] bg-primary mt-2"></span>
+                </h3>
+
+                <form class="space-y-4">
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input type="text" placeholder="Full Name"
+                            class="w-full lg:w-1/2 bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary transition"/>
+
+                        <input type="email" placeholder="Email"
+                            class="w-full sm:w-1/2 bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary transition"/>
+                    </div>
+
+                    <textarea placeholder="Write your message..."
+                        class="w-full resize-none bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary h-32 transition"></textarea>
+
+                    <button
+                        class="bg-primary text-black px-8 py-3 font-primary rounded-lg font-medium text-2xl hover:opacity-90 transition w-full">
+                        Contact Us
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+
+        <!-- ================= BOTTOM ================= -->
+        <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+
+            <!-- Logo -->
+            <img src="../Images/White_Logo.png" class="h-12">
+
+            <!-- Links -->
+            <ul class="flex flex-wrap justify-center gap-5 text-gray-300">
+                <li><a href="UserHome.html" class="hover:text-primary transition">Home</a></li>
+                <li><a href="Gyms.html" class="hover:text-primary transition">Gyms</a></li>
+                <li><a href="Subscription.html" class="hover:text-primary transition">Subscriptions</a></li>
+                <li><a href="Payments.html" class="hover:text-primary transition">Payments</a></li>
+                <li><a href="profile.html" class="hover:text-primary transition">Profile</a></li>
+                <li><a href="Contacts.html" class="hover:text-primary transition">Contact</a></li>
+            </ul>
+
+            <!-- Copyright -->
+            <p class="text-gray-500 text-center">
+                © 2026 FitFinder. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <a id="backToTopFixed" href="#mainBody">
+        <div class="BackToTop fixed bottom-5 right-5 text-black bg-primary p-4 rounded-md shadow-lg hover:bg-yellow-600 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </div>
+    </a>
+
+    <script src="../Js/User/userHome.js"></script>
+</body>
+</html>

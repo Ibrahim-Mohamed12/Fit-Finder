@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Platform Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link href="../css/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-black text-white">
+
+    <div class="flex h-screen">
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="bg-[#020121] w-64 transition-all duration-300 flex flex-col">
+
+            <!-- Logo -->
+            <div class="flex items-center justify-between p-4 border-primary">
+
+                <img class="w-20 h-auto sidebar-text" src="../Images/White_Logo.png">
+
+                <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-10 cursor-pointer"><span class="material-symbols-outlined">menu</span></button>
+
+            </div>
+
+            <!-- Menu -->
+            <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wide flex-1">
+                <a href="AdminDashboard.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span class="sidebar-text">Dashboard</span>
+
+                </a>
+
+                <a href="AdminGyms.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">fitness_center</span>
+                    <span class="sidebar-text">Gyms</span>
+
+                </a>
+
+                <a href="AdminSubscriptions.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">workspace_premium</span>
+                    <span class="sidebar-text">Subscriptions</span>
+
+                </a>
+
+                <a href="AdminPayments.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">payments</span>
+                    <span class="sidebar-text">Payments</span>
+
+                </a>
+
+                <a href="AdminUsers.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">group</span>
+                    <span class="sidebar-text">Users</span>
+
+                </a>
+
+                <!-- Logout -->
+                <div class="mt-auto p-3">
+
+                    <button class="w-full flex items-center gap-3 p-3 text-white rounded hover:bg-gray-800 transition cursor-pointer">
+
+                        <span class="material-symbols-outlined">logout</span>
+                        <span class="sidebar-text">Logout</span>
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col bg-white">
+
+            <!-- Navbar -->
+            <header class="p-6 flex justify-between items-center bg-[#020121] text-white">
+
+                <h1 class="text-3xl tracking-wider font-medium font-primary">Admin Dashboard</h1>
+
+                <div class="flex items-center gap-3">
+
+                    <span class="material-symbols-outlined cursor-pointer">notifications</span>
+
+                    <img src="https://i.pravatar.cc/40" class="rounded-full">
+
+                </div>
+
+            </header>
+
+
+            <!-- Content -->
+            <main class="p-4 sm:p-6 flex-1 overflow-y-auto">
+
+                <div class="DashShadow p-6 rounded-xl bg-white">
+
+                    <h2 class="text-3xl font-semibold mb-6 text-DashNav font-primary tracking-wide text-center">
+                        Users
+                    </h2>
+
+                    <!-- Users List -->
+                    <div class="space-y-3">
+
+                        <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">ahmed@email.com</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 3</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> Today</p>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-red-500 text-white rounded-lg hover:bg-red-400">
+                                    Block
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">ahmed@email.com</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 3</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> Today</p>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-red-500 text-white rounded-lg hover:bg-red-400">
+                                    Block
+                                </button>
+                            </div>
+
+                        </div>
+
+                                                <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">ahmed@email.com</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 3</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> Today</p>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-red-500 text-white rounded-lg hover:bg-red-400">
+                                    Block
+                                </button>
+                            </div>
+
+                        </div>
+
+                                                <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">ahmed@email.com</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 3</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> Today</p>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-red-500 text-white rounded-lg hover:bg-red-400">
+                                    Block
+                                </button>
+                            </div>
+
+                        </div>
+
+                                                <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">ahmed@email.com</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 3</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> Today</p>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-red-500 text-white rounded-lg hover:bg-red-400">
+                                    Block
+                                </button>
+                            </div>
+
+                        </div>
+
+                                                <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">ahmed@email.com</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 3</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> Today</p>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-red-500 text-white rounded-lg hover:bg-red-400">
+                                    Block
+                                </button>
+                            </div>
+
+                        </div>
+
+                                                <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">ahmed@email.com</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 3</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> Today</p>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-red-500 text-white rounded-lg hover:bg-red-400">
+                                    Block
+                                </button>
+                            </div>
+
+                        </div>
+
+                                                <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">ahmed@email.com</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 3</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> Today</p>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-red-500 text-white rounded-lg hover:bg-red-400">
+                                    Block
+                                </button>
+                            </div>
+
+                        </div>
+
+                                                <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">ahmed@email.com</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 3</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> Today</p>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-red-500 text-white rounded-lg hover:bg-red-400">
+                                    Block
+                                </button>
+                            </div>
+
+                        </div>
+
+                                                <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">ahmed@email.com</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 3</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> Today</p>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-red-500 text-white rounded-lg hover:bg-red-400">
+                                    Block
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <!-- Left -->
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Ahmed Ali</p>
+                                <p class="text-sm text-gray-500">ahmed@email.com</p>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 3</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> Today</p>
+
+                            </div>
+
+                            <!-- Status -->
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-green-100 text-green-600">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-red-500 text-white rounded-lg hover:bg-red-400">
+                                    Block
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- User Row -->
+                        <div class="bg-gray-100 rounded-xl shadow-sm p-4 flex flex-col items-center lg:flex-row lg:items-center gap-4">
+
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="font-semibold text-gray-800">Sara Mohamed</p>
+                                <p class="text-sm text-gray-500">sara@email.com</p>
+                            </div>
+
+                            <div class="flex-1 flex justify-center gap-6 text-sm">
+                                <p class="text-gray-500"><span class="text-gray-800">Subscriptions:</span> 1</p>
+                                <p class="text-gray-500"><span class="text-gray-800">Last Active:</span> 2 days ago</p>
+                            </div>
+
+                            <div class="flex-1 flex justify-center">
+                                <span class="px-3 py-1 text-md rounded-full bg-red-100 text-red-600">
+                                    Blocked
+                                </span>
+                            </div>
+
+                            <div class="flex-1 flex justify-center md:justify-end gap-2">
+                                <button class="px-3 py-1 text-md bg-green-600 text-white rounded-lg hover:bg-green-500">
+                                    Unblock
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    <script>
+
+    function toggleSidebar() {
+
+    const sidebar = document.getElementById("sidebar");
+    const texts = document.querySelectorAll(".sidebar-text");
+
+    sidebar.classList.toggle("w-64");
+    sidebar.classList.toggle("w-20");
+
+    texts.forEach(text => text.classList.toggle("hidden"));
+
+    }
+
+    </script>
+
+</body>
+</html>

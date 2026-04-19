@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Owner Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+<link href="../css/output.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-black text-white">
+
+    <div class="flex h-screen">
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="bg-[#020121] w-64 transition-all duration-300 flex flex-col">
+
+            <!-- Logo -->
+            <div class="flex items-center justify-between p-4 border-primary">
+
+                <img class="w-20 h-auto sidebar-text" src="../Images/White_Logo.png">
+
+                <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-10 cursor-pointer"><span class="material-symbols-outlined">menu</span></button>
+
+            </div>
+
+            <!-- Menu -->
+            <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wide flex-1">
+                <a href="AdminDashboard.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span class="sidebar-text">Dashboard</span>
+
+                </a>
+
+                <a href="AdminGyms.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">fitness_center</span>
+                    <span class="sidebar-text">My Gyms</span>
+
+                </a>
+
+                <a href="AdminSubscriptions.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">workspace_premium</span>
+                    <span class="sidebar-text">Plans</span>
+
+                </a>
+
+                <a href="AdminPayments.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">payments</span>
+                    <span class="sidebar-text">Earnings</span>
+
+                </a>
+
+                <a href="AdminUsers.html" class="flex items-center gap-3 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined">group</span>
+                    <span class="sidebar-text">Members</span>
+
+                </a>
+
+                <!-- Logout -->
+                <div class="mt-auto p-3">
+
+                    <button class="w-full flex items-center gap-3 p-3 text-white rounded hover:bg-gray-800 transition cursor-pointer">
+
+                        <span class="material-symbols-outlined">logout</span>
+                        <span class="sidebar-text">Logout</span>
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </aside>
+
+<!-- ================= MAIN ================= -->
+<div class="flex-1 flex flex-col bg-gray-50">
+
+<!-- HEADER -->
+<header class="p-6 flex justify-between items-center bg-[#020121] text-white shadow-md">
+
+<h1 class="text-2xl font-semibold tracking-wide">
+    Gym Owner Dashboard
+</h1>
+
+<div class="flex items-center gap-4">
+    <span class="material-symbols-outlined cursor-pointer hover:text-primary transition">notifications</span>
+    <img src="https://i.pravatar.cc/40" class="rounded-full border-2 border-primary">
+</div>
+
+</header>
+
+<!-- CONTENT -->
+<main class="p-6 space-y-10 overflow-y-auto">
+
+<!-- ================= STATS ================= -->
+<section>
+
+<h2 class="text-lg font-semibold text-gray-700 mb-4">Overview</h2>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+<!-- Card -->
+<div class="bg-white p-5 rounded-2xl shadow-sm border hover:shadow-md transition">
+<p class="text-gray-500 text-sm">My Gyms</p>
+<h2 class="text-3xl font-bold text-primary mt-2">3</h2>
+</div>
+
+<div class="bg-white p-5 rounded-2xl shadow-sm border hover:shadow-md transition">
+<p class="text-gray-500 text-sm">Members</p>
+<h2 class="text-3xl font-bold text-green-600 mt-2">120</h2>
+</div>
+
+<div class="bg-white p-5 rounded-2xl shadow-sm border hover:shadow-md transition">
+<p class="text-gray-500 text-sm">Active Subs</p>
+<h2 class="text-3xl font-bold text-blue-600 mt-2">89</h2>
+</div>
+
+<div class="bg-white p-5 rounded-2xl shadow-sm border hover:shadow-md transition">
+<p class="text-gray-500 text-sm">Revenue</p>
+<h2 class="text-3xl font-bold text-purple-600 mt-2">$5,200</h2>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= QUICK ACTIONS ================= -->
+<section>
+
+<h2 class="text-lg font-semibold text-gray-700 mb-4">Quick Actions</h2>
+
+<div class="flex flex-wrap gap-4">
+
+<button class="bg-primary text-black px-6 py-3 rounded-xl shadow hover:scale-105 transition">
++ Add Gym
+</button>
+
+<button class="bg-black text-white px-6 py-3 rounded-xl shadow hover:scale-105 transition">
++ Add Plan
+</button>
+
+<button class="bg-gray-800 text-white px-6 py-3 rounded-xl shadow hover:scale-105 transition">
+View Reports
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= GYMS ================= -->
+<section>
+
+<h2 class="text-lg font-semibold text-gray-700 mb-4">My Gyms</h2>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<!-- Gym Card -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm border hover:shadow-lg transition group">
+
+<img src="../Images/Background3.jpg"
+class="h-44 w-full object-cover group-hover:scale-105 transition">
+
+<div class="p-4 space-y-3">
+
+<div class="flex justify-between items-center">
+<h3 class="font-bold text-gray-800">Gold Gym</h3>
+<span class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded-full">Active</span>
+</div>
+
+<p class="text-sm text-gray-500">Cairo</p>
+
+<div class="flex justify-between text-sm text-gray-600">
+<span>Plans: 3</span>
+<span>⭐ 4.6</span>
+</div>
+
+<button class="w-full mt-3 bg-primary text-black py-2 rounded-lg hover:opacity-90 transition">
+Manage Gym
+</button>
+
+</div>
+</div>
+
+<!-- Gym Card -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm border hover:shadow-lg transition group">
+
+<img src="../Images/Background2.jpg"
+class="h-44 w-full object-cover group-hover:scale-105 transition">
+
+<div class="p-4 space-y-3">
+
+<div class="flex justify-between items-center">
+<h3 class="font-bold text-gray-800">Power Gym</h3>
+<span class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded-full">Active</span>
+</div>
+
+<p class="text-sm text-gray-500">Giza</p>
+
+<div class="flex justify-between text-sm text-gray-600">
+<span>Plans: 2</span>
+<span>⭐ 4.2</span>
+</div>
+
+<button class="w-full mt-3 bg-primary text-black py-2 rounded-lg hover:opacity-90 transition">
+Manage Gym
+</button>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= MEMBERS ================= -->
+<section>
+
+<h2 class="text-lg font-semibold text-gray-700 mb-4">Recent Members</h2>
+
+<div class="bg-white rounded-2xl shadow-sm border divide-y">
+
+<div class="flex justify-between p-4">
+<span class="text-gray-800">Ahmed Ali</span>
+<span class="text-green-600 text-sm">Active</span>
+</div>
+
+<div class="flex justify-between p-4">
+<span class="text-gray-800">Sara Mohamed</span>
+<span class="text-red-500 text-sm">Expired</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PAYMENTS ================= -->
+<section>
+
+<h2 class="text-lg font-semibold text-gray-700 mb-4">Recent Payments</h2>
+
+<div class="bg-white rounded-2xl shadow-sm border divide-y">
+
+<div class="flex justify-between p-4">
+<span class="text-gray-800">$100 - Ahmed Ali</span>
+<span class="text-green-600 text-sm">Paid</span>
+</div>
+
+<div class="flex justify-between p-4">
+<span class="text-gray-800">$60 - Sara Mohamed</span>
+<span class="text-green-600 text-sm">Paid</span>
+</div>
+
+</div>
+
+</section>
+
+</main>
+</div>
+    </div>
+
+    <!-- ================= SCRIPT ================= -->
+    <script>
+    function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const texts = document.querySelectorAll(".sidebar-text");
+
+    sidebar.classList.toggle("w-64");
+    sidebar.classList.toggle("w-20");
+
+    texts.forEach(text => text.classList.toggle("hidden"));
+    }
+    </script>
+
+</body>
+</html>

@@ -1,13 +1,18 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Betania+Patmos&family=Fjalla+One&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap');
 
 @layer base {
     @theme {
         --font-primary: 'Bebas Neue', sans-serif;
         --font-secondary: "Fjalla One", sans-serif;
+        --font-Outfit: 'Outfit', sans-serif;
+        --font-pro: 'source sans pro', sans-serif;
         --color-primary: #F0B100;
+        --color-DashNav: #4e4e75;
         --breakpoint-3xl: 1660px;
         --container-mx-width: 1600px;
         --breakpoint-login: 1550px;
+        --breakpoint-dash: 1250px;
     }
         /* Scrollbar width */
     ::-webkit-scrollbar {
@@ -46,11 +51,19 @@
     .BackToTop {
         animation: floatY 1.2s ease-out infinite;
     }
+    .toBottom {
+        animation: floatY 1.2s ease-out infinite;
+    }
 }
 
 @Layer utilities {
     .Hero-bg {
         background-image: url('../Images/Hero-background.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .User-Hero-bg {
+        background-image: url('../Images/Home_background.jpg');
         background-size: cover;
         background-position: center;
     }
@@ -64,6 +77,11 @@
         background-size: cover;
         background-position: center;
     }
+    .Payment-bg {
+        background-image: url('../Images/Payment-background.jpg');
+        background-size: cover;
+        background-position: center;
+    }
     select {
         background-color: #000;
         color: white;
@@ -74,8 +92,30 @@
         background-color: #111;
         color: white;
     }
+    .Shadow{
+        box-shadow: 0 -10px 110px -31px rgb(255 202 0 / 10%);
+    }
+    .fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 1s ease;
+        will-change: opacity, transform;
+    }
+
+    .fade-up.show {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+
+    .DashShadow{
+        box-shadow: 0 0 10px 6px rgb(193 193 194 / 30%);
+    }
     .Nav-style {
         @apply bg-black/40 flex lg:flex-row md:flex-row sm:flex-row sm:gap-10 items-center justify-between py-8 px-10 fixed w-full z-10 transition-all duration-300 after:content-[''] after:absolute after:w-full after:h-px after:bg-gray-500/90 after:bottom-0 after:left-0;
+    }
+    .User-Nav-style {
+    @apply bg-black/40 lg:grid lg:grid-cols-3 items-center flex py-6 px-10 fixed w-full z-10 transition-all duration-300 
+    after:content-[''] after:absolute after:w-full after:h-px after:bg-gray-500/90 after:bottom-0 after:left-0;
     }
     .Nav-link {
         @apply text-white hover:text-gray-300 text-2xl font-light scroll-smooth transition-all duration-300;
