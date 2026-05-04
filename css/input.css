@@ -9,8 +9,10 @@
         --font-pro: 'source sans pro', sans-serif;
         --color-primary: #F0B100;
         --color-DashNav: #4e4e75;
+        --color-DashColor: #020121;
         --breakpoint-3xl: 1660px;
         --container-mx-width: 1600px;
+        --breakpoint-Dash: 1430px;
         --breakpoint-login: 1550px;
         --breakpoint-dash: 1250px;
     }
@@ -95,6 +97,9 @@
     .Shadow{
         box-shadow: 0 -10px 110px -31px rgb(255 202 0 / 10%);
     }
+    .CardShadow {
+        box-shadow: 0 0 8px 1px rgb(255 202 0 / 30%);
+    }
     .fade-up {
         opacity: 0;
         transform: translateY(20px);
@@ -108,7 +113,7 @@
     }
 
     .DashShadow{
-        box-shadow: 0 0 10px 6px rgb(193 193 194 / 30%);
+        box-shadow: 0 0 18px 0px #312818;
     }
     .Nav-style {
         @apply bg-black/40 flex lg:flex-row md:flex-row sm:flex-row sm:gap-10 items-center justify-between py-8 px-10 fixed w-full z-10 transition-all duration-300 after:content-[''] after:absolute after:w-full after:h-px after:bg-gray-500/90 after:bottom-0 after:left-0;
@@ -134,5 +139,9 @@
             'wght' 400,
             'GRAD' 0,
             'opsz' 50,
+    }
+    .Icons {
+        font-size: 33px !important;
+        font-weight: 100 !important;
     }
 }

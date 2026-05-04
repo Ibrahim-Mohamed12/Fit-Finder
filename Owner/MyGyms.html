@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Dashboard</title>
+<title>Gym Owner Dashboard</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
@@ -15,51 +15,59 @@
 
     <div class="flex h-screen">
 
-        <!-- ================= SIDEBAR ================= -->
+        <!-- Sidebar -->
         <aside id="sidebar" class="DashShadow fixed md:static top-0 left-0 h-full w-80 bg-black md:bg-linear-to-br from-gray-900/20 to-gray-900/30 -translate-x-full md:translate-x-0 transition duration-300 flex flex-col z-50">
-
             <!-- Logo -->
             <div class="flex items-center justify-between p-4 border-primary">
 
                 <img class="w-25 h-auto sidebar-text" src="../Images/White_Logo.png">
 
-                <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-14 cursor-pointer">
-                    <span class="material-symbols-outlined Icons">menu</span>
-                </button>
+                <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-14 cursor-pointer"><span class="material-symbols-outlined Icons">menu</span></button>
 
             </div>
 
             <!-- Menu -->
             <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wider font-thin flex-1">
+                <a href="OwnerDashboard.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
 
-                <a href="AdminDashboard.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
                     <span class="material-symbols-outlined Icons">dashboard</span>
                     <span class="sidebar-text text-2xl">Dashboard</span>
+
                 </a>
 
-                <a href="AdminGyms.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+                <a href="MyGyms.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+
                     <span class="material-symbols-outlined Icons">fitness_center</span>
-                    <span class="sidebar-text text-2xl">Gyms</span>
+                    <span class="sidebar-text text-2xl">My Gyms</span>
+
                 </a>
 
-                <a href="AdminSubscriptions.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <a href="Plans.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
                     <span class="material-symbols-outlined Icons">workspace_premium</span>
-                    <span class="sidebar-text text-2xl">Subscriptions</span>
+                    <span class="sidebar-text text-2xl">Plans</span>
+
                 </a>
 
-                <a href="AdminPayments.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <a href="Earnings.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
                     <span class="material-symbols-outlined Icons">payments</span>
-                    <span class="sidebar-text text-2xl">Payments</span>
+                    <span class="sidebar-text text-2xl">Earnings</span>
+
                 </a>
 
-                <a href="AdminUsers.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <a href="Members.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
                     <span class="material-symbols-outlined Icons">group</span>
-                    <span class="sidebar-text text-2xl">Users</span>
+                    <span class="sidebar-text text-2xl">Members</span>
+
                 </a>
 
-                <a href="AdminMessages.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
-                    <span class="material-symbols-outlined Icons">mail</span>
-                    <span class="sidebar-text text-2xl">Messages</span>
+                <a href="ContactUs.html" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+
+                    <span class="material-symbols-outlined Icons">phone</span>
+                    <span class="sidebar-text text-2xl">Contact US</span>
+
                 </a>
 
                 <!-- Logout -->
@@ -91,7 +99,7 @@
                 </button>
 
                 <h1 class="text-3xl font-primary font-medium tracking-wide">
-                    Admin Dashboard
+                    Gym Owner Dashboard
                 </h1>
 
                 <div class="flex items-center gap-4">
@@ -103,16 +111,65 @@
 
             <!-- CONTENT -->
             <main class="p-6 space-y-10 overflow-y-auto">
+
+                <!-- ================= STATS ================= -->
+                <section class="space-y-6">
+
+                    <!-- ===== MY GYMS STATS ===== -->
+                    <div class="mt-5 grid grid-cols-1 lg:grid-cols-4  gap-5 mx-20">
+
+                        <!-- Total Gyms -->
+                        <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                            <div class="flex items-center justify-between">
+                                <p class="text-sm text-gray-300">My Gyms</p>
+                                <span class="text-yellow-400 material-symbols-outlined">fitness_center</span>
+                            </div>
+                            <h2 class="text-2xl font-bold mt-3">6</h2>
+                            <p class="text-xs text-gray-400 mt-1">Gyms under your management</p>
+                        </div>
+
+                        <!-- Total Members -->
+                        <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                            <div class="flex items-center justify-between">
+                                <p class="text-sm text-gray-300">Total Members</p>
+                                <span class="text-blue-400 material-symbols-outlined">groups</span>
+                            </div>
+                            <h2 class="text-2xl font-bold mt-3">1,240</h2>
+                            <p class="text-xs text-gray-400 mt-1">Across all gyms</p>
+                        </div>
+
+                        <!-- Active Members -->
+                        <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                            <div class="flex items-center justify-between">
+                                <p class="text-sm text-gray-300">Active Members</p>
+                                <span class="text-green-400 material-symbols-outlined">check_circle</span>
+                            </div>
+                            <h2 class="text-2xl font-bold mt-3">860</h2>
+                            <p class="text-xs text-gray-400 mt-1">Currently subscribed</p>
+                        </div>
+
+                        <!-- Monthly Revenue -->
+                        <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                            <div class="flex items-center justify-between">
+                                <p class="text-sm text-gray-300">Revenue</p>
+                                <span class="text-yellow-300 material-symbols-outlined">payments</span>
+                            </div>
+                            <h2 class="text-2xl font-bold mt-3">$3,200</h2>
+                            <p class="text-xs text-gray-400 mt-1">This month</p>
+                        </div>
+
+                    </div>
+                </section>
                 
                 <div class="mb-10 text-center fade-up mt-20">
 
                     <!-- TITLE -->
                     <h2 class="text-5xl sm:text-6xl md:text-7xl font-medium font-primary text-white mb-4">
-                        All <span class="text-primary">Gyms</span>
+                        Your <span class="text-primary">Gyms</span>
                     </h2>
 
                     <p class="text-base sm:text-lg md:text-xl font-light text-gray-300 tracking-wide mb-8">
-                        View and manage all gyms across different branches
+                        Manage your gyms and view their details
                     </p>
 
                     <div class="flex flex-col items-center justify-center gap-6 px-6 lg:px-20 fade-up">
@@ -128,6 +185,15 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
                             </span>
+
+                        </div>
+
+                        <!-- ================= ACTION BUTTON ================= -->
+                        <div class="w-full md:max-w-2xl">
+
+                            <button class="w-full xl:max-w-2xl flex items-center justify-center gap-2 bg-primary text-black px-8 py-3 rounded-xl text-xl md:text-2xl font-medium font-primary hover:opacity-90 hover:scale-[1.02] transition">
+                                <span class="material-symbols-outlined text-2xl">add</span>Add New Gym
+                            </button>
 
                         </div>
 
