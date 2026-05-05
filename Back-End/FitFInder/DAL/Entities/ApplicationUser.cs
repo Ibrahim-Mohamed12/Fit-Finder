@@ -14,5 +14,9 @@ namespace DAL.Entities
         public string Address { get; set; } = null!;
         public string ProfileImgUrl { get; set; } = null!;
 
+        //Relationships
+
+        public ICollection<Gym> Gyms { get; set; }
+        public ICollection<Subscription> Subscriptions { get; set; }
     }
 }

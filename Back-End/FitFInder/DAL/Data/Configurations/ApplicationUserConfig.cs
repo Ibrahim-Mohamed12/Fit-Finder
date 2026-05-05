@@ -23,8 +23,6 @@ namespace DAL.Data.Configurations
 
             builder.Property(u => u.PhoneNumber).HasMaxLength(20);
 
-            builder.Property(u => u.LockoutEnd).HasColumnType("datetime");
-
             builder.Property(u => u.LockoutEnabled).HasColumnType("bit")
                                                    .HasDefaultValue(0);
 

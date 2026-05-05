@@ -1,23 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\ezz\\FitFInder\\FitFinderProject\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E347E924-D354-4EA5-856F-AFF1D5D31119}|..\\DAL\\DAL.csproj|d:\\ezz\\fitfinder\\dal\\data\\configurations\\applicationuserconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E347E924-D354-4EA5-856F-AFF1D5D31119}|..\\DAL\\DAL.csproj|d:\\ezz\\fitfinder\\dal\\data\\context\\fitfinderdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E347E924-D354-4EA5-856F-AFF1D5D31119}|..\\DAL\\DAL.csproj|d:\\ezz\\fitfinder\\dal\\entities\\gym.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E347E924-D354-4EA5-856F-AFF1D5D31119}|..\\DAL\\DAL.csproj|d:\\ezz\\fitfinder\\dal\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E347E924-D354-4EA5-856F-AFF1D5D31119}|..\\DAL\\DAL.csproj|d:\\ezz\\fitfinder\\dal\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -25,76 +9,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationUserConfig.cs",
-              "DocumentMoniker": "D:\\ezz\\FitFInder\\DAL\\Data\\Configurations\\ApplicationUserConfig.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Data\\Configurations\\ApplicationUserConfig.cs",
-              "ToolTip": "D:\\ezz\\FitFInder\\DAL\\Data\\Configurations\\ApplicationUserConfig.cs",
-              "RelativeToolTip": "..\\DAL\\Data\\Configurations\\ApplicationUserConfig.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T15:32:07.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FitFinderDBContext.cs",
-              "DocumentMoniker": "D:\\ezz\\FitFInder\\DAL\\Data\\Context\\FitFinderDBContext.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Data\\Context\\FitFinderDBContext.cs",
-              "ToolTip": "D:\\ezz\\FitFInder\\DAL\\Data\\Context\\FitFinderDBContext.cs",
-              "RelativeToolTip": "..\\DAL\\Data\\Context\\FitFinderDBContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T15:31:18.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "D:\\ezz\\FitFInder\\DAL\\Entities\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Entities\\BaseEntity.cs",
-              "ToolTip": "D:\\ezz\\FitFInder\\DAL\\Entities\\BaseEntity.cs",
-              "RelativeToolTip": "..\\DAL\\Entities\\BaseEntity.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T15:31:12.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Gym.cs",
-              "DocumentMoniker": "D:\\ezz\\FitFInder\\DAL\\Entities\\Gym.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Entities\\Gym.cs",
-              "ToolTip": "D:\\ezz\\FitFInder\\DAL\\Entities\\Gym.cs",
-              "RelativeToolTip": "..\\DAL\\Entities\\Gym.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T15:31:07.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "D:\\ezz\\FitFInder\\DAL\\Entities\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Entities\\ApplicationUser.cs",
-              "ToolTip": "D:\\ezz\\FitFInder\\DAL\\Entities\\ApplicationUser.cs",
-              "RelativeToolTip": "..\\DAL\\Entities\\ApplicationUser.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T15:30:45.677Z",
-              "EditorCaption": ""
             }
           ]
         },
