@@ -1,0 +1,414 @@
+@{
+    ViewBag.Title = "Admin Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="flex h-screen">
+
+    <aside id="sidebar" class="DashShadow fixed md:static top-0 left-0 h-full w-80 bg-black md:bg-linear-to-br from-gray-900/20 to-gray-900/30 -translate-x-full md:translate-x-0 transition duration-300 flex flex-col z-50">
+
+        <!-- Logo -->
+        <div class="flex items-center justify-between p-4 border-primary">
+
+            <img class="w-25 h-auto sidebar-text" src="../Images/White_Logo.png">
+
+            <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-14 cursor-pointer">
+                <span class="material-symbols-outlined Icons">menu</span>
+            </button>
+
+        </div>
+
+        <!-- Menu -->
+        <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wider font-thin flex-1">
+
+            <a asp-controller="Admin" asp-action="AdminDashboard" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">dashboard</span>
+                <span class="sidebar-text text-2xl">Dashboard</span>
+            </a>
+
+            <a asp-controller="Admin" asp-action="AdminGyms" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">fitness_center</span>
+                <span class="sidebar-text text-2xl">Gyms</span>
+            </a>
+
+            <a asp-controller="Admin" asp-action="AdminSubscriptions" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">workspace_premium</span>
+                <span class="sidebar-text text-2xl">Subscriptions</span>
+            </a>
+
+            <a asp-controller="Admin" asp-action="AdminPayments" class="flex items-center gap-5 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">payments</span>
+                <span class="sidebar-text text-2xl">Payments</span>
+            </a>
+
+            <a asp-controller="Admin" asp-action="AdminUsers" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">group</span>
+                <span class="sidebar-text text-2xl">Users</span>
+            </a>
+
+            <a asp-controller="Admin" asp-action="AdminMessages" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">mail</span>
+                <span class="sidebar-text text-2xl">Messages</span>
+            </a>
+
+            <!-- Logout -->
+            <div class="mt-auto text-xl font-primary tracking-wider">
+
+                <button class="w-full flex items-center gap-5 p-3 font-thin text-white rounded hover:bg-gray-800 transition cursor-pointer bg-gray-100/4">
+
+                    <span class="material-symbols-outlined Icons">logout</span>
+                    <span class="sidebar-text text-2xl">Logout</span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </aside>
+
+    <div id="overlay" class="fixed inset-0 bg-black/60 hidden z-40 md:hidden"></div>
+
+    <!-- ================= MAIN ================= -->
+    <div class="flex-1 flex flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
+
+        <header class="p-6 flex justify-between items-center bg-linear-to-br from-gray-900/10 to-gray-900/5  border-b border-gray-800 text-white">
+
+            <!-- MOBILE MENU -->
+            <button onclick="toggleSidebar()" class="md:hidden">
+                <span class="material-symbols-outlined Icons">menu</span>
+            </button>
+
+            <h1 class="text-3xl font-primary font-medium tracking-wide">
+                Admin Dashboard
+            </h1>
+
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined cursor-pointer hover:text-primary transition Icons">notifications</span>
+                <img src="https://i.pravatar.cc/40" class="rounded-full border-2 border-white cursor-pointer" alt="Profile">
+            </div>
+
+        </header>
+
+        <!-- CONTENT -->
+        <main class="p-6 space-y-10 overflow-y-auto">
+
+            <!-- ================= PAYMENTS ================= -->
+            <div class="space-y-10 mt-10 mx-auto px-6 lg:px-20">
+
+                <!-- ===== PAYMENT STATS ===== -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+                    <div class="bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition text-start">
+                        <div class="flex justify-between items-center">
+                            <p class="text-gray-300 text-sm">Total Revenue</p>
+                            <span class="material-symbols-outlined text-green-400">payments</span>
+                        </div>
+                        <h2 class="text-2xl font-bold mt-3">$12,500</h2>
+                        <p class="text-xs text-gray-400">All completed payments</p>
+                    </div>
+
+                    <div class="bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition text-start">
+                        <div class="flex justify-between items-center">
+                            <p class="text-gray-300 text-sm">Admin Profit</p>
+                            <span class="material-symbols-outlined text-blue-400">account_balance</span>
+                        </div>
+                        <h2 class="text-2xl font-bold mt-3">$1,250</h2>
+                        <p class="text-xs text-gray-400">Commission earnings</p>
+                    </div>
+
+                    <div class="bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition text-start">
+                        <div class="flex justify-between items-center">
+                            <p class="text-gray-300 text-sm">Transactions</p>
+                            <span class="material-symbols-outlined text-yellow-400">receipt_long</span>
+                        </div>
+                        <h2 class="text-2xl font-bold mt-3">320</h2>
+                        <p class="text-xs text-gray-400">Total payment records</p>
+                    </div>
+
+                    <div class="bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition text-start">
+                        <div class="flex justify-between items-center">
+                            <p class="text-gray-300 text-sm">Pending Payments</p>
+                            <span class="material-symbols-outlined text-red-400">schedule</span>
+                        </div>
+                        <h2 class="text-2xl font-bold mt-3">$860</h2>
+                        <p class="text-xs text-gray-400">Awaiting confirmation</p>
+                    </div>
+
+                </div>
+
+                <!-- TITLE -->
+                <div class="text-center fade-up mt-20 mb-10">
+                    <h2 class="text-5xl sm:text-6xl md:text-7xl font-medium font-primary text-white mb-3">
+                        Payments
+                    </h2>
+                    <p class="text-gray-400 text-base sm:text-lg">
+                        Track revenue, commissions, and transactions
+                    </p>
+                </div>
+
+
+                <!-- PAYMENTS LIST -->
+                <div class="space-y-4 fade-up">
+
+                    <!-- PAYMENT CARD -->
+                    <div class="bg-black/70 border border-white/10 rounded-2xl p-5 hover:border-primary hover:transition-all hover:scale-[1.02]">
+
+                        <div class="flex flex-col lg:flex-row lg:items-center gap-6">
+
+                            <!-- LEFT -->
+                            <div class="flex-1">
+                                <p class="text-white font-semibold text-lg">$100 Payment</p>
+                                <p class="text-gray-400 text-sm">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- MIDDLE -->
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-around gap-4 text-sm bg-white/5 p-3 rounded-xl">
+                                    <p><span class="text-white font-medium">Admin:</span> <span class="text-green-400">$10</span></p>
+                                    <p><span class="text-white font-medium">Gym:</span> <span class="text-gray-300">$90</span></p>
+                                    <p><span class="text-white font-medium">Method:</span> <span class="text-gray-300">Visa</span></p>
+                                </div>
+                            </div>
+
+                            <!-- RIGHT -->
+                            <div class="flex items-center justify-between lg:justify-end gap-4 flex-1">
+
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                                    Paid
+                                </span>
+
+                                <button class="text-sm text-primary hover:underline">
+                                    Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                                            <!-- PAYMENT CARD -->
+                    <div class="bg-black/70 border border-white/10 rounded-2xl p-5 hover:border-primary hover:transition-all hover:scale-[1.02]">
+
+                        <div class="flex flex-col lg:flex-row lg:items-center gap-6">
+
+                            <!-- LEFT -->
+                            <div class="flex-1">
+                                <p class="text-white font-semibold text-lg">$100 Payment</p>
+                                <p class="text-gray-400 text-sm">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- MIDDLE -->
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-around gap-4 text-sm bg-white/5 p-3 rounded-xl">
+                                    <p><span class="text-white font-medium">Admin:</span> <span class="text-green-400">$10</span></p>
+                                    <p><span class="text-white font-medium">Gym:</span> <span class="text-gray-300">$90</span></p>
+                                    <p><span class="text-white font-medium">Method:</span> <span class="text-gray-300">Visa</span></p>
+                                </div>
+                            </div>
+
+                            <!-- RIGHT -->
+                            <div class="flex items-center justify-between lg:justify-end gap-4 flex-1">
+
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                                    Paid
+                                </span>
+
+                                <button class="text-sm text-primary hover:underline">
+                                    Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                                            <!-- PAYMENT CARD -->
+                    <div class="bg-black/70 border border-white/10 rounded-2xl p-5 hover:border-primary hover:transition-all hover:scale-[1.02]">
+
+                        <div class="flex flex-col lg:flex-row lg:items-center gap-6">
+
+                            <!-- LEFT -->
+                            <div class="flex-1">
+                                <p class="text-white font-semibold text-lg">$100 Payment</p>
+                                <p class="text-gray-400 text-sm">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- MIDDLE -->
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-around gap-4 text-sm bg-white/5 p-3 rounded-xl">
+                                    <p><span class="text-white font-medium">Admin:</span> <span class="text-green-400">$10</span></p>
+                                    <p><span class="text-white font-medium">Gym:</span> <span class="text-gray-300">$90</span></p>
+                                    <p><span class="text-white font-medium">Method:</span> <span class="text-gray-300">Visa</span></p>
+                                </div>
+                            </div>
+
+                            <!-- RIGHT -->
+                            <div class="flex items-center justify-between lg:justify-end gap-4 flex-1">
+
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                                    Paid
+                                </span>
+
+                                <button class="text-sm text-primary hover:underline">
+                                    Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                                            <!-- PAYMENT CARD -->
+                    <div class="bg-black/70 border border-white/10 rounded-2xl p-5 hover:border-primary hover:transition-all hover:scale-[1.02]">
+
+                        <div class="flex flex-col lg:flex-row lg:items-center gap-6">
+
+                            <!-- LEFT -->
+                            <div class="flex-1">
+                                <p class="text-white font-semibold text-lg">$100 Payment</p>
+                                <p class="text-gray-400 text-sm">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- MIDDLE -->
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-around gap-4 text-sm bg-white/5 p-3 rounded-xl">
+                                    <p><span class="text-white font-medium">Admin:</span> <span class="text-green-400">$10</span></p>
+                                    <p><span class="text-white font-medium">Gym:</span> <span class="text-gray-300">$90</span></p>
+                                    <p><span class="text-white font-medium">Method:</span> <span class="text-gray-300">Visa</span></p>
+                                </div>
+                            </div>
+
+                            <!-- RIGHT -->
+                            <div class="flex items-center justify-between lg:justify-end gap-4 flex-1">
+
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                                    Paid
+                                </span>
+
+                                <button class="text-sm text-primary hover:underline">
+                                    Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                                            <!-- PAYMENT CARD -->
+                    <div class="bg-black/70 border border-white/10 rounded-2xl p-5 hover:border-primary hover:transition-all hover:scale-[1.02]">
+
+                        <div class="flex flex-col lg:flex-row lg:items-center gap-6">
+
+                            <!-- LEFT -->
+                            <div class="flex-1">
+                                <p class="text-white font-semibold text-lg">$100 Payment</p>
+                                <p class="text-gray-400 text-sm">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- MIDDLE -->
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-around gap-4 text-sm bg-white/5 p-3 rounded-xl">
+                                    <p><span class="text-white font-medium">Admin:</span> <span class="text-green-400">$10</span></p>
+                                    <p><span class="text-white font-medium">Gym:</span> <span class="text-gray-300">$90</span></p>
+                                    <p><span class="text-white font-medium">Method:</span> <span class="text-gray-300">Visa</span></p>
+                                </div>
+                            </div>
+
+                            <!-- RIGHT -->
+                            <div class="flex items-center justify-between lg:justify-end gap-4 flex-1">
+
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                                    Paid
+                                </span>
+
+                                <button class="text-sm text-primary hover:underline">
+                                    Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                                            <!-- PAYMENT CARD -->
+                    <div class="bg-black/70 border border-white/10 rounded-2xl p-5 hover:border-primary hover:transition-all hover:scale-[1.02]">
+
+                        <div class="flex flex-col lg:flex-row lg:items-center gap-6">
+
+                            <!-- LEFT -->
+                            <div class="flex-1">
+                                <p class="text-white font-semibold text-lg">$100 Payment</p>
+                                <p class="text-gray-400 text-sm">Ahmed Ali • Gold Gym</p>
+                            </div>
+
+                            <!-- MIDDLE -->
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-around gap-4 text-sm bg-white/5 p-3 rounded-xl">
+                                    <p><span class="text-white font-medium">Admin:</span> <span class="text-green-400">$10</span></p>
+                                    <p><span class="text-white font-medium">Gym:</span> <span class="text-gray-300">$90</span></p>
+                                    <p><span class="text-white font-medium">Method:</span> <span class="text-gray-300">Visa</span></p>
+                                </div>
+                            </div>
+
+                            <!-- RIGHT -->
+                            <div class="flex items-center justify-between lg:justify-end gap-4 flex-1">
+
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                                    Paid
+                                </span>
+
+                                <button class="text-sm text-primary hover:underline">
+                                    Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Duplicate cards (repeat same structure) -->
+                    <div class="bg-black/70 border border-white/10 rounded-2xl p-5 hover:border-primary hover:transition-all hover:scale-[1.02]">
+                        <div class="flex flex-col lg:flex-row lg:items-center gap-6">
+
+                            <div class="flex-1">
+                                <p class="text-white font-semibold text-lg">$100 Payment</p>
+                                <p class="text-gray-400 text-sm">Sara Ali • Power Gym</p>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-around gap-4 text-sm bg-white/5 p-3 rounded-xl">
+                                    <p><span class="text-white font-medium">Admin:</span> <span class="text-green-400">$10</span></p>
+                                    <p><span class="text-white font-medium">Gym:</span> <span class="text-gray-300">$90</span></p>
+                                    <p><span class="text-white font-medium">Method:</span> <span class="text-gray-300">Visa</span></p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between lg:justify-end gap-4 flex-1">
+
+                                <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                                    Paid
+                                </span>
+
+                                <button class="text-sm text-primary hover:underline">
+                                    Details
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+</div>

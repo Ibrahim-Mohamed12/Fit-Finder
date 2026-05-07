@@ -1,0 +1,212 @@
+@{
+    ViewBag.Title = "Admin Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="flex h-screen">
+
+    <aside id="sidebar" class="DashShadow fixed md:static top-0 left-0 h-full w-80 bg-black md:bg-linear-to-br from-gray-900/20 to-gray-900/30 -translate-x-full md:translate-x-0 transition duration-300 flex flex-col z-50">
+
+        <!-- Logo -->
+        <div class="flex items-center justify-between p-4 border-primary">
+
+            <img class="w-25 h-auto sidebar-text" src="../Images/White_Logo.png">
+
+            <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-14 cursor-pointer">
+                <span class="material-symbols-outlined Icons">menu</span>
+            </button>
+
+        </div>
+
+        <!-- Menu -->
+        <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wider font-thin flex-1">
+
+            <a asp-controller="Admin" asp-action="AdminDashboard" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">dashboard</span>
+                <span class="sidebar-text text-2xl">Dashboard</span>
+            </a>
+
+            <a asp-controller="Admin" asp-action="AdminGyms" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">fitness_center</span>
+                <span class="sidebar-text text-2xl">Gyms</span>
+            </a>
+
+            <a asp-controller="Admin" asp-action="AdminSubscriptions" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">workspace_premium</span>
+                <span class="sidebar-text text-2xl">Subscriptions</span>
+            </a>
+
+            <a asp-controller="Admin" asp-action="AdminPayments" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">payments</span>
+                <span class="sidebar-text text-2xl">Payments</span>
+            </a>
+
+            <a asp-controller="Admin" asp-action="AdminUsers" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">group</span>
+                <span class="sidebar-text text-2xl">Users</span>
+            </a>
+
+            <a asp-controller="Admin" asp-action="AdminMessages" class="flex items-center gap-5 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+                <span class="material-symbols-outlined Icons">mail</span>
+                <span class="sidebar-text text-2xl">Messages</span>
+            </a>
+
+            <!-- Logout -->
+            <div class="mt-auto text-xl font-primary tracking-wider">
+
+                <button class="w-full flex items-center gap-5 p-3 font-thin text-white rounded hover:bg-gray-800 transition cursor-pointer bg-gray-100/4">
+
+                    <span class="material-symbols-outlined Icons">logout</span>
+                    <span class="sidebar-text text-2xl">Logout</span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </aside>
+
+    <div id="overlay" class="fixed inset-0 bg-black/60 hidden z-40 md:hidden"></div>
+
+    <!-- ================= MAIN ================= -->
+    <div class="flex-1 flex flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
+
+        <header class="p-6 flex justify-between items-center bg-linear-to-br from-gray-900/10 to-gray-900/5  border-b border-gray-800 text-white">
+
+            <!-- MOBILE MENU -->
+            <button onclick="toggleSidebar()" class="md:hidden">
+                <span class="material-symbols-outlined Icons">menu</span>
+            </button>
+
+            <h1 class="text-3xl font-primary font-medium tracking-wide">
+                Admin Dashboard
+            </h1>
+
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined cursor-pointer hover:text-primary transition Icons">notifications</span>
+                <img src="https://i.pravatar.cc/40" class="rounded-full border-2 border-white cursor-pointer" alt="Profile">
+            </div>
+
+        </header>
+
+        <!-- CONTENT -->
+        <main class="p-6 space-y-10 overflow-y-auto">
+
+            <div class="px-6 lg:px-20 py-10 fade-up">
+
+                <!-- ===== CONTACT MESSAGES STATS ===== -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                    <div class="bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition text-start">
+                        <div class="flex justify-between items-center">
+                            <p class="text-gray-300 text-sm">Total Messages</p>
+                            <span class="material-symbols-outlined text-blue-400">mail</span>
+                        </div>
+                        <h2 class="text-2xl font-bold mt-3">128</h2>
+                        <p class="text-xs text-gray-400">All received messages</p>
+                    </div>
+
+                    <div class="bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition text-start">
+                        <div class="flex justify-between items-center">
+                            <p class="text-gray-300 text-sm">Unread</p>
+                            <span class="material-symbols-outlined text-red-400">mark_email_unread</span>
+                        </div>
+                        <h2 class="text-2xl font-bold mt-3">24</h2>
+                        <p class="text-xs text-gray-400">Pending review</p>
+                    </div>
+
+                    <div class="bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition text-start">
+                        <div class="flex justify-between items-center">
+                            <p class="text-gray-300 text-sm">Responded</p>
+                            <span class="material-symbols-outlined text-green-400">mark_email_read</span>
+                        </div>
+                        <h2 class="text-2xl font-bold mt-3">104</h2>
+                        <p class="text-xs text-gray-400">Handled messages</p>
+                    </div>
+
+                </div>
+
+                <!-- TITLE -->
+                <h2 class="text-5xl sm:text-6xl md:text-7xl font-medium font-primary mb-4 text-center mt-20">
+                    Contact <span class="text-primary">Messages</span>
+                </h2>
+
+                <p class="text-base sm:text-lg text-gray-300 mb-15 text-center">
+                    Manage messages sent by users through the contact form
+                </p>
+
+
+            <!-- ===== MESSAGES LIST ===== -->
+            <div class="space-y-4">
+
+                <!-- MESSAGE CARD -->
+                <div class="bg-gray-800/30 hover:bg-gray-800/40 transition p-5 rounded-2xl flex flex-col xl:flex-row md:items-center gap-4">
+
+                    <!-- LEFT -->
+                    <div class="flex-1 text-center xl:text-start gap-2">
+                        <p class="font-semibold text-white">Ahmed Ali</p>
+                        <p class="text-sm text-gray-400">ahmed@email.com</p>
+                        <span class="text-xs text-gray-500">Today • 2:45 PM</span>
+                    </div>
+
+                    <!-- MIDDLE (MESSAGE) -->
+                    <div class="flex-2 bg-gray-900/40 p-4 rounded-xl">
+                        <p class="text-lg text-gray-200 leading-relaxed">
+                            I want to know more about subscription plans and pricing details. Also I would like to know if there are any discounts for yearly subscriptions.
+                        </p>
+                    </div>
+
+                    <!-- RIGHT -->
+                    <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+
+                        <span class="px-3 py-1 rounded-full text-xs bg-red-100 text-red-600">
+                            New
+                        </span>
+
+                        <button class="flex items-center gap-1 px-3 py-2 rounded-lg bg-red-600 hover:bg-red-500 text-white text-sm transition">
+                            <span class="material-symbols-outlined text-sm">delete</span>
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+                    <!-- MESSAGE CARD -->
+                    <div class="bg-gray-800/30 hover:bg-gray-800/40 transition p-5 rounded-2xl flex flex-col xl:flex-row md:items-center gap-4">
+
+                        <div class="flex-1 text-center xl:text-start gap-2">
+                            <p class="font-semibold text-white">Sara Mohamed</p>
+                            <p class="text-sm text-gray-400">sara@email.com</p>
+                            <span class="text-xs text-gray-500">Yesterday • 6:10 PM</span>
+                        </div>
+
+                        <div class="flex-2 bg-gray-900/40 p-4 rounded-xl">
+                            <p class="text-lg text-gray-200 leading-relaxed">
+                                The app is great but I’m facing an issue with payments confirmation. Can you please check my last transaction?
+                            </p>
+                        </div>
+
+                        <div class="flex-1 flex justify-center md:justify-end items-center gap-3">
+
+                            <span class="px-3 py-1 rounded-full text-xs bg-yellow-100 text-yellow-700">
+                                Pending
+                            </span>
+
+                            <button class="flex items-center gap-1 px-3 py-2 rounded-lg bg-red-600 hover:bg-red-500 text-white text-sm transition">
+                                <span class="material-symbols-outlined text-sm">delete</span>
+                                Delete
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    </div>
+
+                </div>
+
+        </main>
+    </div>
+</div>

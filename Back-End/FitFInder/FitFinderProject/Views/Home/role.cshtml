@@ -1,0 +1,53 @@
+@{
+    ViewBag.Title = "Role Page";
+    Layout = "~/Views/Shared/_RegisterLayout.cshtml";
+}
+
+<div class="relative min-h-screen flex flex-col md:flex-row">
+
+    <!-- LOGO -->
+    <a class="absolute top-6 left-6 md:top-10 md:left-10 z-20" asp-controller="Home" asp-action="index">
+        <img src="../Images/White_Logo.png"
+            class="h-10 md:h-12 hover:scale-110 transition-transform duration-300"
+            alt="Logo">
+    </a>
+
+    <!-- LEFT: Gym Owner -->
+    <a asp-controller="Home" asp-action="login" class="group relative flex-1 bg-[url('../Images/role2.jpg')] bg-cover bg-center flex items-center justify-center">
+
+        <div class="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition"></div>
+
+        <div class="relative z-10 text-center flex flex-col items-center gap-4 px-6">
+
+            <h1 class="text-5xl md:text-7xl font-bold tracking-wide text-primary group-hover:scale-110 transition">
+                Gym Owner
+            </h1>
+
+            <p class="text-lg md:text-2xl text-white/80 max-w-md">
+                Manage members, trainers, plans, and gym settings all from one powerful dashboard system
+            </p>
+
+        </div>
+
+    </a>
+
+    <!-- RIGHT: Trainee -->
+    <a asp-controller="Home" asp-action="login" class="group relative flex-1 bg-[url('../Images/role1.jpg')] bg-cover bg-center flex items-center justify-center">
+
+        <div class="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition"></div>
+
+        <div class="relative z-10 text-center flex flex-col items-center gap-4 px-6">
+
+            <h1 class="text-5xl md:text-7xl font-bold tracking-wide text-primary group-hover:scale-110 transition">
+                Trainee
+            </h1>
+
+            <p class="text-lg md:text-2xl text-white/80 max-w-md">
+                Subscribe to a gym, track your plan progress, and manage your fitness journey with ease
+            </p>
+
+        </div>
+
+    </a>
+
+</div>

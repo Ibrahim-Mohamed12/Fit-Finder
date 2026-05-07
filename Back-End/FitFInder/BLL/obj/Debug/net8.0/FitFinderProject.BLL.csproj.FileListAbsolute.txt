@@ -1,0 +1,15 @@
+D:\FitFinder\Back-End\BLL\bin\Debug\net8.0\FitFinderProject.BLL.deps.json
+D:\FitFinder\Back-End\BLL\bin\Debug\net8.0\FitFinderProject.BLL.dll
+D:\FitFinder\Back-End\BLL\bin\Debug\net8.0\FitFinderProject.BLL.pdb
+D:\FitFinder\Back-End\BLL\bin\Debug\net8.0\FitFinderProject.DAL.dll
+D:\FitFinder\Back-End\BLL\bin\Debug\net8.0\FitFinderProject.DAL.pdb
+D:\FitFinder\Back-End\BLL\obj\Debug\net8.0\FitFinderProject.BLL.csproj.AssemblyReference.cache
+D:\FitFinder\Back-End\BLL\obj\Debug\net8.0\FitFinderProject.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\FitFinder\Back-End\BLL\obj\Debug\net8.0\FitFinderProject.BLL.AssemblyInfoInputs.cache
+D:\FitFinder\Back-End\BLL\obj\Debug\net8.0\FitFinderProject.BLL.AssemblyInfo.cs
+D:\FitFinder\Back-End\BLL\obj\Debug\net8.0\FitFinderProject.BLL.csproj.CoreCompileInputs.cache
+D:\FitFinder\Back-End\BLL\obj\Debug\net8.0\FitFinde.700279BB.Up2Date
+D:\FitFinder\Back-End\BLL\obj\Debug\net8.0\FitFinderProject.BLL.dll
+D:\FitFinder\Back-End\BLL\obj\Debug\net8.0\refint\FitFinderProject.BLL.dll
+D:\FitFinder\Back-End\BLL\obj\Debug\net8.0\FitFinderProject.BLL.pdb
+D:\FitFinder\Back-End\BLL\obj\Debug\net8.0\ref\FitFinderProject.BLL.dll

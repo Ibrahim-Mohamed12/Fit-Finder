@@ -14,9 +14,9 @@ namespace FitFinderProject
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-           builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<FitFinderDBContext>()
-                .AddDefaultTokenProviders();
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                 .AddEntityFrameworkStores<FitFinderDBContext>()
+                 .AddDefaultTokenProviders();
 
             builder.Services.AddDbContext<FitFinderDBContext>(options =>
                 options.UseSqlServer(
@@ -40,9 +40,8 @@ namespace FitFinderProject
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

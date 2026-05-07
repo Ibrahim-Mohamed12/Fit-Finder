@@ -1,0 +1,12 @@
+D:\FitFinder\Back-End\DAL\bin\Debug\net8.0\FitFinderProject.DAL.deps.json
+D:\FitFinder\Back-End\DAL\bin\Debug\net8.0\FitFinderProject.DAL.dll
+D:\FitFinder\Back-End\DAL\bin\Debug\net8.0\FitFinderProject.DAL.pdb
+D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\FitFinderProject.DAL.csproj.AssemblyReference.cache
+D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\FitFinderProject.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\FitFinderProject.DAL.AssemblyInfoInputs.cache
+D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\FitFinderProject.DAL.AssemblyInfo.cs
+D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\FitFinderProject.DAL.csproj.CoreCompileInputs.cache
+D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\FitFinderProject.DAL.dll
+D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\refint\FitFinderProject.DAL.dll
+D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\FitFinderProject.DAL.pdb
+D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\ref\FitFinderProject.DAL.dll

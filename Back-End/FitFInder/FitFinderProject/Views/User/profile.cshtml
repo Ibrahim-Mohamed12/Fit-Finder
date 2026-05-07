@@ -1,0 +1,126 @@
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<section class="w-full px-6 lg:px-20 py-20 bg-linear-to-br from-black/95 to-black/90 min-h-screen pt-50">
+
+    <div class="max-w-5xl mx-auto space-y-8">
+
+        <!-- PROFILE CARD -->
+        <div class="bg-black/80 border border-primary/30 rounded-2xl p-6">
+
+            <div class="flex flex-col md:flex-row items-center gap-6">
+
+                <!-- IMAGE -->
+                <img src="../Images/Profile.jpg"
+                    class="w-28 h-28 rounded-full object-cover border-2 border-primary">
+
+                <!-- INFO -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl text-white font-semibold">
+                        Ibrahim Mohamed
+                    </h3>
+                    <p class="text-gray-400 text-md">
+                        ibrahim@email.com
+                    </p>
+
+                    <span class="inline-block mt-2 text-md bg-primary/10 text-primary px-4 py-1 rounded-full">
+                        Active Member
+                    </span>
+                </div>
+
+                <!-- ACTION -->
+                <div class="md:ml-auto">
+                    <button class="bg-primary font-primary text-black px-5 py-2 rounded-lg font-medium text-2xl tracking-normal hover:opacity-90">
+                        Edit Profile
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- STATS -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+            <div class="bg-white/5 p-5 rounded-xl text-center">
+                <p class="text-gray-400 text-sm">Subscriptions</p>
+                <p class="text-white text-xl font-semibold">1 Active</p>
+            </div>
+
+            <div class="bg-white/5 p-5 rounded-xl text-center">
+                <p class="text-gray-400 text-sm">Visits This Month</p>
+                <p class="text-white text-xl font-semibold">12</p>
+            </div>
+
+            <div class="bg-white/5 p-5 rounded-xl text-center">
+                <p class="text-gray-400 text-sm">Saved Gyms</p>
+                <p class="text-white text-xl font-semibold">5</p>
+            </div>
+
+        </div>
+
+        <!-- PERSONAL INFO -->
+        <div class="bg-black/80 border border-primary/30 rounded-2xl p-6">
+
+            <h3 class="text-white font-medium text-2xl tracking-normal mb-4 font-primary">
+                Personal Information
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <div class="flex flex-col gap-2">
+                    <label for="#name" class="text-primary font-primary text-2xl tracking-wide">Name</label>
+                    <input type="text" value="Ibrahim Mohamed" id="name" class="bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary"/>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label for="#email" class="text-primary font-primary text-2xl tracking-wide">Email</label>
+                    <input type="email" value="ibrahim@email.com" id="email"
+                        class="bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary"/>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label for="#phone" class="text-primary font-primary text-2xl tracking-wide">Phone</label>
+                    <input type="text" value="+20 100 000 0000" id="phone"
+                        class="bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary"/>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label for="#address" class="text-primary font-primary text-2xl tracking-wide">Address</label>
+                    <input type="text" value="Sheikh Zayed, Giza" id="address"
+                        class="bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary"/>
+                </div>
+
+            </div>
+
+            <button class="mt-5 bg-primary text-black px-6 py-3 rounded-lg font-semibold hover:opacity-90">
+                Save Changes
+            </button>
+
+        </div>
+
+        <!-- QUICK ACTIONS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            <a href="Subscription.html"
+                class="bg-black/80 border border-primary/30 rounded-xl p-5 text-center hover:border-primary transition">
+                <p class="text-white font-medium text-xl font-primary tracking-wide">Manage Subscription</p>
+            </a>
+
+            <a href="Payments.html"
+                class="bg-black/80 border border-primary/30 rounded-xl p-5 text-center hover:border-primary transition">
+                <p class="text-white font-medium text-xl font-primary tracking-wide">Payment Methods</p>
+            </a>
+
+            <a href="Gyms.html"
+                class="bg-black/80 border border-primary/30 rounded-xl p-5 text-center hover:border-primary transition">
+                <p class="text-white font-medium text-xl font-primary tracking-wide">Explore Gyms</p>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>

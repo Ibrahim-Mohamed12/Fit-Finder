@@ -1,0 +1,133 @@
+@{
+    ViewBag.Title = "Subscriptions";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<section class="w-full px-6 lg:px-20 py-10 bg-linear-to-br from-black/95 to-black/90 pt-50 pb-30">
+
+    <div class="text-center mb-12">
+        <h2 class="text-5xl sm:text-6xl md:text-7xl font-primary font-medium text-white">
+            Your <span class="text-primary">Subscriptions</span>
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl font-light text-gray-300 tracking-wide mb-8">
+            Manage your active plans and track your progress
+        </p>
+    </div>
+
+    <!-- SUB CARD -->
+    <div class="max-w-4xl mx-auto bg-black/80 border border-primary/30 rounded-2xl p-6 space-y-6">
+
+    <!-- HEADER WITH IMAGE -->
+    <div class="flex items-center justify-between gap-4">
+
+        <div class="flex items-center gap-4">
+
+            <!-- Gym Image -->
+            <img src="../Images/Background3.jpg"
+                class="w-16 h-16 rounded-xl object-cover border border-primary/30"
+                alt="Gym">
+
+            <div>
+                <p class="text-gray-400 text-sm">Active Subscription</p>
+                <h3 class="text-2xl text-white font-semibold">FitLife Gym</h3>
+                <p class="text-gray-400 text-sm">Premium Plan</p>
+            </div>
+
+        </div>
+
+        <!-- Status -->
+        <span class="text-green-400 text-sm bg-green-500/10 px-3 py-1 rounded-full">
+            Active
+        </span>
+
+    </div>
+
+    <!-- PLAN INFO -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+
+        <div class="bg-white/5 p-4 rounded-lg">
+            <p class="text-gray-400">Price</p>
+            <p class="text-primary font-semibold">$25 / month</p>
+        </div>
+
+        <div class="bg-white/5 p-4 rounded-lg">
+            <p class="text-gray-400">Next Billing</p>
+            <p class="text-white font-semibold">May 10, 2026</p>
+        </div>
+
+        <div class="bg-white/5 p-4 rounded-lg">
+            <p class="text-gray-400">Days Remaining</p>
+            <p class="text-white font-semibold">18 days</p>
+        </div>
+
+    </div>
+
+    <!-- PAYMENT METHOD -->
+    <div class="bg-white/5 p-4 rounded-lg flex items-center justify-between">
+
+        <div>
+            <p class="text-gray-400 text-sm">Payment Method</p>
+            <p class="text-white font-semibold">Visa •••• 4242</p>
+        </div>
+
+        <!-- Card Icon -->
+        <div class="text-primary text-2xl">
+            💳
+        </div>
+
+    </div>
+
+    <!-- OFFER -->
+    <div class="bg-primary/10 border border-primary/30 p-4 rounded-lg">
+        <p class="text-primary text-sm mb-1">🎁 Applied Offer</p>
+        <p class="text-white text-sm">
+            50% OFF First Month + Free Personal Trainer Session
+        </p>
+    </div>
+
+            <!-- USAGE -->
+        <div class="grid grid-cols-2 gap-4 text-sm">
+
+            <div class="bg-white/5 p-4 rounded-lg">
+                <p class="text-gray-400">Visits This Month</p>
+                <p class="text-white font-semibold">12</p>
+            </div>
+
+            <div class="bg-white/5 p-4 rounded-lg">
+                <p class="text-gray-400">Days Remaining</p>
+                <p class="text-white font-semibold">18 days</p>
+            </div>
+
+        </div>
+
+    <!-- PROGRESS -->
+    <div>
+        <div class="flex justify-between text-xs text-gray-400 mb-1">
+            <span>Subscription Progress</span>
+            <span>60%</span>
+        </div>
+        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+            <div class="h-full bg-primary w-[60%]"></div>
+        </div>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="flex flex-col sm:flex-row gap-3 pt-4">
+
+        <button class="flex-1 bg-primary text-black py-3 rounded-lg font-primary tracking-normal text-2xl font-medium hover:opacity-90 hover:text-primary hover:bg-gray-600/80 transition">
+            Renew Now
+        </button>
+
+        <button class="flex-1 border border-primary text-primary py-3 tracking-normal font-primary text-2xl rounded-lg hover:bg-primary/10 transition">
+            View Gym Details
+        </button>
+
+        <button class="flex-1 bg-red-500 text-white py-3 rounded-lg font-primary tracking-normal text-2xl hover:bg-red-600 transition">
+            Cancel
+        </button>
+
+    </div>
+
+</div>
+
+</section>

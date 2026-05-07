@@ -1,0 +1,104 @@
+@{
+    ViewBag.Title = "Signup Page";
+    Layout = "~/Views/Shared/_RegisterLayout.cshtml";
+}
+
+<div class="min-h-screen flex flex-col lg:flex-row bg-linear-to-br from-black/94 to-black/90">
+
+    <!-- Left: Form Section -->
+    <div class="flex-1 flex flex-col items-center justify-center p-6 lg:p-16">
+        
+        <a href="index.html" class="mb-8 self-start">
+            <img src="../Images/White_Logo.png" alt="Logo" class="h-10 w-auto transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        </a>
+
+        <div class="w-full max-w-3xl bg-black/30 p-8 lg:p-10 rounded-lg shadow-lg">
+
+            <form action="index.html" class="space-y-6">
+
+                <h1 class="text-4xl sm:text-5xl font-semibold text-primary text-center">CREATE ACCOUNT</h1>
+
+                <p class="text-white/70 text-center tracking-wide text-xl sm:text-2xl">Creating an account and starting the journey</p>
+
+                <!-- Name & Email -->
+                <div class="flex-1 flex flex-col">
+                    <label class="mb-2 text-2xl tracking-wide text-primary">Full Name <span class="text-red-600 text-sm">*</span></label>
+                    <input type="text" placeholder="Enter your full name"
+                    class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
+                </div>
+                <div class="flex-1 flex flex-col">
+                    <label class="mb-2 text-2xl tracking-wide text-primary">Email <span class="text-red-600 text-sm">*</span></label>
+                    <input type="email" placeholder="Enter your email"
+                    class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
+                </div>
+
+                <!-- Password & Confirm -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex-1 flex flex-col">
+                        <label class="mb-2 text-2xl tracking-wide text-primary">Password <span class="text-red-600 text-sm">*</span></label>
+                        <input type="password" placeholder="Enter your password"
+                        class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
+                    </div>
+                    <div class="flex-1 flex flex-col">
+                        <label class="mb-2 text-2xl tracking-wide text-primary">Confirm Password <span class="text-red-600 text-sm">*</span></label>
+                        <input type="password" placeholder="Confirm your password"
+                        class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
+                    </div>
+                </div>
+
+                <!-- Gender -->
+                <div class="relative flex flex-col cursor-pointer">
+                    <label class="mb-2 text-2xl tracking-wide text-primary">Gender <span class="text-red-600 text-sm">*</span></label>
+                    <select name="Gender" id="gender"
+                    class="appearance-none font- w-full p-5 text-xl font-secondary rounded-sm bg-black/40 border border-gray-500 text-white/55 focus:border-primary outline-none transition">
+                        <option value="">Select your Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <!-- Custom arrow -->
+                    <div class="pointer-events-none absolute right-4 top-17 text-white/80">
+                        <svg class="w-4 h-4" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </div>
+                    
+                <!-- Submit Button -->
+                <button type="submit"
+                class="w-full bg-black text-primary border border-primary hover:bg-primary hover:text-black font-medium text-2xl py-3 rounded-sm transition transform hover:scale-102 shadow-lg cursor-pointer">
+                Submit
+                </button>
+
+                <!-- Login Link -->
+                <p class="text-center text-primary tracking-wide text-lg sm:text-xl">Already have an Account? <a asp-controller="Home" asp-action="login" class="text-white hover:underline text-lg sm:text-2xl"> Log in</a></p>
+            </form>
+
+        <!-- OR Divider -->
+        <div class="flex items-center justify-center gap-4 my-6">
+            <div class="flex-1 h-px bg-gray-500"></div>
+                <span class="text-primary text-2xl tracking-wide">OR</span>
+            <div class="flex-1 h-px bg-gray-500"></div>
+        </div>
+
+            <!-- Social Buttons -->
+            <div class="space-y-4">
+                <button class="flex items-center justify-center gap-2 w-full bg-black/40 border border-gray-500 hover:border-primary text-white/80 px-4 py-3 rounded-sm font-medium text-2xl hover:scale-102 transition shadow-lg">  
+                    <i class="fa-brands fa-google"></i>
+                    Login with Google
+                </button>
+
+                <button class="flex items-center justify-center gap-2 w-full bg-black/40 border border-gray-500 hover:border-primary text-white/80 px-4 py-3 rounded-sm font-medium text-2xl hover:scale-102 transition shadow-lg">
+                    <i class="fa-brands fa-facebook"></i>
+                    Login with Facebook
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right: Image / Sidebar -->
+    <div class="hidden login:flex flex-1 bg-linear-to-br from-black/25 to-black/20 border-l border-primary">
+        <div class="w-full h-full shadow-lg bg-cover bg-center" style="background-image: url('../Images/Login-background.jpg');"></div>
+    </div>
+
+</div>
