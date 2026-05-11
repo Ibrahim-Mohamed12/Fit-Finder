@@ -1,3 +1,4 @@
+@model SignUpViewModel
 @{
     ViewBag.Title = "Signup Page";
     Layout = "~/Views/Shared/_RegisterLayout.cshtml";
@@ -13,22 +14,25 @@
         </a>
 
         <div class="w-full max-w-3xl bg-black/30 p-8 lg:p-10 rounded-lg shadow-lg">
-
-            <form action="index.html" class="space-y-6">
+       
+            <form asp-action="signup" asp-controller="Home" method="post" class="space-y-6">
+                @Html.AntiForgeryToken()
 
                 <h1 class="text-4xl sm:text-5xl font-semibold text-primary text-center">CREATE ACCOUNT</h1>
 
                 <p class="text-white/70 text-center tracking-wide text-xl sm:text-2xl">Creating an account and starting the journey</p>
 
+                <div asp-validation-summary="All" style="color: red; background-color: white;"></div>
+
                 <!-- Name & Email -->
                 <div class="flex-1 flex flex-col">
                     <label class="mb-2 text-2xl tracking-wide text-primary">Full Name <span class="text-red-600 text-sm">*</span></label>
-                    <input type="text" placeholder="Enter your full name"
+                    <input asp-for="Name" type="text" placeholder="Enter your full name"
                     class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
                 </div>
                 <div class="flex-1 flex flex-col">
                     <label class="mb-2 text-2xl tracking-wide text-primary">Email <span class="text-red-600 text-sm">*</span></label>
-                    <input type="email" placeholder="Enter your email"
+                    <input asp-for="Email" type="email" placeholder="Enter your email"
                     class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
                 </div>
 
@@ -36,12 +40,12 @@
                 <div class="flex flex-col md:flex-row gap-6">
                     <div class="flex-1 flex flex-col">
                         <label class="mb-2 text-2xl tracking-wide text-primary">Password <span class="text-red-600 text-sm">*</span></label>
-                        <input type="password" placeholder="Enter your password"
+                        <input asp-for="Password" type="password" placeholder="Enter your password"
                         class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
                     </div>
                     <div class="flex-1 flex flex-col">
                         <label class="mb-2 text-2xl tracking-wide text-primary">Confirm Password <span class="text-red-600 text-sm">*</span></label>
-                        <input type="password" placeholder="Confirm your password"
+                        <input asp-for="ConfirmPassword" type="password" placeholder="Confirm your password"
                         class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
                     </div>
                 </div>
@@ -49,11 +53,9 @@
                 <!-- Gender -->
                 <div class="relative flex flex-col cursor-pointer">
                     <label class="mb-2 text-2xl tracking-wide text-primary">Gender <span class="text-red-600 text-sm">*</span></label>
-                    <select name="Gender" id="gender"
+                    <select asp-for="Gender" asp-items="@(new SelectList(new[] { new { Value = "Male", Text = "Male" }, new { Value = "Female", Text = "Female" } }, "Value", "Text"))" id="gender"
                     class="appearance-none font- w-full p-5 text-xl font-secondary rounded-sm bg-black/40 border border-gray-500 text-white/55 focus:border-primary outline-none transition">
-                        <option value="">Select your Gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
+                    
                     </select>
 
                     <!-- Custom arrow -->

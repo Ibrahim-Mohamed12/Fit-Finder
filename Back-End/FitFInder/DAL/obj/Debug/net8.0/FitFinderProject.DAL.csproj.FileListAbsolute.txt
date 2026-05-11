@@ -10,3 +10,15 @@ D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\FitFinderProject.DAL.dll
 D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\refint\FitFinderProject.DAL.dll
 D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\FitFinderProject.DAL.pdb
 D:\FitFinder\Back-End\DAL\obj\Debug\net8.0\ref\FitFinderProject.DAL.dll
+D:\ezz\FitFInder\DAL\obj\Debug\net8.0\FitFinderProject.DAL.csproj.AssemblyReference.cache
+D:\ezz\FitFInder\DAL\obj\Debug\net8.0\FitFinderProject.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ezz\FitFInder\DAL\obj\Debug\net8.0\FitFinderProject.DAL.AssemblyInfoInputs.cache
+D:\ezz\FitFInder\DAL\obj\Debug\net8.0\FitFinderProject.DAL.AssemblyInfo.cs
+D:\ezz\FitFInder\DAL\obj\Debug\net8.0\FitFinderProject.DAL.csproj.CoreCompileInputs.cache
+D:\ezz\FitFInder\DAL\obj\Debug\net8.0\FitFinderProject.DAL.dll
+D:\ezz\FitFInder\DAL\obj\Debug\net8.0\refint\FitFinderProject.DAL.dll
+D:\ezz\FitFInder\DAL\obj\Debug\net8.0\FitFinderProject.DAL.pdb
+D:\ezz\FitFInder\DAL\bin\Debug\net8.0\FitFinderProject.DAL.deps.json
+D:\ezz\FitFInder\DAL\bin\Debug\net8.0\FitFinderProject.DAL.dll
+D:\ezz\FitFInder\DAL\bin\Debug\net8.0\FitFinderProject.DAL.pdb
+D:\ezz\FitFInder\DAL\obj\Debug\net8.0\ref\FitFinderProject.DAL.dll

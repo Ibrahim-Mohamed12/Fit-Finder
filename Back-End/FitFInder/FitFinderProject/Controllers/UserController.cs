@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FitFinderProject.PL.Controllers
 {
+    [Authorize(Roles = "Trainee")]
     public class UserController : Controller
     {
         public IActionResult UserHome()

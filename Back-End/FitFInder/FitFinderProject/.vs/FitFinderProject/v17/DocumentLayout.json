@@ -1,149 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\FitFinder\\Back-End\\FitFinderProject\\",
+  "WorkspaceRootPath": "D:\\ezz\\FitFInder\\FitFinderProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\shared\\_ownerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\shared\\_ownerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\home\\role.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\home\\role.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\shared\\_homelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\shared\\_homelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\shared\\_registerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\shared\\_registerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\user\\gyms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\user\\gyms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\admin\\adminusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\admin\\adminusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\owner\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\owner\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\owner\\ownerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\owner\\ownerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\admin\\adminmessages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\admin\\adminmessages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\admin\\adminpayments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\admin\\adminpayments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\admin\\adminsubscriptions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\admin\\adminsubscriptions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\admin\\admingyms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\admin\\admingyms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\owner\\mygyms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\owner\\mygyms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\owner\\plans.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\owner\\plans.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\owner\\earnings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\owner\\earnings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\owner\\members.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\owner\\members.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\user\\userhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\user\\userhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\user\\contacts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\user\\contacts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\user\\payments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\user\\payments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\controllers\\ownercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\ezz\\fitfinder\\fitfinderproject\\controllers\\ownercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:controllers\\ownercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\user\\subscription.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\user\\subscription.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E2500470-4818-44B7-ADEC-5398E4E438AA}|..\\BLL\\FitFinderProject.BLL.csproj|d:\\ezz\\fitfinder\\bll\\service\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\ezz\\fitfinder\\fitfinderproject\\views\\owner\\ownerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\owner\\ownerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2500470-4818-44B7-ADEC-5398E4E438AA}|..\\BLL\\FitFinderProject.BLL.csproj|d:\\fitfinder\\back-end\\bll\\fitfinderproject.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\wwwroot\\css\\output.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:wwwroot\\css\\output.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\fitfinder\\back-end\\fitfinderproject\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|d:\\ezz\\fitfinder\\fitfinderproject\\models\\ownerdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19C27B22-21F0-402F-B9BD-C405EC94B11E}|FitFinderProject.PL.csproj|solutionrelative:models\\ownerdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -153,7 +25,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -161,467 +33,83 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Gyms.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\Gyms.cshtml",
-              "RelativeDocumentMoniker": "Views\\User\\Gyms.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\Gyms.cshtml",
-              "RelativeToolTip": "Views\\User\\Gyms.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T14:28:10.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBUAAAApAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GenericService.cs",
+              "DocumentMoniker": "D:\\ezz\\FitFInder\\BLL\\Service\\GenericService.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Service\\GenericService.cs",
+              "ToolTip": "D:\\ezz\\FitFInder\\BLL\\Service\\GenericService.cs",
+              "RelativeToolTip": "..\\BLL\\Service\\GenericService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T13:31:53.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_HomeLayout.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_HomeLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_HomeLayout.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_HomeLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_HomeLayout.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACYAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:35:07.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "OwnerDashboard.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\OwnerDashboard.cshtml",
-              "RelativeDocumentMoniker": "Views\\Owner\\OwnerDashboard.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\OwnerDashboard.cshtml",
-              "RelativeToolTip": "Views\\Owner\\OwnerDashboard.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADYAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:41:05.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_RegisterLayout.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_RegisterLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_RegisterLayout.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_RegisterLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_RegisterLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:45:04.888Z",
+              "WhenOpened": "2026-05-11T19:25:01.988Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_OwnerLayout.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_OwnerLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_OwnerLayout.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_OwnerLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_OwnerLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:55:26.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_UserLayout.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_UserLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_UserLayout.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_UserLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_UserLayout.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAADIAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T14:18:10.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "signup.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Home\\signup.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\signup.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Home\\signup.cshtml",
-              "RelativeToolTip": "Views\\Home\\signup.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEkAAACYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T14:20:28.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "login.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Home\\login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\login.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Home\\login.cshtml",
-              "RelativeToolTip": "Views\\Home\\login.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAACsAAACbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:44:21.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBkAAAAjAAAAAAAAAA==",
+              "Title": "OwnerController.cs",
+              "DocumentMoniker": "D:\\ezz\\FitFInder\\FitFinderProject\\Controllers\\OwnerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OwnerController.cs",
+              "ToolTip": "D:\\ezz\\FitFInder\\FitFinderProject\\Controllers\\OwnerController.cs",
+              "RelativeToolTip": "Controllers\\OwnerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T13:31:33.181Z",
+              "WhenOpened": "2026-05-11T19:21:33.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "role.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Home\\role.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\role.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Home\\role.cshtml",
-              "RelativeToolTip": "Views\\Home\\role.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:41:21.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "index.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Home\\index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\index.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Home\\index.cshtml",
-              "RelativeToolTip": "Views\\Home\\index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:34:43.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "MyGyms.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\MyGyms.cshtml",
-              "RelativeDocumentMoniker": "Views\\Owner\\MyGyms.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\MyGyms.cshtml",
-              "RelativeToolTip": "Views\\Owner\\MyGyms.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADcAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:56:23.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AdminGyms.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminGyms.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\AdminGyms.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminGyms.cshtml",
-              "RelativeToolTip": "Views\\Admin\\AdminGyms.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAACAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:31:19.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AdminSubscriptions.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminSubscriptions.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\AdminSubscriptions.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminSubscriptions.cshtml",
-              "RelativeToolTip": "Views\\Admin\\AdminSubscriptions.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABcAAAB2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T14:09:51.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AdminUsers.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminUsers.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\AdminUsers.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminUsers.cshtml",
-              "RelativeToolTip": "Views\\Admin\\AdminUsers.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABcAAAB2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T14:09:59.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ContactUs.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\ContactUs.cshtml",
-              "RelativeDocumentMoniker": "Views\\Owner\\ContactUs.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\ContactUs.cshtml",
-              "RelativeToolTip": "Views\\Owner\\ContactUs.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADcAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:55:11.979Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AdminMessages.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminMessages.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\AdminMessages.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminMessages.cshtml",
-              "RelativeToolTip": "Views\\Admin\\AdminMessages.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADAAAACEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:58:41.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AdminPayments.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminPayments.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\AdminPayments.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminPayments.cshtml",
-              "RelativeToolTip": "Views\\Admin\\AdminPayments.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABcAAAB3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T14:09:44.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Plans.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\Plans.cshtml",
-              "RelativeDocumentMoniker": "Views\\Owner\\Plans.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\Plans.cshtml",
-              "RelativeToolTip": "Views\\Owner\\Plans.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:58:39.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Earnings.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\Earnings.cshtml",
-              "RelativeDocumentMoniker": "Views\\Owner\\Earnings.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\Earnings.cshtml",
-              "RelativeToolTip": "Views\\Owner\\Earnings.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADcAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:58:34.634Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Members.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\Members.cshtml",
-              "RelativeDocumentMoniker": "Views\\Owner\\Members.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Owner\\Members.cshtml",
-              "RelativeToolTip": "Views\\Owner\\Members.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADcAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:58:33.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:42:35.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UserHome.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\UserHome.cshtml",
-              "RelativeDocumentMoniker": "Views\\User\\UserHome.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\UserHome.cshtml",
-              "RelativeToolTip": "Views\\User\\UserHome.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T14:18:05.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AdminDashboard.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminDashboard.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\AdminDashboard.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Admin\\AdminDashboard.cshtml",
-              "RelativeToolTip": "Views\\Admin\\AdminDashboard.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADAAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:31:12.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Payments.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\Payments.cshtml",
-              "RelativeDocumentMoniker": "Views\\User\\Payments.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\Payments.cshtml",
-              "RelativeToolTip": "Views\\User\\Payments.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T14:27:34.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Contacts.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\Contacts.cshtml",
-              "RelativeDocumentMoniker": "Views\\User\\Contacts.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\Contacts.cshtml",
-              "RelativeToolTip": "Views\\User\\Contacts.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T14:28:54.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:32:55.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "OwnerController.cs",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Controllers\\OwnerController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OwnerController.cs",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Controllers\\OwnerController.cs",
-              "RelativeToolTip": "Controllers\\OwnerController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA3wAcAAAAJAAAAAAAAAA==",
+              "Title": "OwnerDashboardViewModel.cs",
+              "DocumentMoniker": "D:\\ezz\\FitFInder\\FitFinderProject\\Models\\OwnerDashboardViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\OwnerDashboardViewModel.cs",
+              "ToolTip": "D:\\ezz\\FitFInder\\FitFinderProject\\Models\\OwnerDashboardViewModel.cs",
+              "RelativeToolTip": "Models\\OwnerDashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T13:32:26.472Z",
+              "WhenOpened": "2026-05-11T18:56:57.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Subscription.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\Subscription.cshtml",
-              "RelativeDocumentMoniker": "Views\\User\\Subscription.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\Subscription.cshtml",
-              "RelativeToolTip": "Views\\User\\Subscription.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "OwnerDashboard.cshtml",
+              "DocumentMoniker": "D:\\ezz\\FitFInder\\FitFinderProject\\Views\\Owner\\OwnerDashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Owner\\OwnerDashboard.cshtml",
+              "ToolTip": "D:\\ezz\\FitFInder\\FitFinderProject\\Views\\Owner\\OwnerDashboard.cshtml",
+              "RelativeToolTip": "Views\\Owner\\OwnerDashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T14:25:21.188Z",
+              "WhenOpened": "2026-05-11T18:53:24.422Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "profile.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\profile.cshtml",
-              "RelativeDocumentMoniker": "Views\\User\\profile.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\User\\profile.cshtml",
-              "RelativeToolTip": "Views\\User\\profile.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T14:26:50.113Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "FitFinderProject.BLL",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\BLL\\FitFinderProject.BLL.csproj",
-              "RelativeDocumentMoniker": "..\\BLL\\FitFinderProject.BLL.csproj",
-              "ToolTip": "D:\\FitFinder\\Back-End\\BLL\\FitFinderProject.BLL.csproj",
-              "RelativeToolTip": "..\\BLL\\FitFinderProject.BLL.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-07T14:21:35.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:42:18.841Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-07T13:42:41.963Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T13:31:23.84Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "output.css",
-              "DocumentMoniker": "D:\\FitFinder\\Back-End\\FitFinderProject\\wwwroot\\css\\output.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\output.css",
-              "ToolTip": "D:\\FitFinder\\Back-End\\FitFinderProject\\wwwroot\\css\\output.css",
-              "RelativeToolTip": "wwwroot\\css\\output.css",
-              "ViewState": "AgIAANwNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-07T13:32:35.52Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             }
           ]
         }

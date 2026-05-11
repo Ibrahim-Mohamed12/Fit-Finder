@@ -1,3 +1,4 @@
+@model LoginViewModel
 @{
     ViewBag.Title = "Login Page";
     Layout = "~/Views/Shared/_RegisterLayout.cshtml";
@@ -14,23 +15,26 @@
 
         <div class="w-full max-w-2xl bg-black/30 p-8 lg:p-10 rounded-lg shadow-lg">
 
-            <form action="index.html" class="space-y-6">
+            <form asp-controller="Home" asp-action="login" method="post" class="space-y-6">
+                @Html.AntiForgeryToken()
 
                 <h1 class="text-4xl sm:text-5xl font-semibold text-primary text-center">Welcome Back</h1>
 
                 <p class="text-white/70 text-center tracking-wide text-xl sm:text-2xl">Access your account and manage your gym experience</p>
 
+                <div asp-validation-summary="All" style="color: red; background-color: white;"></div>
+
                 <!-- Name & Email -->
                 <div class="flex-1 flex flex-col">
                     <label class="mb-2 text-2xl tracking-wide text-primary">Email <span class="text-red-600 text-sm">*</span></label>
-                    <input type="email" placeholder="Enter your email"
+                    <input asp-for="Email" type="email" placeholder="Enter your email"
                     class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
                 </div>
 
                 <!-- Password & Confirm -->
                 <div class="flex-1 flex flex-col">
                     <label class="mb-2 text-2xl tracking-wide text-primary">Password <span class="text-red-600 text-sm">*</span></label>
-                    <input type="password" placeholder="Enter your password"
+                    <input asp-for="Password" type="password" placeholder="Enter your password"
                     class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
                 </div>
                     
@@ -40,8 +44,8 @@
                 Submit
                 </button>
 
-                <!-- Login Link -->
-                <p class="text-center text-primary tracking-wide text-lg sm:text-xl">don't have an Account? <a asp-asp-controller="Home" asp-action="signup" class="text-white hover:underline text-lg sm:text-2xl"> Sign Up</a></p>
+                <!-- SignUp Link -->
+                <p class="text-center text-primary tracking-wide text-lg sm:text-xl">don't have an Account? <a asp-controller="Home" asp-action="signup" class="text-white hover:underline text-lg sm:text-2xl"> Sign Up</a></p>
             </form>
 
         <!-- OR Divider -->
@@ -68,7 +72,7 @@
 
     <!-- Right: Image / Sidebar -->
     <div class="hidden login:flex flex-1 bg-linear-to-br from-black/90 to-black/90 border-l border-primary z-10">
-        <div class="w-full h-full shadow-lg bg-cover bg-center" style="background-image: url('../Images/Login-background.jpg');"></div>
+        <div class="w-full h-full shadow-lg bg-cover bg-center" style="background-image: url('~/images/Login-background.jpg');"></div>
     </div>
 
 </div>

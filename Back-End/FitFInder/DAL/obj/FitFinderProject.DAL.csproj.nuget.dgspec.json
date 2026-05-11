@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FitFinder\\Back-End\\DAL\\FitFinderProject.DAL.csproj": {}
+    "D:\\ezz\\FitFInder\\DAL\\FitFinderProject.DAL.csproj": {}
   },
   "projects": {
-    "D:\\FitFinder\\Back-End\\DAL\\FitFinderProject.DAL.csproj": {
+    "D:\\ezz\\FitFInder\\DAL\\FitFinderProject.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FitFinder\\Back-End\\DAL\\FitFinderProject.DAL.csproj",
+        "projectUniqueName": "D:\\ezz\\FitFInder\\DAL\\FitFinderProject.DAL.csproj",
         "projectName": "FitFinderProject.DAL",
-        "projectPath": "D:\\FitFinder\\Back-End\\DAL\\FitFinderProject.DAL.csproj",
-        "packagesPath": "C:\\Users\\Domain\\.nuget\\packages\\",
-        "outputPath": "D:\\FitFinder\\Back-End\\DAL\\obj\\",
+        "projectPath": "D:\\ezz\\FitFInder\\DAL\\FitFinderProject.DAL.csproj",
+        "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
+        "outputPath": "D:\\ezz\\FitFInder\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Domain\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

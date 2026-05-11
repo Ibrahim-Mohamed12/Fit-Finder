@@ -1,11 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DAL.Entities;
+using FitFinderProject.BLL.Interface;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FitFinderProject.PL.Controllers
 {
+    [Authorize(Roles = "Owner")]
     public class OwnerController : Controller
     {
+        private readonly IGenericService<Gym> Gym;
+
+        //Rest of the services will be added later as needed
+        //because of EL-NOMA
+        public OwnerController(IGenericService<Gym> gym)
+        {
+            Gym = gym;
+        }
+
         public IActionResult OwnerDashboard()
         {
+             
+
             return View();
         }
 
