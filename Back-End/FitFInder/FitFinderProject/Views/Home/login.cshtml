@@ -1,68 +1,70 @@
-@model LoginViewModel
+﻿@model LoginViewModel
 @{
     ViewBag.Title = "Login Page";
     Layout = "~/Views/Shared/_RegisterLayout.cshtml";
 }
 
-<div class="min-h-screen flex flex-col lg:flex-row bg-linear-to-br from-black/94 to-black/90">
+<div class="flex min-h-screen flex-col bg-linear-to-br from-black/94 to-black/90 lg:flex-row">
 
     <!-- Left: Form Section -->
-    <div class="flex-1 flex flex-col items-center justify-center p-6 lg:p-16">
+    <div class="flex flex-1 flex-col items-center justify-center p-6 lg:p-16">
         
         <a href="index.html" class="mb-8 self-start">
-            <img src="../Images/White_Logo.png" alt="Logo" class="h-10 w-auto transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+            <img src="../Images/White_Logo.png" alt="Logo" class="h-10 w-auto transform cursor-pointer transition-transform duration-300 hover:scale-110">
         </a>
 
-        <div class="w-full max-w-2xl bg-black/30 p-8 lg:p-10 rounded-lg shadow-lg">
+        <div class="w-full max-w-2xl rounded-lg bg-black/30 p-8 shadow-lg lg:p-10">
 
             <form asp-controller="Home" asp-action="login" method="post" class="space-y-6">
                 @Html.AntiForgeryToken()
 
-                <h1 class="text-4xl sm:text-5xl font-semibold text-primary text-center">Welcome Back</h1>
+                <h1 class="text-primary text-center text-4xl font-semibold sm:text-5xl">Welcome Back</h1>
 
-                <p class="text-white/70 text-center tracking-wide text-xl sm:text-2xl">Access your account and manage your gym experience</p>
+                <p class="text-center text-xl tracking-wide text-white/70 sm:text-2xl">Access your account and manage your gym experience</p>
 
-                <div asp-validation-summary="All" style="color: red; background-color: white;"></div>
+                <div asp-validation-summary="All"
+                     class="border-messageBorder bg-messageBackground text-messageText rounded-md border-3 p-2">
+                </div>
 
                 <!-- Name & Email -->
-                <div class="flex-1 flex flex-col">
-                    <label class="mb-2 text-2xl tracking-wide text-primary">Email <span class="text-red-600 text-sm">*</span></label>
+                <div class="flex flex-1 flex-col">
+                    <label class="text-primary mb-2 text-2xl tracking-wide">Email <span class="text-sm text-red-600">*</span></label>
                     <input asp-for="Email" type="email" placeholder="Enter your email"
-                    class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
+                    class="font-secondary w-full rounded-sm border border-gray-500 bg-black/40 p-5 text-xl transition outline-none focus:border-primary">
                 </div>
 
                 <!-- Password & Confirm -->
-                <div class="flex-1 flex flex-col">
-                    <label class="mb-2 text-2xl tracking-wide text-primary">Password <span class="text-red-600 text-sm">*</span></label>
+                <div class="flex flex-1 flex-col">
+                    <label class="text-primary mb-2 text-2xl tracking-wide">Password <span class="text-sm text-red-600">*</span></label>
                     <input asp-for="Password" type="password" placeholder="Enter your password"
-                    class="p-5 rounded-sm bg-black/40 border text-xl font-secondary border-gray-500 focus:border-primary outline-none transition w-full">
+                    class="font-secondary w-full rounded-sm border border-gray-500 bg-black/40 p-5 text-xl transition outline-none focus:border-primary">
                 </div>
                     
                 <!-- Submit Button -->
                 <button type="submit"
-                class="w-full bg-black text-primary border border-primary hover:bg-primary hover:text-black font-medium text-2xl py-3 rounded-sm transition transform hover:scale-102 shadow-lg cursor-pointer">
+                class="text-primary border-primary w-full transform cursor-pointer rounded-sm border bg-black py-3 text-2xl font-medium shadow-lg transition hover:bg-primary hover:scale-102 hover:text-black">
                 Submit
                 </button>
 
                 <!-- SignUp Link -->
-                <p class="text-center text-primary tracking-wide text-lg sm:text-xl">don't have an Account? <a asp-controller="Home" asp-action="signup" class="text-white hover:underline text-lg sm:text-2xl"> Sign Up</a></p>
+                <p class="text-primary text-center text-lg tracking-wide sm:text-xl">don't have an Account? <a asp-controller="Home" asp-action="signup" class="text-lg text-white hover:underline sm:text-2xl"> Sign Up</a></p>
             </form>
 
         <!-- OR Divider -->
-        <div class="flex items-center justify-center gap-4 my-6">
-            <div class="flex-1 h-px bg-gray-500"></div>
+        <div class="my-6 flex items-center justify-center gap-4">
+            <div class="h-px flex-1 bg-gray-500"></div>
                 <span class="text-primary text-2xl tracking-wide">OR</span>
-            <div class="flex-1 h-px bg-gray-500"></div>
+            <div class="h-px flex-1 bg-gray-500"></div>
         </div>
 
             <!-- Social Buttons -->
             <div class="space-y-4">
-                <button class="flex items-center justify-center gap-2 w-full bg-black/40 border border-gray-500 hover:border-primary text-white/80 px-4 py-3 rounded-sm font-medium text-2xl hover:scale-102 transition shadow-lg">  
+                <button class="flex w-full items-center justify-center gap-2 rounded-sm border border-gray-500 bg-black/40 px-4 py-3 text-2xl font-medium text-white/80 shadow-lg transition hover:border-primary hover:scale-102">  
                     <i class="fa-brands fa-google"></i>
                     Login with Google
                 </button>
 
-                <button class="flex items-center justify-center gap-2 w-full bg-black/40 border border-gray-500 hover:border-primary text-white/80 px-4 py-3 rounded-sm font-medium text-2xl hover:scale-102 transition shadow-lg">
+                <button class="flex w-full items-center justify-center gap-2 rounded-sm border border-gray-500 bg-black/40 px-4 py-3 text-2xl font-medium text-white/80 shadow-lg transition hover:border-primary hover:scale-102">
                     <i class="fa-brands fa-facebook"></i>
                     Login with Facebook
                 </button>
@@ -71,8 +73,8 @@
     </div>
 
     <!-- Right: Image / Sidebar -->
-    <div class="hidden login:flex flex-1 bg-linear-to-br from-black/90 to-black/90 border-l border-primary z-10">
-        <div class="w-full h-full shadow-lg bg-cover bg-center" style="background-image: url('~/images/Login-background.jpg');"></div>
+    <div class="border-primary z-10 hidden flex-1 border-l bg-linear-to-br from-black/90 to-black/90 login:flex">
+        <div class="h-full w-full bg-cover bg-center shadow-lg" style="background-image: url('../Images/Login-background.jpg');"></div>
     </div>
 
 </div>

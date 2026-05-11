@@ -1,5 +1,4 @@
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Betania+Patmos&family=Fjalla+One&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap');
+﻿@import "tailwindcss";
 
 @layer base {
     @theme {
@@ -15,8 +14,12 @@
         --breakpoint-Dash: 1430px;
         --breakpoint-login: 1550px;
         --breakpoint-dash: 1250px;
+        --color-messageBorder: #721c24;
+        --color-messageBackground: #f8d7da;
+        --color-messageText: #721c24;
     }
-        /* Scrollbar width */
+
+    /* Scrollbar width */
     ::-webkit-scrollbar {
         width: 8px;
     }
@@ -32,19 +35,21 @@
         border-radius: 6px;
     }
 
-    /* Hover effect */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #ffd54a;
-    }
+        /* Hover effect */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffd54a;
+        }
 
 
     @keyframes floatY {
         0% {
             transform: translateY(0);
         }
+
         50% {
             transform: translateY(-15px);
         }
+
         100% {
             transform: translateY(0);
         }
@@ -53,53 +58,78 @@
     .BackToTop {
         animation: floatY 1.2s ease-out infinite;
     }
+
     .toBottom {
         animation: floatY 1.2s ease-out infinite;
     }
 }
 
-@Layer utilities {
+@layer utilities {
     .Hero-bg {
         background-image: url('../Images/Hero-background.jpg');
         background-size: cover;
         background-position: center;
     }
+
     .User-Hero-bg {
         background-image: url('../Images/Home_background.jpg');
         background-size: cover;
         background-position: center;
     }
+
     .About-bg {
         background-image: url('../Images/About-background.jpg');
         background-size: cover;
         background-position: center;
     }
+
     .Login-bg {
         background-image: url('../Images/Login-background.jpg');
         background-size: cover;
         background-position: center;
     }
+
     .Payment-bg {
         background-image: url('../Images/Payment-background.jpg');
         background-size: cover;
         background-position: center;
     }
+
+    .role1-bg {
+        background-image: url('../Images/role1.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .role2-bg {
+        background-image: url('../Images/role2.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
     select {
         background-color: #000;
         color: white;
         border: 1px solid #F0B100;
     }
 
-    select option {
-        background-color: #111;
-        color: white;
+        select option {
+            background-color: #111;
+            color: white;
+        }
+
+    .validation-summary-valid {
+        display: none;
     }
-    .Shadow{
+
+    .Shadow {
         box-shadow: 0 -10px 110px -31px rgb(255 202 0 / 10%);
     }
+
     .CardShadow {
         box-shadow: 0 0 8px 1px rgb(255 202 0 / 30%);
     }
+
     .fade-up {
         opacity: 0;
         transform: translateY(20px);
@@ -107,39 +137,41 @@
         will-change: opacity, transform;
     }
 
-    .fade-up.show {
-        opacity: 1;
-        transform: translateY(0); 
-    }
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    .DashShadow{
+    .DashShadow {
         box-shadow: 0 0 18px 0px #312818;
     }
+
     .Nav-style {
-        @apply bg-black/40 flex lg:flex-row md:flex-row sm:flex-row sm:gap-10 items-center justify-between py-8 px-10 fixed w-full z-10 transition-all duration-300 after:content-[''] after:absolute after:w-full after:h-px after:bg-gray-500/90 after:bottom-0 after:left-0;
+        @apply fixed z-10 flex w-full items-center justify-between bg-black/40 px-10 py-8 transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-gray-500/90 after:content-[''] sm:flex-row sm:gap-10 md:flex-row lg:flex-row;
     }
+
     .User-Nav-style {
-    @apply bg-black/40 lg:grid lg:grid-cols-3 items-center flex py-6 px-10 fixed w-full z-10 transition-all duration-300 
-    after:content-[''] after:absolute after:w-full after:h-px after:bg-gray-500/90 after:bottom-0 after:left-0;
+        @apply fixed z-10 flex w-full items-center bg-black/40 px-10 py-6 transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-gray-500/90 after:content-[''] lg:grid lg:grid-cols-3;
     }
+
     .Nav-link {
-        @apply text-white hover:text-gray-300 text-2xl font-light scroll-smooth transition-all duration-300;
+        @apply scroll-smooth text-2xl font-light text-white transition-all duration-300 hover:text-gray-300;
     }
+
     .Form-style {
-        @apply w-full max-w-5xl text-white p-10 shadow-lg border-2 border-primary space-y-6 bg-black/60 [clip-path:polygon(0%_0%,90%_0%,200%_100%,0%_99%)];
+        @apply border-primary w-full max-w-5xl space-y-6 border-2 bg-black/60 p-10 text-white shadow-lg [clip-path:polygon(0%_0%,90%_0%,200%_100%,0%_99%)];
     }
+
     .Services-Card {
-        @apply bg-black/80 border-2 border-yellow-500 p-4 sm:p-6 rounded-sm shadow-lg transition-all duration-300 hover:scale-105 skew-y-2;
+        @apply skew-y-2 rounded-sm border-2 border-yellow-500 bg-black/80 p-4 shadow-lg transition-all duration-300 hover:scale-105 sm:p-6;
     }
 }
-@Layer components {
+
+@layer components {
     .material-symbols-outlined {
-        font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 50,
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 50,
     }
+
     .Icons {
         font-size: 33px !important;
         font-weight: 100 !important;

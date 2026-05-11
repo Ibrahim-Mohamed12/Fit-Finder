@@ -1,29 +1,29 @@
-@{
+﻿@{
     ViewBag.Title = "Role Page";
     Layout = "~/Views/Shared/_RegisterLayout.cshtml";
 }
 
-<div class="relative min-h-screen flex flex-col md:flex-row">
+<div class="relative flex min-h-screen flex-col md:flex-row">
 
     <!-- LOGO -->
-    <a class="absolute top-6 left-6 md:top-10 md:left-10 z-20" asp-controller="Home" asp-action="index">
+    <a class="absolute top-6 left-6 z-20 md:top-10 md:left-10" asp-controller="Home" asp-action="index">
         <img src="../Images/White_Logo.png"
-            class="h-10 md:h-12 hover:scale-110 transition-transform duration-300"
+            class="h-10 transition-transform duration-300 hover:scale-110 md:h-12"
             alt="Logo">
     </a>
 
     <!-- LEFT: Gym Owner -->
-    <a asp-controller="Home" asp-action="login" asp-route-role="G" class="group relative flex-1 bg-[url('../Images/role2.jpg')] bg-cover bg-center flex items-center justify-center">
+    <a asp-controller="Home" asp-action="login" asp-route-role="G" class="group role2-bg relative flex flex-1 items-center justify-center">
 
-        <div class="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition"></div>
+        <div class="absolute inset-0 bg-black/70 transition group-hover:bg-black/50"></div>
 
-        <div class="relative z-10 text-center flex flex-col items-center gap-4 px-6">
+        <div class="relative z-10 flex flex-col items-center gap-4 px-6 text-center">
 
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide text-primary group-hover:scale-110 transition">
+            <h1 class="text-primary text-5xl font-bold tracking-wide transition group-hover:scale-110 md:text-7xl">
                 Gym Owner
             </h1>
 
-            <p class="text-lg md:text-2xl text-white/80 max-w-md">
+            <p class="max-w-md text-lg text-white/80 md:text-2xl">
                 Manage members, trainers, plans, and gym settings all from one powerful dashboard system
             </p>
 
@@ -32,17 +32,17 @@
     </a>
 
     <!-- RIGHT: Trainee -->
-    <a asp-controller="Home" asp-action="login" asp-route-role="T" class="group relative flex-1 bg-[url('../Images/role1.jpg')] bg-cover bg-center flex items-center justify-center">
+    <a asp-controller="Home" asp-action="login" asp-route-role="T" class="group role1-bg relative flex flex-1 items-center justify-center">
 
-        <div class="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition"></div>
+        <div class="absolute inset-0 bg-black/70 transition group-hover:bg-black/50"></div>
 
-        <div class="relative z-10 text-center flex flex-col items-center gap-4 px-6">
+        <div class="relative z-10 flex flex-col items-center gap-4 px-6 text-center">
 
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide text-primary group-hover:scale-110 transition">
+            <h1 class="text-primary text-5xl font-bold tracking-wide transition group-hover:scale-110 md:text-7xl">
                 Trainee
             </h1>
 
-            <p class="text-lg md:text-2xl text-white/80 max-w-md">
+            <p class="max-w-md text-lg text-white/80 md:text-2xl">
                 Subscribe to a gym, track your plan progress, and manage your fitness journey with ease
             </p>
 

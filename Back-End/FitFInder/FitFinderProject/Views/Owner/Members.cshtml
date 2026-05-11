@@ -1,4 +1,4 @@
-@{
+﻿@{
     ViewBag.Title = "Owner Dashboard";
     Layout = "~/Views/Shared/_OwnerLayout.cshtml";
 }
@@ -6,54 +6,54 @@
 <div class="flex h-screen">
 
     <!-- Sidebar -->
-    <aside id="sidebar" class="DashShadow fixed md:static top-0 left-0 h-full w-80 bg-black md:bg-linear-to-br from-gray-900/20 to-gray-900/30 -translate-x-full md:translate-x-0 transition duration-300 flex flex-col z-50">
+    <aside id="sidebar" class="DashShadow fixed top-0 left-0 z-50 flex h-full w-80 -translate-x-full flex-col bg-black from-gray-900/20 to-gray-900/30 transition duration-300 md:static md:translate-x-0 md:bg-linear-to-br">
         <!-- Logo -->
-        <div class="flex items-center justify-between p-4 border-primary">
+        <div class="border-primary flex items-center justify-between p-4">
 
-            <img class="w-25 h-auto sidebar-text" src="../Images/White_Logo.png">
+            <img class="sidebar-text h-auto w-25" src="../Images/White_Logo.png">
 
-            <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-14 cursor-pointer"><span class="material-symbols-outlined Icons">menu</span></button>
+            <button onclick="toggleSidebar()" class="h-14 cursor-pointer rounded p-2 hover:bg-gray-800"><span class="material-symbols-outlined Icons">menu</span></button>
 
         </div>
 
         <!-- Menu -->
-        <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wider font-thin flex-1">
-            <a asp-controller="Owner" asp-action="OwnerDashboard" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+        <nav class="font-primary flex flex-1 flex-col gap-3 p-3 text-xl font-thin tracking-wider">
+            <a asp-controller="Owner" asp-action="OwnerDashboard" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">dashboard</span>
                 <span class="sidebar-text text-2xl">Dashboard</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="MyGyms" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="MyGyms" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">fitness_center</span>
                 <span class="sidebar-text text-2xl">My Gyms</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Plans" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Plans" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">workspace_premium</span>
                 <span class="sidebar-text text-2xl">Plans</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Earnings" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Earnings" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">payments</span>
                 <span class="sidebar-text text-2xl">Earnings</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Members" class="flex items-center gap-5 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Members" class="flex cursor-pointer items-center gap-5 rounded bg-zinc-400/30 p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">group</span>
                 <span class="sidebar-text text-2xl">Members</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="ContactUs" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="ContactUs" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">phone</span>
                 <span class="sidebar-text text-2xl">Contact US</span>
@@ -61,9 +61,9 @@
             </a>
 
             <!-- Logout -->
-            <div class="mt-auto text-xl font-primary tracking-wider">
+            <div class="font-primary mt-auto text-xl tracking-wider">
 
-                <button class="w-full flex items-center gap-5 p-3 font-thin text-white rounded hover:bg-gray-800 transition cursor-pointer bg-gray-100/4">
+                <button class="flex w-full cursor-pointer items-center gap-5 rounded bg-gray-100/4 p-3 font-thin text-white transition hover:bg-gray-800">
 
                     <span class="material-symbols-outlined Icons">logout</span>
                     <span class="sidebar-text text-2xl">Logout</span>
@@ -76,25 +76,25 @@
 
     </aside>
 
-    <div id="overlay" class="fixed inset-0 bg-black/60 hidden z-40 md:hidden"></div>
+    <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/60 md:hidden"></div>
 
     <!-- ================= MAIN ================= -->
-    <div class="flex-1 flex flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
+    <div class="flex flex-1 flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
 
-        <header class="p-6 flex justify-between items-center bg-linear-to-br from-gray-900/10 to-gray-900/5 border-b border-gray-800 text-white">
+        <header class="flex items-center justify-between border-b border-gray-800 bg-linear-to-br from-gray-900/10 to-gray-900/5 p-6 text-white">
 
             <!-- MOBILE MENU -->
-            <button onclick="toggleSidebar()" class="md:hidden">
+            <button onclick="toggleSidebar()" class="cursor-pointer md:hidden">
                 <span class="material-symbols-outlined Icons">menu</span>
             </button>
 
-            <h1 class="text-3xl font-primary font-medium tracking-wide">
+            <h1 class="font-primary text-3xl font-medium tracking-wide">
                 Gym Owner Dashboard
             </h1>
 
             <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined cursor-pointer hover:text-primary transition Icons">notifications</span>
-                <img src="https://i.pravatar.cc/40" class="rounded-full border-2 border-white cursor-pointer" alt="Profile">
+                <span class="material-symbols-outlined Icons cursor-pointer transition hover:text-primary">notifications</span>
+                <img src="https://i.pravatar.cc/40" class="cursor-pointer rounded-full border-2 border-white" alt="Profile">
             </div>
 
         </header>
@@ -103,48 +103,48 @@
         <main class="space-y-10 overflow-y-auto">
 
             <!-- ================= STATS ================= -->
-            <section class="space-y-6 mx-auto px-6 lg:px-20">
+            <section class="mx-auto space-y-6 px-6 lg:px-20">
 
-                <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
                     <!-- Total Members -->
-                    <div class="bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Total Members</p>
-                            <span class="text-blue-400 text-xl material-symbols-outlined">group</span>
+                            <span class="material-symbols-outlined text-xl text-blue-400">group</span>
                         </div>
-                        <h2 class="text-3xl font-bold mt-3">320</h2>
-                        <p class="text-xs text-gray-400 mt-1">All registered users</p>
+                        <h2 class="mt-3 text-3xl font-bold">320</h2>
+                        <p class="mt-1 text-xs text-gray-400">All registered users</p>
                     </div>
 
                     <!-- Active Members -->
-                    <div class="bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Active Members</p>
-                            <span class="text-green-400 text-xl material-symbols-outlined">check_circle</span>
+                            <span class="material-symbols-outlined text-xl text-green-400">check_circle</span>
                         </div>
-                        <h2 class="text-3xl font-bold mt-3">141</h2>
-                        <p class="text-xs text-gray-400 mt-1">Currently subscribed</p>
+                        <h2 class="mt-3 text-3xl font-bold">141</h2>
+                        <p class="mt-1 text-xs text-gray-400">Currently subscribed</p>
                     </div>
 
                     <!-- Expired -->
-                    <div class="bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Expired</p>
-                            <span class="text-red-400 text-xl material-symbols-outlined">block</span>
+                            <span class="material-symbols-outlined text-xl text-red-400">block</span>
                         </div>
-                        <h2 class="text-3xl font-bold mt-3">20</h2>
-                        <p class="text-xs text-gray-400 mt-1">Need renewal</p>
+                        <h2 class="mt-3 text-3xl font-bold">20</h2>
+                        <p class="mt-1 text-xs text-gray-400">Need renewal</p>
                     </div>
 
                     <!-- New This Month -->
-                    <div class="bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">New This Month</p>
-                            <span class="text-yellow-400  text-xl material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined text-xl text-yellow-400">star</span>
                         </div>
-                        <h2 class="text-3xl font-bold mt-3">3</h2>
-                        <p class="text-xs text-gray-400 mt-1">Recent joiners</p>
+                        <h2 class="mt-3 text-3xl font-bold">3</h2>
+                        <p class="mt-1 text-xs text-gray-400">Recent joiners</p>
                     </div>
 
                 </div>
@@ -152,28 +152,28 @@
             </section>
                 
             <!-- ================= Members ================= -->
-            <section class="space-y-6 mx-auto px-6 lg:px-20">
+            <section class="mx-auto space-y-6 px-6 lg:px-20">
 
-                <div class="mb-10 text-center fade-up mt-20">
+                <div class="fade-up mt-20 mb-10 text-center">
 
                     <!-- TITLE -->
-                    <h2 class="text-5xl sm:text-6xl md:text-7xl font-medium font-primary text-white mb-4">
+                    <h2 class="font-primary mb-4 text-5xl font-medium text-white sm:text-6xl md:text-7xl">
                         Members <span class="text-primary"></span>
                     </h2>
 
-                    <p class="text-base sm:text-lg md:text-xl font-light text-gray-300 tracking-wide mb-8">
+                    <p class="mb-8 text-base font-light tracking-wide text-gray-300 sm:text-lg md:text-xl">
                         Manage and monitor gym members across all branches
                     </p>
 
-                    <div class="flex flex-col items-center justify-center gap-6 px-6 lg:px-20 fade-up my-10">
+                    <div class="fade-up my-10 flex flex-col items-center justify-center gap-6 px-6 lg:px-20">
 
                         <!-- ================= SEARCH ================= -->
                         <div class="relative w-full md:max-w-2xl">
 
-                            <input type="text" placeholder="Search gyms..." class="w-full bg-black/70 text-base md:text-lg border border-primary/40 focus:border-primary text-white placeholder-gray-400 pl-5 pr-12 py-4 rounded-xl outline-none transition"/>
+                            <input type="text" placeholder="Search gyms..." class="border-primary/40 w-full rounded-xl border bg-black/70 py-4 pr-12 pl-5 text-base text-white placeholder-gray-400 transition outline-none focus:border-primary md:text-lg"/>
 
                             <!-- ICON -->
-                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
+                            <span class="absolute top-1/2 right-4 -translate-y-1/2 text-gray-400">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
@@ -182,23 +182,23 @@
                         </div>
 
                         <!-- FILTERS -->
-                        <div class="flex flex-wrap justify-center gap-4 mb-10">
+                        <div class="mb-10 flex flex-wrap justify-center gap-4">
 
-                            <div class="flex items-center px-8 py-2 gap-2 text-md rounded-md border border-primary/70 text-gray-300 hover:bg-primary hover:text-black cursor-pointer transition">
+                            <div class="text-md border-primary/70 flex cursor-pointer items-center gap-2 rounded-md border px-8 py-2 text-gray-300 transition hover:bg-primary hover:text-black">
                                 <span class="material-symbols-outlined cursor-pointer">group</span>
                                 <button class="cursor-pointer">
                                     All
                                 </button>
                             </div>
 
-                            <div class="flex items-center px-8 py-2 gap-2 text-md rounded-md border border-primary/70 text-gray-300 hover:bg-primary hover:text-black cursor-pointer transition">
+                            <div class="text-md border-primary/70 flex cursor-pointer items-center gap-2 rounded-md border px-8 py-2 text-gray-300 transition hover:bg-primary hover:text-black">
                                 <span class="material-symbols-outlined cursor-pointer">check_circle</span>
                                 <button class="cursor-pointer">
                                     Active
                                 </button>
                             </div>
 
-                            <div class="flex items-center px-8 py-2 gap-1 text-md rounded-md border border-primary/70 text-gray-300 hover:bg-primary hover:text-black cursor-pointer transition">
+                            <div class="text-md border-primary/70 flex cursor-pointer items-center gap-1 rounded-md border px-8 py-2 text-gray-300 transition hover:bg-primary hover:text-black">
                                 <span class="material-symbols-outlined cursor-pointer">cancel</span>
                                 <button class="cursor-pointer">
                                     Expired
@@ -210,20 +210,20 @@
                     </div>
 
                     <!-- ===== MEMBERS GRID ===== -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-20 fade-up">
+                    <div class="fade-up mb-20 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
 
                         <!-- CARD -->
-                        <div class="bg-black/70 border border-gray-800 rounded-2xl p-5 hover:border-primary transition">
+                        <div class="rounded-2xl border border-gray-800 bg-black/70 p-5 transition hover:border-primary">
 
                             <!-- USER HEADER -->
-                            <div class="flex items-center gap-4 mb-4">
+                            <div class="mb-4 flex items-center gap-4">
 
                                 <img src="https://i.pravatar.cc/80?img=1"
-                                    class="w-14 h-14 rounded-full border border-gray-700">
+                                    class="h-14 w-14 rounded-full border border-gray-700">
 
                                 <div>
-                                    <h3 class="text-white font-semibold">Ahmed Ali</h3>
-                                    <p class="text-gray-400 text-sm">ahmed@mail.com</p>
+                                    <h3 class="font-semibold text-white">Ahmed Ali</h3>
+                                    <p class="text-sm text-gray-400">ahmed@mail.com</p>
                                 </div>
 
                             </div>
@@ -231,11 +231,11 @@
                             <!-- GYM INFO -->
                             <div class="mb-3">
                                 <p class="text-sm text-gray-400">Gym</p>
-                                <p class="text-white font-medium">FitLife Gym</p>
+                                <p class="font-medium text-white">FitLife Gym</p>
                             </div>
 
                             <!-- SUB INFO -->
-                            <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div class="mb-4 grid grid-cols-2 gap-3 text-sm">
 
                                 <div>
                                     <p class="text-gray-400">Plan</p>
@@ -244,7 +244,7 @@
 
                                 <div>
                                     <p class="text-gray-400">Status</p>
-                                    <p class="text-green-400 font-medium">Active</p>
+                                    <p class="font-medium text-green-400">Active</p>
                                 </div>
 
                                 <div>
@@ -262,11 +262,11 @@
                             <!-- ACTIONS -->
                             <div class="flex gap-2">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-medium">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-medium text-black">
                                     View
                                 </button>
 
-                                <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg text-sm">
+                                <button class="flex-1 rounded-lg border border-red-500 py-2 text-sm text-red-400">
                                     Remove
                                 </button>
 
@@ -275,17 +275,17 @@
                         </div>
 
                                                     <!-- CARD -->
-                        <div class="bg-black/70 border border-gray-800 rounded-2xl p-5 hover:border-primary transition">
+                        <div class="rounded-2xl border border-gray-800 bg-black/70 p-5 transition hover:border-primary">
 
                             <!-- USER HEADER -->
-                            <div class="flex items-center gap-4 mb-4">
+                            <div class="mb-4 flex items-center gap-4">
 
                                 <img src="https://i.pravatar.cc/80?img=1"
-                                    class="w-14 h-14 rounded-full border border-gray-700">
+                                    class="h-14 w-14 rounded-full border border-gray-700">
 
                                 <div>
-                                    <h3 class="text-white font-semibold">Ahmed Ali</h3>
-                                    <p class="text-gray-400 text-sm">ahmed@mail.com</p>
+                                    <h3 class="font-semibold text-white">Ahmed Ali</h3>
+                                    <p class="text-sm text-gray-400">ahmed@mail.com</p>
                                 </div>
 
                             </div>
@@ -293,11 +293,11 @@
                             <!-- GYM INFO -->
                             <div class="mb-3">
                                 <p class="text-sm text-gray-400">Gym</p>
-                                <p class="text-white font-medium">FitLife Gym</p>
+                                <p class="font-medium text-white">FitLife Gym</p>
                             </div>
 
                             <!-- SUB INFO -->
-                            <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div class="mb-4 grid grid-cols-2 gap-3 text-sm">
 
                                 <div>
                                     <p class="text-gray-400">Plan</p>
@@ -306,7 +306,7 @@
 
                                 <div>
                                     <p class="text-gray-400">Status</p>
-                                    <p class="text-green-400 font-medium">Active</p>
+                                    <p class="font-medium text-green-400">Active</p>
                                 </div>
 
                                 <div>
@@ -324,11 +324,11 @@
                             <!-- ACTIONS -->
                             <div class="flex gap-2">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-medium">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-medium text-black">
                                     View
                                 </button>
 
-                                <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg text-sm">
+                                <button class="flex-1 rounded-lg border border-red-500 py-2 text-sm text-red-400">
                                     Remove
                                 </button>
 
@@ -337,17 +337,17 @@
                         </div>
 
                                                     <!-- CARD -->
-                        <div class="bg-black/70 border border-gray-800 rounded-2xl p-5 hover:border-primary transition">
+                        <div class="rounded-2xl border border-gray-800 bg-black/70 p-5 transition hover:border-primary">
 
                             <!-- USER HEADER -->
-                            <div class="flex items-center gap-4 mb-4">
+                            <div class="mb-4 flex items-center gap-4">
 
                                 <img src="https://i.pravatar.cc/80?img=1"
-                                    class="w-14 h-14 rounded-full border border-gray-700">
+                                    class="h-14 w-14 rounded-full border border-gray-700">
 
                                 <div>
-                                    <h3 class="text-white font-semibold">Ahmed Ali</h3>
-                                    <p class="text-gray-400 text-sm">ahmed@mail.com</p>
+                                    <h3 class="font-semibold text-white">Ahmed Ali</h3>
+                                    <p class="text-sm text-gray-400">ahmed@mail.com</p>
                                 </div>
 
                             </div>
@@ -355,11 +355,11 @@
                             <!-- GYM INFO -->
                             <div class="mb-3">
                                 <p class="text-sm text-gray-400">Gym</p>
-                                <p class="text-white font-medium">FitLife Gym</p>
+                                <p class="font-medium text-white">FitLife Gym</p>
                             </div>
 
                             <!-- SUB INFO -->
-                            <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div class="mb-4 grid grid-cols-2 gap-3 text-sm">
 
                                 <div>
                                     <p class="text-gray-400">Plan</p>
@@ -368,7 +368,7 @@
 
                                 <div>
                                     <p class="text-gray-400">Status</p>
-                                    <p class="text-green-400 font-medium">Active</p>
+                                    <p class="font-medium text-green-400">Active</p>
                                 </div>
 
                                 <div>
@@ -386,11 +386,11 @@
                             <!-- ACTIONS -->
                             <div class="flex gap-2">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-medium">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-medium text-black">
                                     View
                                 </button>
 
-                                <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg text-sm">
+                                <button class="flex-1 rounded-lg border border-red-500 py-2 text-sm text-red-400">
                                     Remove
                                 </button>
 
@@ -399,17 +399,17 @@
                         </div>
 
                                                     <!-- CARD -->
-                        <div class="bg-black/70 border border-gray-800 rounded-2xl p-5 hover:border-primary transition">
+                        <div class="rounded-2xl border border-gray-800 bg-black/70 p-5 transition hover:border-primary">
 
                             <!-- USER HEADER -->
-                            <div class="flex items-center gap-4 mb-4">
+                            <div class="mb-4 flex items-center gap-4">
 
                                 <img src="https://i.pravatar.cc/80?img=1"
-                                    class="w-14 h-14 rounded-full border border-gray-700">
+                                    class="h-14 w-14 rounded-full border border-gray-700">
 
                                 <div>
-                                    <h3 class="text-white font-semibold">Ahmed Ali</h3>
-                                    <p class="text-gray-400 text-sm">ahmed@mail.com</p>
+                                    <h3 class="font-semibold text-white">Ahmed Ali</h3>
+                                    <p class="text-sm text-gray-400">ahmed@mail.com</p>
                                 </div>
 
                             </div>
@@ -417,11 +417,11 @@
                             <!-- GYM INFO -->
                             <div class="mb-3">
                                 <p class="text-sm text-gray-400">Gym</p>
-                                <p class="text-white font-medium">FitLife Gym</p>
+                                <p class="font-medium text-white">FitLife Gym</p>
                             </div>
 
                             <!-- SUB INFO -->
-                            <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div class="mb-4 grid grid-cols-2 gap-3 text-sm">
 
                                 <div>
                                     <p class="text-gray-400">Plan</p>
@@ -430,7 +430,7 @@
 
                                 <div>
                                     <p class="text-gray-400">Status</p>
-                                    <p class="text-green-400 font-medium">Active</p>
+                                    <p class="font-medium text-green-400">Active</p>
                                 </div>
 
                                 <div>
@@ -448,11 +448,11 @@
                             <!-- ACTIONS -->
                             <div class="flex gap-2">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-medium">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-medium text-black">
                                     View
                                 </button>
 
-                                <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg text-sm">
+                                <button class="flex-1 rounded-lg border border-red-500 py-2 text-sm text-red-400">
                                     Remove
                                 </button>
 
@@ -461,26 +461,26 @@
                         </div>
 
                         <!-- CARD 2 -->
-                        <div class="bg-black/70 border border-gray-800 rounded-2xl p-5 hover:border-primary transition">
+                        <div class="rounded-2xl border border-gray-800 bg-black/70 p-5 transition hover:border-primary">
 
-                            <div class="flex items-center gap-4 mb-4">
+                            <div class="mb-4 flex items-center gap-4">
 
                                 <img src="https://i.pravatar.cc/80?img=2"
-                                    class="w-14 h-14 rounded-full border border-gray-700">
+                                    class="h-14 w-14 rounded-full border border-gray-700">
 
                                 <div>
-                                    <h3 class="text-white font-semibold">Sara Mohamed</h3>
-                                    <p class="text-gray-400 text-sm">sara@mail.com</p>
+                                    <h3 class="font-semibold text-white">Sara Mohamed</h3>
+                                    <p class="text-sm text-gray-400">sara@mail.com</p>
                                 </div>
 
                             </div>
 
                             <div class="mb-3">
                                 <p class="text-sm text-gray-400">Gym</p>
-                                <p class="text-white font-medium">Power House</p>
+                                <p class="font-medium text-white">Power House</p>
                             </div>
 
-                            <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div class="mb-4 grid grid-cols-2 gap-3 text-sm">
 
                                 <div>
                                     <p class="text-gray-400">Plan</p>
@@ -489,7 +489,7 @@
 
                                 <div>
                                     <p class="text-gray-400">Status</p>
-                                    <p class="text-red-400 font-medium">Expired</p>
+                                    <p class="font-medium text-red-400">Expired</p>
                                 </div>
 
                                 <div>
@@ -506,11 +506,11 @@
 
                             <div class="flex gap-2">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-medium">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-medium text-black">
                                     View
                                 </button>
 
-                                <button class="flex-1 border border-green-500 text-green-400 py-2 rounded-lg text-sm">
+                                <button class="flex-1 rounded-lg border border-green-500 py-2 text-sm text-green-400">
                                     Renew
                                 </button>
 
@@ -519,26 +519,26 @@
                         </div>
 
                         <!-- CARD 3 (sample) -->
-                        <div class="bg-black/70 border border-gray-800 rounded-2xl p-5 hover:border-primary transition">
+                        <div class="rounded-2xl border border-gray-800 bg-black/70 p-5 transition hover:border-primary">
 
-                            <div class="flex items-center gap-4 mb-4">
+                            <div class="mb-4 flex items-center gap-4">
 
                                 <img src="https://i.pravatar.cc/80?img=3"
-                                    class="w-14 h-14 rounded-full border border-gray-700">
+                                    class="h-14 w-14 rounded-full border border-gray-700">
 
                                 <div>
-                                    <h3 class="text-white font-semibold">Omar Hassan</h3>
-                                    <p class="text-gray-400 text-sm">omar@mail.com</p>
+                                    <h3 class="font-semibold text-white">Omar Hassan</h3>
+                                    <p class="text-sm text-gray-400">omar@mail.com</p>
                                 </div>
 
                             </div>
 
                             <div class="mb-3">
                                 <p class="text-sm text-gray-400">Gym</p>
-                                <p class="text-white font-medium">Iron Club</p>
+                                <p class="font-medium text-white">Iron Club</p>
                             </div>
 
-                            <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div class="mb-4 grid grid-cols-2 gap-3 text-sm">
 
                                 <div>
                                     <p class="text-gray-400">Plan</p>
@@ -547,7 +547,7 @@
 
                                 <div>
                                     <p class="text-gray-400">Status</p>
-                                    <p class="text-yellow-400 font-medium">Pending</p>
+                                    <p class="font-medium text-yellow-400">Pending</p>
                                 </div>
 
                                 <div>
@@ -564,11 +564,11 @@
 
                             <div class="flex gap-2">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-medium">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-medium text-black">
                                     View
                                 </button>
 
-                                <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg text-sm">
+                                <button class="flex-1 rounded-lg border border-red-500 py-2 text-sm text-red-400">
                                     Remove
                                 </button>
 

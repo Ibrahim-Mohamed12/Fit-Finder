@@ -1,4 +1,4 @@
-@model OwnerDashboardViewModel
+﻿@model OwnerDashboardViewModel
 @{
     ViewBag.Title = "Owner Dashboard";
     Layout = "~/Views/Shared/_OwnerLayout.cshtml";
@@ -7,53 +7,53 @@
 <div class="flex h-screen">
 
     <!-- Sidebar -->
-    <aside id="sidebar" class="DashShadow fixed md:static top-0 left-0 h-full w-80 bg-black md:bg-linear-to-br from-gray-900/20 to-gray-900/30 -translate-x-full md:translate-x-0 transition duration-300 flex flex-col z-50">
+    <aside id="sidebar" class="DashShadow fixed top-0 left-0 z-50 flex h-full w-80 -translate-x-full flex-col bg-black from-gray-900/20 to-gray-900/30 transition duration-300 md:static md:translate-x-0 md:bg-linear-to-br">
         <!-- Logo -->
-        <div class="flex items-center justify-between p-4 border-primary">
+        <div class="border-primary flex items-center justify-between p-4">
 
-            <img class="w-25 h-auto sidebar-text" src="../Images/White_Logo.png">
+            <img class="sidebar-text h-auto w-25" src="../Images/White_Logo.png">
 
-            <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-14 cursor-pointer"><span class="material-symbols-outlined Icons">menu</span></button>
+            <button onclick="toggleSidebar()" class="h-14 cursor-pointer rounded p-2 hover:bg-gray-800"><span class="material-symbols-outlined Icons">menu</span></button>
 
         </div>
 
         <!-- Menu -->
-        <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wider font-thin flex-1">
-            <a asp-controller="Owner" asp-action="OwnerDashboard" class="flex items-center gap-5 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+        <nav class="font-primary flex flex-1 flex-col gap-3 p-3 text-xl font-thin tracking-wider">
+            <a asp-controller="Owner" asp-action="OwnerDashboard" class="flex cursor-pointer items-center gap-5 rounded bg-zinc-400/30 p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">dashboard</span>
                 <span class="sidebar-text text-2xl">Dashboard</span>
             </a>
 
-            <a asp-controller="Owner" asp-action="MyGyms" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="MyGyms" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">fitness_center</span>
                 <span class="sidebar-text text-2xl">My Gyms</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Plans" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Plans" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">workspace_premium</span>
                 <span class="sidebar-text text-2xl">Plans</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Earnings" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Earnings" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">payments</span>
                 <span class="sidebar-text text-2xl">Earnings</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Members" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Members" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">group</span>
                 <span class="sidebar-text text-2xl">Members</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="ContactUs" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="ContactUs" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">phone</span>
                 <span class="sidebar-text text-2xl">Contact US</span>
@@ -61,9 +61,9 @@
             </a>
 
             <!-- Logout -->
-            <div class="mt-auto text-xl font-primary tracking-wider">
+            <div class="font-primary mt-auto text-xl tracking-wider">
 
-                <a asp-controller="Home" asp-action="logout" class="w-full flex items-center gap-5 p-3 font-thin text-white rounded hover:bg-gray-800 transition cursor-pointer bg-gray-100/4">
+                <a asp-controller="Home" asp-action="logout" class="flex w-full cursor-pointer items-center gap-5 rounded bg-gray-100/4 p-3 font-thin text-white transition hover:bg-gray-800">
 
                     <span class="material-symbols-outlined Icons">logout</span>
                     <span class="sidebar-text text-2xl">Logout</span>
@@ -76,108 +76,108 @@
 
     </aside>
 
-    <div id="overlay" class="fixed inset-0 bg-black/60 hidden z-40 md:hidden"></div>
+    <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/60 md:hidden"></div>
 
     <!-- ================= MAIN ================= -->
-    <div class="flex-1 flex flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
+    <div class="flex flex-1 flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
 
-        <header class="p-6 flex justify-between items-center bg-linear-to-br from-gray-900/10 to-gray-900/5  border-b border-gray-800 text-white">
+        <header class="flex items-center justify-between border-b border-gray-800 bg-linear-to-br from-gray-900/10 to-gray-900/5 p-6 text-white">
 
             <!-- MOBILE MENU -->
-            <button onclick="toggleSidebar()" class="md:hidden">
+            <button onclick="toggleSidebar()" class="cursor-pointer md:hidden">
                 <span class="material-symbols-outlined Icons">menu</span>
             </button>
 
-            <h1 class="text-3xl font-primary font-medium tracking-wide">
+            <h1 class="font-primary text-3xl font-medium tracking-wide">
                 Gym Owner Dashboard
             </h1>
 
             <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined cursor-pointer hover:text-primary transition Icons">notifications</span>
-                <img src="https://i.pravatar.cc/40" class="rounded-full border-2 border-white cursor-pointer" alt="Profile">
+                <span class="material-symbols-outlined Icons cursor-pointer transition hover:text-primary">notifications</span>
+                <img src="https://i.pravatar.cc/40" class="cursor-pointer rounded-full border-2 border-white" alt="Profile">
             </div>
 
         </header>
 
         <!-- CONTENT -->
-        <main class="p-6 space-y-10 overflow-y-auto">
+        <main class="space-y-10 overflow-y-auto p-6">
 
             <!-- ================= STATS ================= -->
             <section class="space-y-6">
 
-                <div class="mt-5 grid grid-cols-1 lg:grid-cols-4 text-center gap-5 mx-auto px-6 lg:px-20">
+                <div class="mx-auto mt-5 grid grid-cols-1 gap-5 px-6 text-center lg:grid-cols-4 lg:px-20">
 
                     <!-- Card -->
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">My Gyms</p>
-                            <span class="text-blue-400 text-xl material-symbols-outlined">fitness_center</span>
+                            <span class="material-symbols-outlined text-xl text-blue-400">fitness_center</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">6</h2>
-                        <p class="text-xs text-gray-400 mt-1">Total gyms under your management</p>
+                        <h2 class="mt-3 text-2xl font-bold">6</h2>
+                        <p class="mt-1 text-xs text-gray-400">Total gyms under your management</p>
                     </div>
 
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Members</p>
-                            <span class="text-blue-400 text-xl material-symbols-outlined">group</span>
+                            <span class="material-symbols-outlined text-xl text-blue-400">group</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">320</h2>
-                        <p class="text-xs text-gray-400 mt-1">All registered users</p>
+                        <h2 class="mt-3 text-2xl font-bold">320</h2>
+                        <p class="mt-1 text-xs text-gray-400">All registered users</p>
                     </div>
 
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Active Subs</p>
-                            <span class="text-green-400 text-xl material-symbols-outlined">check_circle</span>
+                            <span class="material-symbols-outlined text-xl text-green-400">check_circle</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">89</h2>
-                        <p class="text-xs text-gray-400 mt-1">Currently subscribed members</p>
+                        <h2 class="mt-3 text-2xl font-bold">89</h2>
+                        <p class="mt-1 text-xs text-gray-400">Currently subscribed members</p>
                     </div>
 
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Revenue</p>
-                            <span class="text-yellow-400 text-xl material-symbols-outlined">account_balance_wallet</span>
+                            <span class="material-symbols-outlined text-xl text-yellow-400">account_balance_wallet</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">$5,200</h2>
-                        <p class="text-xs text-gray-400 mt-1">Monthly earnings</p>
+                        <h2 class="mt-3 text-2xl font-bold">$5,200</h2>
+                        <p class="mt-1 text-xs text-gray-400">Monthly earnings</p>
                     </div>
 
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Total Revenue</p>
-                            <span class="text-blue-400 text-xl material-symbols-outlined">trending_up</span>
+                            <span class="material-symbols-outlined text-xl text-blue-400">trending_up</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">$5,200</h2>
-                        <p class="text-xs text-gray-400 mt-1">Total earnings</p>
+                        <h2 class="mt-3 text-2xl font-bold">$5,200</h2>
+                        <p class="mt-1 text-xs text-gray-400">Total earnings</p>
                     </div>
 
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">This Month</p>
-                            <span class="text-purple-400 text-xl material-symbols-outlined">calendar_today</span>
+                            <span class="material-symbols-outlined text-xl text-purple-400">calendar_today</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">$3,200</h2>
-                        <p class="text-xs text-gray-400 mt-1">This month's earnings</p>
+                        <h2 class="mt-3 text-2xl font-bold">$3,200</h2>
+                        <p class="mt-1 text-xs text-gray-400">This month's earnings</p>
                     </div>
 
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Top Gym</p>
-                            <span class="text-orange-400 text-xl material-symbols-outlined">fitness_center</span>
+                            <span class="material-symbols-outlined text-xl text-orange-400">fitness_center</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">Gold Gym</h2>
-                        <p class="text-xs text-gray-400 mt-1">Best performing gym</p>
+                        <h2 class="mt-3 text-2xl font-bold">Gold Gym</h2>
+                        <p class="mt-1 text-xs text-gray-400">Best performing gym</p>
                     </div>
 
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Top Plan</p>
-                            <span class="text-green-400 text-xl material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined text-xl text-green-400">star</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">Premium</h2>
-                        <p class="text-xs text-gray-400 mt-1">Best performing plan</p>
+                        <h2 class="mt-3 text-2xl font-bold">Premium</h2>
+                        <p class="mt-1 text-xs text-gray-400">Best performing plan</p>
                     </div>
 
                 </div>
@@ -187,24 +187,24 @@
             <!-- ================= GYMS ================= -->
             <section class="w-full py-16 text-center">
 
-                <div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-8 px-6 lg:px-20">
+                <div class="grid grid-cols-1 gap-8 px-6 md:grid-cols-1 lg:px-20 xl:grid-cols-3">
 
                     <!-- Gym Card -->
-                    <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+                    <div class="group border-primary/30 fade-up overflow-hidden rounded-2xl border bg-black/80 transition duration-300 hover:border-primary hover:-translate-y-2">
 
                         <!-- IMAGE -->
                         <div class="relative">
                             <img src="../Images/Background3.jpg"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                                class="h-auto w-full object-cover transition duration-300 group-hover:scale-105"
                                 alt="Gym">
 
                             <!-- Rating -->
-                            <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
-                                ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                            <div class="absolute top-3 right-3 rounded-full bg-black/70 px-3 py-1 text-sm text-yellow-400">
+                                ★ 4.8 <span class="text-xs text-gray-300">(1.2k)</span>
                             </div>
 
                             <!-- Open status -->
-                            <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                            <div class="absolute top-3 left-3 rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Open Now
                             </div>
                         </div>
@@ -212,43 +212,43 @@
                         <div class="p-5 text-left">
 
                             <!-- TITLE -->
-                            <div class="flex justify-between items-start">
+                            <div class="flex items-start justify-between">
                                 <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
                                 <span class="text-primary text-sm font-medium">$25/mo</span>
                             </div>
 
                             <!-- LOCATION + DISTANCE -->
-                            <p class="text-gray-400 text-sm mt-1">
+                            <p class="mt-1 text-sm text-gray-400">
                                 Downtown • 1.2 km away
                             </p>
 
                             <!-- QUICK STATS -->
-                            <div class="flex gap-2 flex-wrap mt-3">
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">24/7 Access</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">PT Available</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">Beginner Friendly</span>
                             </div>
 
                             <!-- DESCRIPTION -->
-                            <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                            <p class="mt-4 text-sm leading-relaxed text-gray-400">
                                 Modern fitness center with premium equipment, certified trainers, and flexible training programs.
                             </p>
 
                             <!-- FEATURES (DECISION DRIVERS) -->
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Free Trial</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Group Classes</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Nutrition Plans</span>
                             </div>
 
                             <!-- CTA -->
-                            <div class="flex gap-3 mt-5">
+                            <div class="mt-5 flex gap-3">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black transition hover:opacity-90">
                                     View Details
                                 </button>
 
-                                <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg">
+                                <button class="flex-1 rounded-lg border border-red-500 py-2 text-red-400">
                                     Delete
                                 </button>
 
@@ -257,21 +257,21 @@
                         </div>
                     </div>
 
-                    <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+                    <div class="group border-primary/30 fade-up overflow-hidden rounded-2xl border bg-black/80 transition duration-300 hover:border-primary hover:-translate-y-2">
 
                         <!-- IMAGE -->
                         <div class="relative">
                             <img src="../Images/Background2.jpg"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                                class="h-auto w-full object-cover transition duration-300 group-hover:scale-105"
                                 alt="Gym">
 
                             <!-- Rating -->
-                            <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
-                                ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                            <div class="absolute top-3 right-3 rounded-full bg-black/70 px-3 py-1 text-sm text-yellow-400">
+                                ★ 4.8 <span class="text-xs text-gray-300">(1.2k)</span>
                             </div>
 
                             <!-- Open status -->
-                            <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                            <div class="absolute top-3 left-3 rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Open Now
                             </div>
                         </div>
@@ -279,43 +279,43 @@
                         <div class="p-5 text-left">
 
                             <!-- TITLE -->
-                            <div class="flex justify-between items-start">
+                            <div class="flex items-start justify-between">
                                 <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
                                 <span class="text-primary text-sm font-medium">$25/mo</span>
                             </div>
 
                             <!-- LOCATION + DISTANCE -->
-                            <p class="text-gray-400 text-sm mt-1">
+                            <p class="mt-1 text-sm text-gray-400">
                                 Downtown • 1.2 km away
                             </p>
 
                             <!-- QUICK STATS -->
-                            <div class="flex gap-2 flex-wrap mt-3">
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">24/7 Access</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">PT Available</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">Beginner Friendly</span>
                             </div>
 
                             <!-- DESCRIPTION -->
-                            <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                            <p class="mt-4 text-sm leading-relaxed text-gray-400">
                                 Modern fitness center with premium equipment, certified trainers, and flexible training programs.
                             </p>
 
                             <!-- FEATURES (DECISION DRIVERS) -->
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Free Trial</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Group Classes</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Nutrition Plans</span>
                             </div>
 
                             <!-- CTA -->
-                            <div class="flex gap-3 mt-5">
+                            <div class="mt-5 flex gap-3">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black transition hover:opacity-90">
                                     View Details
                                 </button>
 
-                                <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg">
+                                <button class="flex-1 rounded-lg border border-red-500 py-2 text-red-400">
                                     Delete
                                 </button>
 
@@ -324,21 +324,21 @@
                         </div>
                     </div>
 
-                    <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+                    <div class="group border-primary/30 fade-up overflow-hidden rounded-2xl border bg-black/80 transition duration-300 hover:border-primary hover:-translate-y-2">
 
                         <!-- IMAGE -->
                         <div class="relative">
                             <img src="../Images/Background9.jpg"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                                class="h-auto w-full object-cover transition duration-300 group-hover:scale-105"
                                 alt="Gym">
 
                             <!-- Rating -->
-                            <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
-                                ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                            <div class="absolute top-3 right-3 rounded-full bg-black/70 px-3 py-1 text-sm text-yellow-400">
+                                ★ 4.8 <span class="text-xs text-gray-300">(1.2k)</span>
                             </div>
 
                             <!-- Open status -->
-                            <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                            <div class="absolute top-3 left-3 rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Open Now
                             </div>
                         </div>
@@ -346,43 +346,43 @@
                         <div class="p-5 text-left">
 
                             <!-- TITLE -->
-                            <div class="flex justify-between items-start">
+                            <div class="flex items-start justify-between">
                                 <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
                                 <span class="text-primary text-sm font-medium">$25/mo</span>
                             </div>
 
                             <!-- LOCATION + DISTANCE -->
-                            <p class="text-gray-400 text-sm mt-1">
+                            <p class="mt-1 text-sm text-gray-400">
                                 Downtown • 1.2 km away
                             </p>
 
                             <!-- QUICK STATS -->
-                            <div class="flex gap-2 flex-wrap mt-3">
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">24/7 Access</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">PT Available</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">Beginner Friendly</span>
                             </div>
 
                             <!-- DESCRIPTION -->
-                            <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                            <p class="mt-4 text-sm leading-relaxed text-gray-400">
                                 Modern fitness center with premium equipment, certified trainers, and flexible training programs.
                             </p>
 
                             <!-- FEATURES (DECISION DRIVERS) -->
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Free Trial</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Group Classes</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Nutrition Plans</span>
                             </div>
 
                             <!-- CTA -->
-                            <div class="flex gap-3 mt-5">
+                            <div class="mt-5 flex gap-3">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black transition hover:opacity-90">
                                     View Details
                                 </button>
 
-                                <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg">
+                                <button class="flex-1 rounded-lg border border-red-500 py-2 text-red-400">
                                     Delete
                                 </button>
 
@@ -391,21 +391,21 @@
                         </div>
                     </div>
 
-                    <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+                    <div class="group border-primary/30 fade-up overflow-hidden rounded-2xl border bg-black/80 transition duration-300 hover:border-primary hover:-translate-y-2">
 
                         <!-- IMAGE -->
                         <div class="relative">
                             <img src="../Images/Background3.jpg"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                                class="h-auto w-full object-cover transition duration-300 group-hover:scale-105"
                                 alt="Gym">
 
                             <!-- Rating -->
-                            <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
-                                ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                            <div class="absolute top-3 right-3 rounded-full bg-black/70 px-3 py-1 text-sm text-yellow-400">
+                                ★ 4.8 <span class="text-xs text-gray-300">(1.2k)</span>
                             </div>
 
                             <!-- Open status -->
-                            <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                            <div class="absolute top-3 left-3 rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Open Now
                             </div>
                         </div>
@@ -413,43 +413,43 @@
                         <div class="p-5 text-left">
 
                             <!-- TITLE -->
-                            <div class="flex justify-between items-start">
+                            <div class="flex items-start justify-between">
                                 <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
                                 <span class="text-primary text-sm font-medium">$25/mo</span>
                             </div>
 
                             <!-- LOCATION + DISTANCE -->
-                            <p class="text-gray-400 text-sm mt-1">
+                            <p class="mt-1 text-sm text-gray-400">
                                 Downtown • 1.2 km away
                             </p>
 
                             <!-- QUICK STATS -->
-                            <div class="flex gap-2 flex-wrap mt-3">
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">24/7 Access</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">PT Available</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">Beginner Friendly</span>
                             </div>
 
                             <!-- DESCRIPTION -->
-                            <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                            <p class="mt-4 text-sm leading-relaxed text-gray-400">
                                 Modern fitness center with premium equipment, certified trainers, and flexible training programs.
                             </p>
 
                             <!-- FEATURES (DECISION DRIVERS) -->
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Free Trial</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Group Classes</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Nutrition Plans</span>
                             </div>
 
                             <!-- CTA -->
-                            <div class="flex gap-3 mt-5">
+                            <div class="mt-5 flex gap-3">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black transition hover:opacity-90">
                                     View Details
                                 </button>
 
-                                <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg">
+                                <button class="flex-1 rounded-lg border border-red-500 py-2 text-red-400">
                                     Delete
                                 </button>
                             </div>
@@ -457,21 +457,21 @@
                         </div>
                     </div>
 
-                    <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+                    <div class="group border-primary/30 fade-up overflow-hidden rounded-2xl border bg-black/80 transition duration-300 hover:border-primary hover:-translate-y-2">
 
                         <!-- IMAGE -->
                         <div class="relative">
                             <img src="../Images/Background5.jpg"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                                class="h-auto w-full object-cover transition duration-300 group-hover:scale-105"
                                 alt="Gym">
 
                             <!-- Rating -->
-                            <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
-                                ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                            <div class="absolute top-3 right-3 rounded-full bg-black/70 px-3 py-1 text-sm text-yellow-400">
+                                ★ 4.8 <span class="text-xs text-gray-300">(1.2k)</span>
                             </div>
 
                             <!-- Open status -->
-                            <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                            <div class="absolute top-3 left-3 rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Open Now
                             </div>
                         </div>
@@ -479,43 +479,43 @@
                         <div class="p-5 text-left">
 
                             <!-- TITLE -->
-                            <div class="flex justify-between items-start">
+                            <div class="flex items-start justify-between">
                                 <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
                                 <span class="text-primary text-sm font-medium">$25/mo</span>
                             </div>
 
                             <!-- LOCATION + DISTANCE -->
-                            <p class="text-gray-400 text-sm mt-1">
+                            <p class="mt-1 text-sm text-gray-400">
                                 Downtown • 1.2 km away
                             </p>
 
                             <!-- QUICK STATS -->
-                            <div class="flex gap-2 flex-wrap mt-3">
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">24/7 Access</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">PT Available</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">Beginner Friendly</span>
                             </div>
 
                             <!-- DESCRIPTION -->
-                            <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                            <p class="mt-4 text-sm leading-relaxed text-gray-400">
                                 Modern fitness center with premium equipment, certified trainers, and flexible training programs.
                             </p>
 
                             <!-- FEATURES (DECISION DRIVERS) -->
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Free Trial</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Group Classes</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Nutrition Plans</span>
                             </div>
 
                             <!-- CTA -->
-                            <div class="flex gap-3 mt-5">
+                            <div class="mt-5 flex gap-3">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black transition hover:opacity-90">
                                     View Details
                                 </button>
 
-                                <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg">
+                                <button class="flex-1 rounded-lg border border-red-500 py-2 text-red-400">
                                     Delete
                                 </button>
                             </div>
@@ -523,21 +523,21 @@
                         </div>
                     </div>
 
-                    <div class="group rounded-2xl overflow-hidden bg-black/80 border border-primary/30 hover:border-primary transition duration-300 hover:-translate-y-2 fade-up">
+                    <div class="group border-primary/30 fade-up overflow-hidden rounded-2xl border bg-black/80 transition duration-300 hover:border-primary hover:-translate-y-2">
 
                         <!-- IMAGE -->
                         <div class="relative">
                             <img src="../Images/Background3.jpg"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                                class="h-auto w-full object-cover transition duration-300 group-hover:scale-105"
                                 alt="Gym">
 
                             <!-- Rating -->
-                            <div class="absolute top-3 right-3 bg-black/70 text-yellow-400 text-sm px-3 py-1 rounded-full">
-                                ★ 4.8 <span class="text-gray-300 text-xs">(1.2k)</span>
+                            <div class="absolute top-3 right-3 rounded-full bg-black/70 px-3 py-1 text-sm text-yellow-400">
+                                ★ 4.8 <span class="text-xs text-gray-300">(1.2k)</span>
                             </div>
 
                             <!-- Open status -->
-                            <div class="absolute top-3 left-3 bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                            <div class="absolute top-3 left-3 rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Open Now
                             </div>
                         </div>
@@ -545,43 +545,43 @@
                         <div class="p-5 text-left">
 
                             <!-- TITLE -->
-                            <div class="flex justify-between items-start">
+                            <div class="flex items-start justify-between">
                                 <h3 class="text-xl font-semibold text-white">FitLife Gym</h3>
                                 <span class="text-primary text-sm font-medium">$25/mo</span>
                             </div>
 
                             <!-- LOCATION + DISTANCE -->
-                            <p class="text-gray-400 text-sm mt-1">
+                            <p class="mt-1 text-sm text-gray-400">
                                 Downtown • 1.2 km away
                             </p>
 
                             <!-- QUICK STATS -->
-                            <div class="flex gap-2 flex-wrap mt-3">
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">24/7 Access</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">PT Available</span>
-                                <span class="text-xs bg-white/5 text-gray-300 px-2 py-1 rounded-full">Beginner Friendly</span>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">24/7 Access</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">PT Available</span>
+                                <span class="rounded-full bg-white/5 px-2 py-1 text-xs text-gray-300">Beginner Friendly</span>
                             </div>
 
                             <!-- DESCRIPTION -->
-                            <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                            <p class="mt-4 text-sm leading-relaxed text-gray-400">
                                 Modern fitness center with premium equipment, certified trainers, and flexible training programs.
                             </p>
 
                             <!-- FEATURES (DECISION DRIVERS) -->
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Free Trial</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Group Classes</span>
-                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Nutrition Plans</span>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Free Trial</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Group Classes</span>
+                                <span class="bg-primary/10 text-primary rounded-full px-2 py-1 text-xs">Nutrition Plans</span>
                             </div>
 
                             <!-- CTA -->
-                            <div class="flex gap-3 mt-5">
+                            <div class="mt-5 flex gap-3">
 
-                                <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                                <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black transition hover:opacity-90">
                                     View Details
                                 </button>
 
-                                <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg">
+                                <button class="flex-1 rounded-lg border border-red-500 py-2 text-red-400">
                                     Delete
                                 </button>
 
@@ -594,59 +594,59 @@
             </section>
 
             <!-- ================= PLANS ================= -->
-            <section class="w-full mb-25">
+            <section class="mb-25 w-full">
 
-                <div class="mb-12 fade-up text-center">
-                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-medium font-primary text-white mb-4">
+                <div class="fade-up mb-12 text-center">
+                    <h2 class="font-primary mb-4 text-4xl font-medium text-white sm:text-5xl md:text-6xl">
                         Membership<span class="text-primary"> Plans</span>
                     </h2>
-                    <p class="text-base sm:text-md md:text-lg font-light text-gray-300 tracking-wide">
+                    <p class="text-base font-light tracking-wide text-gray-300 sm:text-md md:text-lg">
                         Manage subscription packages for your gyms
                     </p>
                 </div>
 
                 <!-- Plans Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-6 fade-up mx-auto px-6 lg:px-20">
+                <div class="fade-up mx-auto grid grid-cols-1 gap-6 px-6 md:grid-cols-1 lg:px-20 xl:grid-cols-3">
 
                     <!-- Basic Plan -->
-                    <div class="bg-black/70 border border-primary/20 rounded-2xl hover:border-primary hover:scale-105 transition-all delay-50 p-6">
+                    <div class="border-primary/20 rounded-2xl border bg-black/70 p-6 transition-all delay-50 hover:border-primary hover:scale-105">
 
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="mb-4 flex items-center justify-between">
                             <h3 class="text-2xl font-semibold text-white">Basic</h3>
-                            <span class="bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">
+                            <span class="rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Active
                             </span>
                         </div>
 
-                        <p class="text-4xl font-bold text-primary mb-2">
+                        <p class="text-primary mb-2 text-4xl font-bold">
                             $25
-                            <span class="text-sm text-gray-400 font-normal">/month</span>
+                            <span class="text-sm font-normal text-gray-400">/month</span>
                         </p>
 
-                        <p class="text-gray-400 text-sm mb-5">
+                        <p class="mb-5 text-sm text-gray-400">
                             Ideal for beginners and casual members
                         </p>
 
                         <!-- Features -->
-                        <div class="space-y-3 mb-6">
-                            <p class="text-gray-300 text-sm">✔ Gym access</p>
-                            <p class="text-gray-300 text-sm">✔ Locker room</p>
-                            <p class="text-gray-300 text-sm">✔ 2 classes / week</p>
-                            <p class="text-gray-300 text-sm">✔ 1 free trial session</p>
+                        <div class="mb-6 space-y-3">
+                            <p class="text-sm text-gray-300">✔ Gym access</p>
+                            <p class="text-sm text-gray-300">✔ Locker room</p>
+                            <p class="text-sm text-gray-300">✔ 2 classes / week</p>
+                            <p class="text-sm text-gray-300">✔ 1 free trial session</p>
                         </div>
 
                         <!-- Stats -->
-                        <div class="flex justify-between text-sm text-gray-400 mb-5">
+                        <div class="mb-5 flex justify-between text-sm text-gray-400">
                             <span>Subscribers: 42</span>
                             <span>Revenue: $1050</span>
                         </div>
 
                         <!-- Actions -->
                         <div class="flex gap-3">
-                            <button class="flex-1 bg-primary text-black py-2 rounded-lg font-medium">
+                            <button class="bg-primary flex-1 rounded-lg py-2 font-medium text-black">
                                 Edit
                             </button>
-                            <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg">
+                            <button class="flex-1 rounded-lg border border-red-500 py-2 text-red-400">
                                 Disable
                             </button>
                         </div>
@@ -654,41 +654,41 @@
                     </div>
 
                     <!-- Premium Plan -->
-                    <div class="bg-black/70 border border-primary/20 rounded-2xl hover:border-primary hover:scale-105 transition-all delay-50 p-6">
+                    <div class="border-primary/20 rounded-2xl border bg-black/70 p-6 transition-all delay-50 hover:border-primary hover:scale-105">
 
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="mb-4 flex items-center justify-between">
                             <h3 class="text-2xl font-semibold text-white">Premium</h3>
-                            <span class="bg-yellow-500/20 text-yellow-400 text-xs px-3 py-1 rounded-full">
+                            <span class="rounded-full bg-yellow-500/20 px-3 py-1 text-xs text-yellow-400">
                                 Most Popular
                             </span>
                         </div>
 
-                        <p class="text-4xl font-bold text-primary mb-2">
+                        <p class="text-primary mb-2 text-4xl font-bold">
                             $50
-                            <span class="text-sm text-gray-400 font-normal">/month</span>
+                            <span class="text-sm font-normal text-gray-400">/month</span>
                         </p>
 
-                        <p class="text-gray-400 text-sm mb-5">
+                        <p class="mb-5 text-sm text-gray-400">
                             Best for advanced members and full access
                         </p>
 
-                        <div class="space-y-3 mb-6">
-                            <p class="text-gray-300 text-sm">✔ 24/7 access</p>
-                            <p class="text-gray-300 text-sm">✔ Unlimited classes</p>
-                            <p class="text-gray-300 text-sm">✔ Personal trainer</p>
-                            <p class="text-gray-300 text-sm">✔ Nutrition plan</p>
+                        <div class="mb-6 space-y-3">
+                            <p class="text-sm text-gray-300">✔ 24/7 access</p>
+                            <p class="text-sm text-gray-300">✔ Unlimited classes</p>
+                            <p class="text-sm text-gray-300">✔ Personal trainer</p>
+                            <p class="text-sm text-gray-300">✔ Nutrition plan</p>
                         </div>
 
-                        <div class="flex justify-between text-sm text-gray-400 mb-5">
+                        <div class="mb-5 flex justify-between text-sm text-gray-400">
                             <span>Subscribers: 71</span>
                             <span>Revenue: $3550</span>
                         </div>
 
                         <div class="flex gap-3">
-                            <button class="flex-1 bg-primary text-black py-2 rounded-lg font-medium">
+                            <button class="bg-primary flex-1 rounded-lg py-2 font-medium text-black">
                                 Edit
                             </button>
-                            <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg">
+                            <button class="flex-1 rounded-lg border border-red-500 py-2 text-red-400">
                                 Disable
                             </button>
                         </div>
@@ -696,41 +696,41 @@
                     </div>
 
                     <!-- VIP Plan -->
-                    <div class="bg-black/70 border border-primary/20 rounded-2xl p-6 hover:border-primary transition-all hover:scale-105 delay-50">
+                    <div class="border-primary/20 rounded-2xl border bg-black/70 p-6 transition-all delay-50 hover:border-primary hover:scale-105">
 
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="mb-4 flex items-center justify-between">
                             <h3 class="text-2xl font-semibold text-white">VIP</h3>
-                            <span class="bg-purple-500/20 text-purple-400 text-xs px-3 py-1 rounded-full">
+                            <span class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-400">
                                 Exclusive
                             </span>
                         </div>
 
-                        <p class="text-4xl font-bold text-primary mb-2">
+                        <p class="text-primary mb-2 text-4xl font-bold">
                             $80
-                            <span class="text-sm text-gray-400 font-normal">/month</span>
+                            <span class="text-sm font-normal text-gray-400">/month</span>
                         </p>
 
-                        <p class="text-gray-400 text-sm mb-5">
+                        <p class="mb-5 text-sm text-gray-400">
                             Premium services with exclusive benefits
                         </p>
 
-                        <div class="space-y-3 mb-6">
-                            <p class="text-gray-300 text-sm">✔ Everything in Premium</p>
-                            <p class="text-gray-300 text-sm">✔ Private coach</p>
-                            <p class="text-gray-300 text-sm">✔ VIP lounge</p>
-                            <p class="text-gray-300 text-sm">✔ Sauna access</p>
+                        <div class="mb-6 space-y-3">
+                            <p class="text-sm text-gray-300">✔ Everything in Premium</p>
+                            <p class="text-sm text-gray-300">✔ Private coach</p>
+                            <p class="text-sm text-gray-300">✔ VIP lounge</p>
+                            <p class="text-sm text-gray-300">✔ Sauna access</p>
                         </div>
 
-                        <div class="flex justify-between text-sm text-gray-400 mb-5">
+                        <div class="mb-5 flex justify-between text-sm text-gray-400">
                             <span>Subscribers: 19</span>
                             <span>Revenue: $1520</span>
                         </div>
 
                         <div class="flex gap-3">
-                            <button class="flex-1 bg-primary text-black py-2 rounded-lg font-medium">
+                            <button class="bg-primary flex-1 rounded-lg py-2 font-medium text-black">
                                 Edit
                             </button>
-                            <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg">
+                            <button class="flex-1 rounded-lg border border-red-500 py-2 text-red-400">
                                 Disable
                             </button>
                         </div>
@@ -744,55 +744,55 @@
             <section class="space-y-10">
 
                 <!-- TITLE -->
-                <div class="text-center fade-up">
-                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-medium font-primary text-white mb-4">
+                <div class="fade-up text-center">
+                    <h2 class="font-primary mb-4 text-4xl font-medium text-white sm:text-5xl md:text-6xl">
                     <span class="text-primary">Earnings</span> Overview
                     </h2>
-                    <p class="text-base sm:text-lg text-gray-400 tracking-wide">
+                    <p class="text-base tracking-wide text-gray-400 sm:text-lg">
                     Track revenue performance and recent financial activity
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 px-6 lg:px-20 fade-up">
+                <div class="fade-up grid grid-cols-1 gap-8 px-6 lg:px-20 xl:grid-cols-2">
 
                     <!-- ================= REVENUE BY GYM ================= -->
-                    <div class="bg-black/70 rounded-2xl border border-white/10 p-6">
+                    <div class="rounded-2xl border border-white/10 bg-black/70 p-6">
 
-                    <h3 class="text-2xl md:text-3xl font-primary font-medium text-white mb-6">
+                    <h3 class="font-primary mb-6 text-2xl font-medium text-white md:text-3xl">
                         Revenue by Gym
                     </h3>
 
                     <div class="space-y-5">
 
                         <!-- ITEM -->
-                        <div class="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 transition">
+                        <div class="flex items-center justify-between rounded-xl bg-white/5 p-4 transition hover:bg-white/10">
                         <div>
-                            <p class="text-gray-200 font-medium">Gold Gym</p>
+                            <p class="font-medium text-gray-200">Gold Gym</p>
                             <p class="text-xs text-gray-400">Top performing branch</p>
                         </div>
-                        <p class="text-primary font-semibold text-lg">$5,000</p>
+                        <p class="text-primary text-lg font-semibold">$5,000</p>
                         </div>
 
                         <!-- ITEM -->
-                        <div class="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 transition">
+                        <div class="flex items-center justify-between rounded-xl bg-white/5 p-4 transition hover:bg-white/10">
                         <div>
-                            <p class="text-gray-200 font-medium">Power Gym</p>
+                            <p class="font-medium text-gray-200">Power Gym</p>
                             <p class="text-xs text-gray-400">Growing steadily</p>
                         </div>
-                        <p class="text-primary font-semibold text-lg">$3,200</p>
+                        <p class="text-primary text-lg font-semibold">$3,200</p>
                         </div>
 
                     </div>
                     </div>
 
                     <!-- ================= RECENT PAYMENTS ================= -->
-                    <div class="bg-black/70 rounded-2xl border border-white/10 p-6">
+                    <div class="rounded-2xl border border-white/10 bg-black/70 p-6">
 
-                    <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-2xl md:text-3xl font-primary font-medium text-white">
+                    <div class="mb-6 flex items-center justify-between">
+                        <h3 class="font-primary text-2xl font-medium text-white md:text-3xl">
                         Recent Payments
                         </h3>
-                        <button class="text-sm text-primary hover:underline">
+                        <button class="text-primary text-sm hover:underline">
                         View all
                         </button>
                     </div>
@@ -800,21 +800,21 @@
                     <div class="space-y-3">
 
                         <!-- PAYMENT -->
-                        <div class="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 transition">
+                        <div class="flex items-center justify-between rounded-xl bg-white/5 p-4 transition hover:bg-white/10">
                         <div>
                             <p class="text-gray-200">Ahmed • Premium</p>
                             <p class="text-xs text-gray-400">Gold Gym</p>
                         </div>
-                        <p class="text-green-400 font-semibold">$100</p>
+                        <p class="font-semibold text-green-400">$100</p>
                         </div>
 
                         <!-- PAYMENT -->
-                        <div class="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 transition">
+                        <div class="flex items-center justify-between rounded-xl bg-white/5 p-4 transition hover:bg-white/10">
                         <div>
                             <p class="text-gray-200">Sara • Basic</p>
                             <p class="text-xs text-gray-400">Power Gym</p>
                         </div>
-                        <p class="text-green-400 font-semibold">$60</p>
+                        <p class="font-semibold text-green-400">$60</p>
                         </div>
 
                     </div>
@@ -824,52 +824,52 @@
             </section>
 
             <!-- ================= Members ================= -->
-            <section class="space-y-10 my-25">
+            <section class="my-25 space-y-10">
 
                 <!-- TITLE -->
-                <div class="text-center fade-up">
-                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-medium font-primary text-white mb-4">
+                <div class="fade-up text-center">
+                    <h2 class="font-primary mb-4 text-4xl font-medium text-white sm:text-5xl md:text-6xl">
                         Members
                     </h2>
-                    <p class="text-base sm:text-lg text-gray-400 tracking-wide">
+                    <p class="text-base tracking-wide text-gray-400 sm:text-lg">
                         Manage and monitor gym members across all branches
                     </p>
                 </div>
 
-                <div class="gap-8 px-6 lg:px-20 fade-up">
+                <div class="fade-up gap-8 px-6 lg:px-20">
 
                     <!-- ================= RECENT MEMBERS ================= -->
-                    <div class="bg-black/70 rounded-2xl border border-white/10 p-6">
+                    <div class="rounded-2xl border border-white/10 bg-black/70 p-6">
 
-                        <div class="flex justify-between items-center mb-6">
-                            <h3 class="text-2xl md:text-3xl font-primary font-medium text-white">
+                        <div class="mb-6 flex items-center justify-between">
+                            <h3 class="font-primary text-2xl font-medium text-white md:text-3xl">
                             Recent Members
                             </h3>
-                            <button class="text-sm text-primary hover:underline">
+                            <button class="text-primary text-sm hover:underline">
                             View all
                             </button>
                         </div>
 
-                        <div class="gap-3 w-full grid grid-cols-1 md:grid-cols-2">
+                        <div class="grid w-full grid-cols-1 gap-3 md:grid-cols-2">
 
                             <!-- MEMBER -->
-                            <div class="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 transition">
+                            <div class="flex items-center justify-between rounded-xl bg-white/5 p-4 transition hover:bg-white/10">
                                 <div>
                                     <p class="text-gray-200">Ahmed Mohamed</p>
                                     <p class="text-xs text-gray-400">Gold Gym • Premium</p>
                                 </div>
-                                <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-400">
+                                <span class="rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                     Active
                                 </span>
                             </div>
 
                             <!-- MEMBER -->
-                            <div class="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 transition">
+                            <div class="flex items-center justify-between rounded-xl bg-white/5 p-4 transition hover:bg-white/10">
                                 <div>
                                     <p class="text-gray-200">Sara Ali</p>
                                     <p class="text-xs text-gray-400">Power Gym • Basic</p>
                                 </div>
-                                <span class="text-xs px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300">
+                                <span class="rounded-full bg-yellow-500/20 px-3 py-1 text-xs text-yellow-300">
                                     Pending
                                 </span>
                             </div>

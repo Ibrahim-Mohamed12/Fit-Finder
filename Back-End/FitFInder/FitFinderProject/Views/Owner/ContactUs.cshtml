@@ -1,4 +1,4 @@
-@{
+﻿@{
     ViewBag.Title = "Owner Dashboard";
     Layout = "~/Views/Shared/_OwnerLayout.cshtml";
 }
@@ -6,54 +6,54 @@
 <div class="flex h-screen">
 
     <!-- Sidebar -->
-    <aside id="sidebar" class="DashShadow fixed md:static top-0 left-0 h-full w-80 bg-black md:bg-linear-to-br from-gray-900/20 to-gray-900/30 -translate-x-full md:translate-x-0 transition duration-300 flex flex-col z-50">
+    <aside id="sidebar" class="DashShadow fixed top-0 left-0 z-50 flex h-full w-80 -translate-x-full flex-col bg-black from-gray-900/20 to-gray-900/30 transition duration-300 md:static md:translate-x-0 md:bg-linear-to-br">
         <!-- Logo -->
-        <div class="flex items-center justify-between p-4 border-primary">
+        <div class="border-primary flex items-center justify-between p-4">
 
-            <img class="w-25 h-auto sidebar-text" src="../Images/White_Logo.png">
+            <img class="sidebar-text h-auto w-25" src="../Images/White_Logo.png">
 
-            <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-14 cursor-pointer"><span class="material-symbols-outlined Icons">menu</span></button>
+            <button onclick="toggleSidebar()" class="h-14 cursor-pointer rounded p-2 hover:bg-gray-800"><span class="material-symbols-outlined Icons">menu</span></button>
 
         </div>
 
         <!-- Menu -->
-        <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wider font-thin flex-1">
-            <a asp-controller="Owner" asp-action="OwnerDashboard" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+        <nav class="font-primary flex flex-1 flex-col gap-3 p-3 text-xl font-thin tracking-wider">
+            <a asp-controller="Owner" asp-action="OwnerDashboard" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">dashboard</span>
                 <span class="sidebar-text text-2xl">Dashboard</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="MyGyms" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="MyGyms" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">fitness_center</span>
                 <span class="sidebar-text text-2xl">My Gyms</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Plans" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Plans" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">workspace_premium</span>
                 <span class="sidebar-text text-2xl">Plans</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Earnings" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Earnings" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">payments</span>
                 <span class="sidebar-text text-2xl">Earnings</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Members" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Members" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">group</span>
                 <span class="sidebar-text text-2xl">Members</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="ContactUs" class="flex items-center gap-5 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="ContactUs" class="flex cursor-pointer items-center gap-5 rounded bg-zinc-400/30 p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">phone</span>
                 <span class="sidebar-text text-2xl">Contact US</span>
@@ -61,9 +61,9 @@
             </a>
 
             <!-- Logout -->
-            <div class="mt-auto text-xl font-primary tracking-wider">
+            <div class="font-primary mt-auto text-xl tracking-wider">
 
-                <button class="w-full flex items-center gap-5 p-3 font-thin text-white rounded hover:bg-gray-800 transition cursor-pointer bg-gray-100/4">
+                <button class="flex w-full cursor-pointer items-center gap-5 rounded bg-gray-100/4 p-3 font-thin text-white transition hover:bg-gray-800">
 
                     <span class="material-symbols-outlined Icons">logout</span>
                     <span class="sidebar-text text-2xl">Logout</span>
@@ -76,74 +76,74 @@
 
     </aside>
 
-    <div id="overlay" class="fixed inset-0 bg-black/60 hidden z-40 md:hidden"></div>
+    <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/60 md:hidden"></div>
 
     <!-- ================= MAIN ================= -->
-    <div class="flex-1 flex flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
+    <div class="flex flex-1 flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
 
-        <header class="p-6 flex justify-between items-center bg-linear-to-br from-gray-900/10 to-gray-900/5 border-b border-gray-800 text-white">
+        <header class="flex items-center justify-between border-b border-gray-800 bg-linear-to-br from-gray-900/10 to-gray-900/5 p-6 text-white">
 
             <!-- MOBILE MENU -->
-            <button onclick="toggleSidebar()" class="md:hidden">
+            <button onclick="toggleSidebar()" class="cursor-pointer md:hidden">
                 <span class="material-symbols-outlined Icons">menu</span>
             </button>
 
-            <h1 class="text-3xl font-primary font-medium tracking-wide">
+            <h1 class="font-primary text-3xl font-medium tracking-wide">
                 Gym Owner Dashboard
             </h1>
 
             <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined cursor-pointer hover:text-primary transition Icons">notifications</span>
-                <img src="https://i.pravatar.cc/40" class="rounded-full border-2 border-white cursor-pointer" alt="Profile">
+                <span class="material-symbols-outlined Icons cursor-pointer transition hover:text-primary">notifications</span>
+                <img src="https://i.pravatar.cc/40" class="cursor-pointer rounded-full border-2 border-white" alt="Profile">
             </div>
 
         </header>
 
         <!-- CONTENT -->
-        <main class="p-6 space-y-10 overflow-y-auto">
+        <main class="space-y-10 overflow-y-auto p-6">
                 
-            <div class="flex flex-col h-full my-10">
+            <div class="my-10 flex h-full flex-col">
 
-                <h1 class="font-primary text-7xl text-white font-medium text-center">
+                <h1 class="font-primary text-center text-7xl font-medium text-white">
                     Contact<span class="text-primary"> Us</span>
                 </h1>
 
-                <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-300 font-light text-center max-w-3xl mx-auto">
+                <p class="mx-auto mt-4 max-w-3xl text-center text-base font-light text-gray-300 sm:text-lg md:text-xl">
                     Helping you find the perfect gym and manage your fitness journey effortlessly
                 </p>
 
                 <!-- Form + Contact Info -->
-                <div class="flex flex-col xl:flex-row justify-center items-center gap-0 xl:gap-20 mt-20 w-full max-w-mx-width mx-auto">
+                <div class="max-w-mx-width mx-auto mt-20 flex w-full flex-col items-center justify-center gap-0 xl:flex-row xl:gap-20">
 
                     <!-- Form -->
                     <form action="index.html" class="Form-style w-full lg:w-1/2"> 
 
                         <div class="flex flex-col">
-                            <label class="mb-2 text-2xl font-primary text-primary">Full Name</label>
+                            <label class="font-primary text-primary mb-2 text-2xl">Full Name</label>
                             <input 
                             type="text"
                             placeholder="Enter your name"
-                            class="p-3 rounded-sm bg-black/40 border border-gray-500 focus:border-primary outline-none transition">
+                            class="rounded-sm border border-gray-500 bg-black/40 p-3 transition outline-none focus:border-primary">
                         </div>
 
-                        <div class="flex flex-col mt-6">
-                            <label class="mb-2 text-2xl font-primary text-primary">Email</label>
+                        <div class="mt-6 flex flex-col">
+                            <label class="font-primary text-primary mb-2 text-2xl">Email</label>
                             <input 
                             type="email"
                             placeholder="Enter your email"
-                            class="p-3 rounded-sm bg-black/40 border border-gray-500 focus:border-primary outline-none transition">
+                            class="rounded-sm border border-gray-500 bg-black/40 p-3 transition outline-none focus:border-primary">
                         </div>
 
-                        <div class="flex flex-col mt-6">
-                            <label class="mb-2 text-2xl font-primary text-primary">Message</label>
+                        <div class="mt-6 flex flex-col">
+                            <label class="font-primary text-primary mb-2 text-2xl">Message</label>
                             <textarea 
                             rows="5"
                             placeholder="Write your message..."
-                            class="p-3 rounded-sm bg-black/40 border border-gray-500 focus:border-primary outline-none transition resize-none"></textarea>
+                            class="resize-none rounded-sm border border-gray-500 bg-black/40 p-3 transition outline-none focus:border-primary"></textarea>
                         </div>
 
                         <div class="flex justify-center pt-6">
-                            <button type="submit" class="bg-black w-full text-primary px-8 py-3 border border-primary hover:bg-primary hover:text-black font-primary text-2xl rounded-sm font-medium hover:scale-102 transition shadow-lg cursor-pointer">
+                            <button type="submit" class="text-primary border-primary font-primary w-full cursor-pointer rounded-sm border bg-black px-8 py-3 text-2xl font-medium shadow-lg transition hover:bg-primary hover:scale-102 hover:text-black">
                                 Send Message
                             </button>
                         </div>
@@ -151,21 +151,21 @@
                     </form>
 
                     <!-- Contact Info -->
-                    <div class="w-full lg:w-1/2 text-white space-y-8 flex justify-center flex-col h-150">
+                    <div class="flex h-150 w-full flex-col justify-center space-y-8 text-white lg:w-1/2">
 
-                        <div class="border border-primary p-6 rounded-sm bg-black/40 transform hover:scale-105 transition-transform duration-300">
-                            <h3 class="font-primary text-3xl text-primary mb-2">Email</h3>
-                            <p class="text-gray-300 text-lg">contact@fitnessexplorer.com</p>
+                        <div class="border-primary transform rounded-sm border bg-black/40 p-6 transition-transform duration-300 hover:scale-105">
+                            <h3 class="font-primary text-primary mb-2 text-3xl">Email</h3>
+                            <p class="text-lg text-gray-300">contact@fitnessexplorer.com</p>
                         </div>
 
-                        <div class="border border-primary p-6 rounded-sm bg-black/40 transform hover:scale-105 transition-transform duration-300">
-                            <h3 class="font-primary text-3xl text-primary mb-2">Phone</h3>
-                            <p class="text-gray-300 text-lg">+20 100 123 4567</p>
+                        <div class="border-primary transform rounded-sm border bg-black/40 p-6 transition-transform duration-300 hover:scale-105">
+                            <h3 class="font-primary text-primary mb-2 text-3xl">Phone</h3>
+                            <p class="text-lg text-gray-300">+20 100 123 4567</p>
                         </div>
 
-                        <div class="border border-primary p-6 rounded-sm bg-black/40 transform hover:scale-105 transition-transform duration-300">
-                            <h3 class="font-primary text-3xl text-primary mb-2">Location</h3>
-                            <p class="text-gray-300 text-lg">Cairo, Egypt</p>
+                        <div class="border-primary transform rounded-sm border bg-black/40 p-6 transition-transform duration-300 hover:scale-105">
+                            <h3 class="font-primary text-primary mb-2 text-3xl">Location</h3>
+                            <p class="text-lg text-gray-300">Cairo, Egypt</p>
                         </div>
                     </div>
                 </div>

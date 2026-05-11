@@ -1,4 +1,4 @@
-@{
+﻿@{
     ViewBag.Title = "Owner Dashboard";
     Layout = "~/Views/Shared/_OwnerLayout.cshtml";
 }
@@ -6,54 +6,54 @@
 <div class="flex h-screen">
 
     <!-- Sidebar -->
-    <aside id="sidebar" class="DashShadow fixed md:static top-0 left-0 h-full w-80 bg-black md:bg-linear-to-br from-gray-900/20 to-gray-900/30 -translate-x-full md:translate-x-0 transition duration-300 flex flex-col z-50">
+    <aside id="sidebar" class="DashShadow fixed top-0 left-0 z-50 flex h-full w-80 -translate-x-full flex-col bg-black from-gray-900/20 to-gray-900/30 transition duration-300 md:static md:translate-x-0 md:bg-linear-to-br">
         <!-- Logo -->
-        <div class="flex items-center justify-between p-4 border-primary">
+        <div class="border-primary flex items-center justify-between p-4">
 
-            <img class="w-25 h-auto sidebar-text" src="../Images/White_Logo.png">
+            <img class="sidebar-text h-auto w-25" src="../Images/White_Logo.png">
 
-            <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-14 cursor-pointer"><span class="material-symbols-outlined Icons">menu</span></button>
+            <button onclick="toggleSidebar()" class="h-14 cursor-pointer rounded p-2 hover:bg-gray-800"><span class="material-symbols-outlined Icons">menu</span></button>
 
         </div>
 
         <!-- Menu -->
-        <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wider font-thin flex-1">
-            <a asp-controller="Owner" asp-action="OwnerDashboard" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+        <nav class="font-primary flex flex-1 flex-col gap-3 p-3 text-xl font-thin tracking-wider">
+            <a asp-controller="Owner" asp-action="OwnerDashboard" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">dashboard</span>
                 <span class="sidebar-text text-2xl">Dashboard</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="MyGyms" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="MyGyms" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">fitness_center</span>
                 <span class="sidebar-text text-2xl">My Gyms</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Plans" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Plans" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">workspace_premium</span>
                 <span class="sidebar-text text-2xl">Plans</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Earnings" class="flex items-center gap-5 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Earnings" class="flex cursor-pointer items-center gap-5 rounded bg-zinc-400/30 p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">payments</span>
                 <span class="sidebar-text text-2xl">Earnings</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="Members" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="Members" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">group</span>
                 <span class="sidebar-text text-2xl">Members</span>
 
             </a>
 
-            <a asp-controller="Owner" asp-action="ContactUs" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Owner" asp-action="ContactUs" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
 
                 <span class="material-symbols-outlined Icons">phone</span>
                 <span class="sidebar-text text-2xl">Contact US</span>
@@ -61,9 +61,9 @@
             </a>
 
             <!-- Logout -->
-            <div class="mt-auto text-xl font-primary tracking-wider">
+            <div class="font-primary mt-auto text-xl tracking-wider">
 
-                <button class="w-full flex items-center gap-5 p-3 font-thin text-white rounded hover:bg-gray-800 transition cursor-pointer bg-gray-100/4">
+                <button class="flex w-full cursor-pointer items-center gap-5 rounded bg-gray-100/4 p-3 font-thin text-white transition hover:bg-gray-800">
 
                     <span class="material-symbols-outlined Icons">logout</span>
                     <span class="sidebar-text text-2xl">Logout</span>
@@ -76,25 +76,25 @@
 
     </aside>
 
-    <div id="overlay" class="fixed inset-0 bg-black/60 hidden z-40 md:hidden"></div>
+    <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/60 md:hidden"></div>
 
     <!-- ================= MAIN ================= -->
-    <div class="flex-1 flex flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
+    <div class="flex flex-1 flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
 
-        <header class="p-6 flex justify-between items-center bg-linear-to-br from-gray-900/10 to-gray-900/5 border-b border-gray-800 text-white">
+        <header class="flex items-center justify-between border-b border-gray-800 bg-linear-to-br from-gray-900/10 to-gray-900/5 p-6 text-white">
 
             <!-- MOBILE MENU -->
-            <button onclick="toggleSidebar()" class="md:hidden">
+            <button onclick="toggleSidebar()" class="cursor-pointer md:hidden">
                 <span class="material-symbols-outlined Icons">menu</span>
             </button>
 
-            <h1 class="text-3xl font-primary font-medium tracking-wide">
+            <h1 class="font-primary text-3xl font-medium tracking-wide">
                 Gym Owner Dashboard
             </h1>
 
             <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined cursor-pointer hover:text-primary transition Icons">notifications</span>
-                <img src="https://i.pravatar.cc/40" class="rounded-full border-2 border-white cursor-pointer" alt="Profile">
+                <span class="material-symbols-outlined Icons cursor-pointer transition hover:text-primary">notifications</span>
+                <img src="https://i.pravatar.cc/40" class="cursor-pointer rounded-full border-2 border-white" alt="Profile">
             </div>
 
         </header>
@@ -106,66 +106,66 @@
             <section class="space-y-6">
 
                 <!-- ===== STATS ===== -->
-                <div class="mt-10 grid grid-cols-1 lg:grid-cols-4 text-center gap-5 mx-20">
+                <div class="mx-20 mt-10 grid grid-cols-1 gap-5 text-center lg:grid-cols-4">
 
                     <!-- Card -->
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Total Revenue</p>
-                            <span class="text-yellow-400 text-xl material-symbols-outlined">account_balance_wallet</span>
+                            <span class="material-symbols-outlined text-xl text-yellow-400">account_balance_wallet</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">$3,200</h2>
-                        <p class="text-xs text-gray-400 mt-1">Total earnings this month</p>
+                        <h2 class="mt-3 text-2xl font-bold">$3,200</h2>
+                        <p class="mt-1 text-xs text-gray-400">Total earnings this month</p>
                     </div>
 
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">This Month</p>
-                            <span class="text-blue-400 text-xl material-symbols-outlined">calendar_month</span>
+                            <span class="material-symbols-outlined text-xl text-blue-400">calendar_month</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">$3,200</h2>
-                        <p class="text-xs text-gray-400 mt-1">Total earnings this month</p>
+                        <h2 class="mt-3 text-2xl font-bold">$3,200</h2>
+                        <p class="mt-1 text-xs text-gray-400">Total earnings this month</p>
                     </div>
 
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Transactions</p>
-                            <span class="text-green-400 text-xl material-symbols-outlined">receipt</span>
+                            <span class="material-symbols-outlined text-xl text-green-400">receipt</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">6</h2>
-                        <p class="text-xs text-gray-400 mt-1">Total transactions this month</p>
+                        <h2 class="mt-3 text-2xl font-bold">6</h2>
+                        <p class="mt-1 text-xs text-gray-400">Total transactions this month</p>
                     </div>
 
-                    <div class="bg-linear-to-br text-start from-gray-900/20 to-gray-900/40 p-6 rounded-2xl CardShadow hover:scale-[1.03] transition cursor-pointer">
+                    <div class="CardShadow cursor-pointer rounded-2xl bg-linear-to-br from-gray-900/20 to-gray-900/40 p-6 text-start transition hover:scale-[1.03]">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-gray-300">Active Subs</p>
-                            <span class="text-red-400 text-xl material-symbols-outlined">subscriptions</span>
+                            <span class="material-symbols-outlined text-xl text-red-400">subscriptions</span>
                         </div>
-                        <h2 class="text-2xl font-bold mt-3">3</h2>
-                        <p class="text-xs text-gray-400 mt-1">Total active subscriptions</p>
+                        <h2 class="mt-3 text-2xl font-bold">3</h2>
+                        <p class="mt-1 text-xs text-gray-400">Total active subscriptions</p>
                     </div>
 
                 </div>
 
             </section>
             <!-- ================= EARNINGS ================= -->
-            <section class="space-y-6 mx-auto px-6 lg:px-20">
+            <section class="mx-auto space-y-6 px-6 lg:px-20">
 
                 <!-- ===== HEADER ===== -->
-                <div class="mb-8 mt-20 flex flex-col items-center">
+                <div class="mt-20 mb-8 flex flex-col items-center">
 
-                    <div class="mb-12 fade-up text-center">
-                        <h2 class="text-4xl sm:text-5xl md:text-6xl font-medium font-primary text-white mb-4">
+                    <div class="fade-up mb-12 text-center">
+                        <h2 class="font-primary mb-4 text-4xl font-medium text-white sm:text-5xl md:text-6xl">
                             Earnings<span class="text-primary"> Overview</span>
                         </h2>
-                        <p class="text-base sm:text-md md:text-lg font-light text-gray-300 tracking-wide">
+                        <p class="text-base font-light tracking-wide text-gray-300 sm:text-md md:text-lg">
                             Track your revenue and financial performance
                         </p>
                     </div>
 
-                    <div class="w-full md:max-w-2xl mb-10">
+                    <div class="mb-10 w-full md:max-w-2xl">
 
-                        <button class="w-full xl:max-w-2xl flex items-center justify-center gap-2 bg-primary text-black px-8 py-3 rounded-xl text-xl md:text-2xl font-medium font-primary hover:opacity-90 hover:scale-[1.02] transition">
+                        <button class="bg-primary font-primary flex w-full items-center justify-center gap-2 rounded-xl px-8 py-3 text-xl font-medium text-black transition hover:scale-[1.02] hover:opacity-90 md:text-2xl xl:max-w-2xl">
                             <span class="material-symbols-outlined text-2xl">download</span>Export CSV
                         </button>
 
@@ -174,12 +174,12 @@
                 </div>
 
                 <!-- ===== TABLE ===== -->
-                <div class="overflow-x-auto bg-black/60 border border-primary/20 rounded-2xl">
+                <div class="border-primary/20 overflow-x-auto rounded-2xl border bg-black/60">
 
-                    <table class="min-w-full text-sm text-center">
+                    <table class="min-w-full text-center text-sm">
 
                         <!-- HEAD -->
-                        <thead class="bg-black/80 text-gray-400 uppercase text-[11px] tracking-wider">
+                        <thead class="bg-black/80 tracking-wider text-gray-400 text-[11px] uppercase">
                             <tr>
                                 <th class="p-4 text-left">User</th>
                                 <th class="p-4">Plan</th>
@@ -193,49 +193,49 @@
                         <!-- BODY -->
                         <tbody class="divide-y divide-gray-800">
 
-                            <tr class="hover:bg-white/5 transition">
+                            <tr class="transition hover:bg-white/5">
                                 <td class="p-4 text-left">
                                     <p class="text-white">Ahmed Ali</p>
                                     <p class="text-xs text-gray-500">ahmed@email.com</p>
                                 </td>
-                                <td class="p-4 text-primary">Basic</td>
+                                <td class="text-primary p-4">Basic</td>
                                 <td class="p-4 text-green-400">$25</td>
                                 <td class="p-4 text-gray-400">12 May 2026</td>
                                 <td class="p-4 text-gray-400">Visa</td>
                                 <td class="p-4">
-                                    <span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-xs">
+                                    <span class="rounded-full bg-green-500/10 px-3 py-1 text-xs text-green-400">
                                         Paid
                                     </span>
                                 </td>
                             </tr>
 
-                            <tr class="hover:bg-white/5 transition">
+                            <tr class="transition hover:bg-white/5">
                                 <td class="p-4 text-left">
                                     <p class="text-white">Sara Mohamed</p>
                                     <p class="text-xs text-gray-500">sara@email.com</p>
                                 </td>
-                                <td class="p-4 text-primary">Premium</td>
+                                <td class="text-primary p-4">Premium</td>
                                 <td class="p-4 text-green-400">$50</td>
                                 <td class="p-4 text-gray-400">10 May 2026</td>
                                 <td class="p-4 text-gray-400">Mastercard</td>
                                 <td class="p-4">
-                                    <span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-xs">
+                                    <span class="rounded-full bg-green-500/10 px-3 py-1 text-xs text-green-400">
                                         Paid
                                     </span>
                                 </td>
                             </tr>
 
-                            <tr class="hover:bg-white/5 transition">
+                            <tr class="transition hover:bg-white/5">
                                 <td class="p-4 text-left">
                                     <p class="text-white">Omar Hassan</p>
                                     <p class="text-xs text-gray-500">omar@email.com</p>
                                 </td>
-                                <td class="p-4 text-primary">VIP</td>
+                                <td class="text-primary p-4">VIP</td>
                                 <td class="p-4 text-green-400">$80</td>
                                 <td class="p-4 text-gray-400">8 May 2026</td>
                                 <td class="p-4 text-gray-400">Cash</td>
                                 <td class="p-4">
-                                    <span class="bg-yellow-500/10 text-yellow-400 px-3 py-1 rounded-full text-xs">
+                                    <span class="rounded-full bg-yellow-500/10 px-3 py-1 text-xs text-yellow-400">
                                         Pending
                                     </span>
                                 </td>

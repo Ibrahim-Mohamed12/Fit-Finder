@@ -1,60 +1,60 @@
-@{
+﻿@{
     ViewBag.Title = "Admin Dashboard";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <div class="flex h-screen">
 
-    <aside id="sidebar" class="DashShadow fixed md:static top-0 left-0 h-full w-80 bg-black md:bg-linear-to-br from-gray-900/20 to-gray-900/30 -translate-x-full md:translate-x-0 transition duration-300 flex flex-col z-50">
+    <aside id="sidebar" class="DashShadow fixed top-0 left-0 z-50 flex h-full w-80 -translate-x-full flex-col bg-black from-gray-900/20 to-gray-900/30 transition duration-300 md:static md:translate-x-0 md:bg-linear-to-br">
 
         <!-- Logo -->
-        <div class="flex items-center justify-between p-4 border-primary">
+        <div class="border-primary flex items-center justify-between p-4">
 
-            <img class="w-25 h-auto sidebar-text" src="../Images/White_Logo.png">
+            <img class="sidebar-text h-auto w-25" src="../Images/White_Logo.png">
 
-            <button onclick="toggleSidebar()" class="hover:bg-gray-800 p-2 rounded h-14 cursor-pointer">
+            <button onclick="toggleSidebar()" class="h-14 cursor-pointer rounded p-2 hover:bg-gray-800">
                 <span class="material-symbols-outlined Icons">menu</span>
             </button>
 
         </div>
 
         <!-- Menu -->
-        <nav class="flex flex-col gap-3 p-3 text-xl font-primary tracking-wider font-thin flex-1">
+        <nav class="font-primary flex flex-1 flex-col gap-3 p-3 text-xl font-thin tracking-wider">
 
-            <a asp-controller="Admin" asp-action="AdminDashboard" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Admin" asp-action="AdminDashboard" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
                 <span class="material-symbols-outlined Icons">dashboard</span>
                 <span class="sidebar-text text-2xl">Dashboard</span>
             </a>
 
-            <a asp-controller="Admin" asp-action="AdminGyms" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Admin" asp-action="AdminGyms" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
                 <span class="material-symbols-outlined Icons">fitness_center</span>
                 <span class="sidebar-text text-2xl">Gyms</span>
             </a>
 
-            <a asp-controller="Admin" asp-action="AdminSubscriptions" class="flex items-center gap-5 p-3 hover:bg-gray-800 bg-zinc-400/30 rounded cursor-pointer">
+            <a asp-controller="Admin" asp-action="AdminSubscriptions" class="flex cursor-pointer items-center gap-5 rounded bg-zinc-400/30 p-3 hover:bg-gray-800">
                 <span class="material-symbols-outlined Icons">workspace_premium</span>
                 <span class="sidebar-text text-2xl">Subscriptions</span>
             </a>
 
-            <a asp-controller="Admin" asp-action="AdminPayments" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Admin" asp-action="AdminPayments" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
                 <span class="material-symbols-outlined Icons">payments</span>
                 <span class="sidebar-text text-2xl">Payments</span>
             </a>
 
-            <a asp-controller="Admin" asp-action="AdminUsers" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Admin" asp-action="AdminUsers" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
                 <span class="material-symbols-outlined Icons">group</span>
                 <span class="sidebar-text text-2xl">Users</span>
             </a>
 
-            <a asp-controller="Admin" asp-action="AdminMessages" class="flex items-center gap-5 p-3 hover:bg-gray-800 rounded cursor-pointer">
+            <a asp-controller="Admin" asp-action="AdminMessages" class="flex cursor-pointer items-center gap-5 rounded p-3 hover:bg-gray-800">
                 <span class="material-symbols-outlined Icons">mail</span>
                 <span class="sidebar-text text-2xl">Messages</span>
             </a>
 
             <!-- Logout -->
-            <div class="mt-auto text-xl font-primary tracking-wider">
+            <div class="font-primary mt-auto text-xl tracking-wider">
 
-                <button class="w-full flex items-center gap-5 p-3 font-thin text-white rounded hover:bg-gray-800 transition cursor-pointer bg-gray-100/4">
+                <button class="flex w-full cursor-pointer items-center gap-5 rounded bg-gray-100/4 p-3 font-thin text-white transition hover:bg-gray-800">
 
                     <span class="material-symbols-outlined Icons">logout</span>
                     <span class="sidebar-text text-2xl">Logout</span>
@@ -67,59 +67,59 @@
 
     </aside>
 
-    <div id="overlay" class="fixed inset-0 bg-black/60 hidden z-40 md:hidden"></div>
+    <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/60 md:hidden"></div>
 
     <!-- ================= MAIN ================= -->
-    <div class="flex-1 flex flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
+    <div class="flex flex-1 flex-col bg-linear-to-br from-gray-900/20 to-gray-900/30">
 
-        <header class="p-6 flex justify-between items-center bg-linear-to-br from-gray-900/10 to-gray-900/5  border-b border-gray-800 text-white">
+        <header class="flex items-center justify-between border-b border-gray-800 bg-linear-to-br from-gray-900/10 to-gray-900/5 p-6 text-white">
 
             <!-- MOBILE MENU -->
-            <button onclick="toggleSidebar()" class="md:hidden">
+            <button onclick="toggleSidebar()" class="cursor-pointer md:hidden">
                 <span class="material-symbols-outlined Icons">menu</span>
             </button>
 
-            <h1 class="text-3xl font-primary font-medium tracking-wide">
+            <h1 class="font-primary text-3xl font-medium tracking-wide">
                 Admin Dashboard
             </h1>
 
             <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined cursor-pointer hover:text-primary transition Icons">notifications</span>
-                <img src="https://i.pravatar.cc/40" class="rounded-full border-2 border-white cursor-pointer" alt="Profile">
+                <span class="material-symbols-outlined Icons cursor-pointer transition hover:text-primary">notifications</span>
+                <img src="https://i.pravatar.cc/40" class="cursor-pointer rounded-full border-2 border-white" alt="Profile">
             </div>
 
         </header>
 
         <!-- CONTENT -->
-        <main class="p-6 space-y-10 overflow-y-auto">
+        <main class="space-y-10 overflow-y-auto p-6">
 
             <!-- ================= SUBSCRIPTIONS ================= -->
-            <section class="space-y-10 my-10">
+            <section class="my-10 space-y-10">
 
                 <!-- TITLE -->
-                <div class="text-center fade-up mb-15">
-                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-medium font-primary text-white mb-4">
+                <div class="fade-up mb-15 text-center">
+                    <h2 class="font-primary mb-4 text-4xl font-medium text-white sm:text-5xl md:text-6xl">
                         Subscriptions
                     </h2>
-                    <p class="text-base sm:text-lg text-gray-400 tracking-wide">
+                    <p class="text-base tracking-wide text-gray-400 sm:text-lg">
                         Track all active and expired memberships
                     </p>
                 </div>
 
                 <!-- GRID -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 px-6 lg:px-20">
+                <div class="grid grid-cols-1 gap-6 px-6 lg:grid-cols-2 lg:px-20 xl:grid-cols-3">
 
                     <!-- CARD -->
-                    <div class="bg-black/70 rounded-2xl p-5 CardShadow hover:scale-[1.02] transition">
+                    <div class="CardShadow rounded-2xl bg-black/70 p-5 transition hover:scale-[1.02]">
 
                         <!-- HEADER -->
-                        <div class="flex justify-between items-start mb-4">
+                        <div class="mb-4 flex items-start justify-between">
                             <div>
-                                <p class="text-white font-semibold text-lg">Ahmed Ali</p>
-                                <p class="text-gray-400 text-sm">Gold Gym</p>
+                                <p class="text-lg font-semibold text-white">Ahmed Ali</p>
+                                <p class="text-sm text-gray-400">Gold Gym</p>
                             </div>
 
-                            <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                            <span class="rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Active
                             </span>
                         </div>
@@ -127,42 +127,42 @@
                         <!-- INFO GRID -->
                         <div class="grid grid-cols-2 gap-3 text-sm">
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Plan</p>
-                                <p class="text-white font-medium">Premium</p>
+                                <p class="font-medium text-white">Premium</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Price</p>
-                                <p class="text-white font-medium">$100</p>
+                                <p class="font-medium text-white">$100</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Start</p>
-                                <p class="text-white font-medium">01-01-2026</p>
+                                <p class="font-medium text-white">01-01-2026</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">End</p>
-                                <p class="text-white font-medium">01-02-2026</p>
+                                <p class="font-medium text-white">01-02-2026</p>
                             </div>
 
                         </div>
 
                         <!-- REVENUE -->
-                        <div class="flex justify-between items-center mt-4">
-                            <p class="text-gray-400 text-sm">Revenue</p>
-                            <p class="text-green-400 font-semibold">$10</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-sm text-gray-400">Revenue</p>
+                            <p class="font-semibold text-green-400">$10</p>
                         </div>
 
                         <!-- ACTIONS -->
-                        <div class="flex gap-3 mt-5">
+                        <div class="mt-5 flex gap-3">
 
-                            <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black transition hover:opacity-90">
                                 View
                             </button>
 
-                            <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg text-sm hover:bg-red-500/10 transition">
+                            <button class="flex-1 rounded-lg border border-red-500 py-2 text-sm text-red-400 transition hover:bg-red-500/10">
                                 Cancel
                             </button>
 
@@ -171,16 +171,16 @@
                     </div>
 
                                             <!-- CARD -->
-                    <div class="bg-black/70 rounded-2xl p-5 CardShadow hover:scale-[1.02] transition">
+                    <div class="CardShadow rounded-2xl bg-black/70 p-5 transition hover:scale-[1.02]">
 
                         <!-- HEADER -->
-                        <div class="flex justify-between items-start mb-4">
+                        <div class="mb-4 flex items-start justify-between">
                             <div>
-                                <p class="text-white font-semibold text-lg">Ahmed Ali</p>
-                                <p class="text-gray-400 text-sm">Gold Gym</p>
+                                <p class="text-lg font-semibold text-white">Ahmed Ali</p>
+                                <p class="text-sm text-gray-400">Gold Gym</p>
                             </div>
 
-                            <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                            <span class="rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Active
                             </span>
                         </div>
@@ -188,42 +188,42 @@
                         <!-- INFO GRID -->
                         <div class="grid grid-cols-2 gap-3 text-sm">
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Plan</p>
-                                <p class="text-white font-medium">Premium</p>
+                                <p class="font-medium text-white">Premium</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Price</p>
-                                <p class="text-white font-medium">$100</p>
+                                <p class="font-medium text-white">$100</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Start</p>
-                                <p class="text-white font-medium">01-01-2026</p>
+                                <p class="font-medium text-white">01-01-2026</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">End</p>
-                                <p class="text-white font-medium">01-02-2026</p>
+                                <p class="font-medium text-white">01-02-2026</p>
                             </div>
 
                         </div>
 
                         <!-- REVENUE -->
-                        <div class="flex justify-between items-center mt-4">
-                            <p class="text-gray-400 text-sm">Revenue</p>
-                            <p class="text-green-400 font-semibold">$10</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-sm text-gray-400">Revenue</p>
+                            <p class="font-semibold text-green-400">$10</p>
                         </div>
 
                         <!-- ACTIONS -->
-                        <div class="flex gap-3 mt-5">
+                        <div class="mt-5 flex gap-3">
 
-                            <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black transition hover:opacity-90">
                                 View
                             </button>
 
-                            <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg text-sm hover:bg-red-500/10 transition">
+                            <button class="flex-1 rounded-lg border border-red-500 py-2 text-sm text-red-400 transition hover:bg-red-500/10">
                                 Cancel
                             </button>
 
@@ -232,16 +232,16 @@
                     </div>
 
                                             <!-- CARD -->
-                    <div class="bg-black/70 rounded-2xl p-5 CardShadow hover:scale-[1.02] transition">
+                    <div class="CardShadow rounded-2xl bg-black/70 p-5 transition hover:scale-[1.02]">
 
                         <!-- HEADER -->
-                        <div class="flex justify-between items-start mb-4">
+                        <div class="mb-4 flex items-start justify-between">
                             <div>
-                                <p class="text-white font-semibold text-lg">Ahmed Ali</p>
-                                <p class="text-gray-400 text-sm">Gold Gym</p>
+                                <p class="text-lg font-semibold text-white">Ahmed Ali</p>
+                                <p class="text-sm text-gray-400">Gold Gym</p>
                             </div>
 
-                            <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                            <span class="rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Active
                             </span>
                         </div>
@@ -249,42 +249,42 @@
                         <!-- INFO GRID -->
                         <div class="grid grid-cols-2 gap-3 text-sm">
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Plan</p>
-                                <p class="text-white font-medium">Premium</p>
+                                <p class="font-medium text-white">Premium</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Price</p>
-                                <p class="text-white font-medium">$100</p>
+                                <p class="font-medium text-white">$100</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Start</p>
-                                <p class="text-white font-medium">01-01-2026</p>
+                                <p class="font-medium text-white">01-01-2026</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">End</p>
-                                <p class="text-white font-medium">01-02-2026</p>
+                                <p class="font-medium text-white">01-02-2026</p>
                             </div>
 
                         </div>
 
                         <!-- REVENUE -->
-                        <div class="flex justify-between items-center mt-4">
-                            <p class="text-gray-400 text-sm">Revenue</p>
-                            <p class="text-green-400 font-semibold">$10</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-sm text-gray-400">Revenue</p>
+                            <p class="font-semibold text-green-400">$10</p>
                         </div>
 
                         <!-- ACTIONS -->
-                        <div class="flex gap-3 mt-5">
+                        <div class="mt-5 flex gap-3">
 
-                            <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black transition hover:opacity-90">
                                 View
                             </button>
 
-                            <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg text-sm hover:bg-red-500/10 transition">
+                            <button class="flex-1 rounded-lg border border-red-500 py-2 text-sm text-red-400 transition hover:bg-red-500/10">
                                 Cancel
                             </button>
 
@@ -293,16 +293,16 @@
                     </div>
 
                                             <!-- CARD -->
-                    <div class="bg-black/70 rounded-2xl p-5 CardShadow hover:scale-[1.02] transition">
+                    <div class="CardShadow rounded-2xl bg-black/70 p-5 transition hover:scale-[1.02]">
 
                         <!-- HEADER -->
-                        <div class="flex justify-between items-start mb-4">
+                        <div class="mb-4 flex items-start justify-between">
                             <div>
-                                <p class="text-white font-semibold text-lg">Ahmed Ali</p>
-                                <p class="text-gray-400 text-sm">Gold Gym</p>
+                                <p class="text-lg font-semibold text-white">Ahmed Ali</p>
+                                <p class="text-sm text-gray-400">Gold Gym</p>
                             </div>
 
-                            <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                            <span class="rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Active
                             </span>
                         </div>
@@ -310,42 +310,42 @@
                         <!-- INFO GRID -->
                         <div class="grid grid-cols-2 gap-3 text-sm">
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Plan</p>
-                                <p class="text-white font-medium">Premium</p>
+                                <p class="font-medium text-white">Premium</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Price</p>
-                                <p class="text-white font-medium">$100</p>
+                                <p class="font-medium text-white">$100</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Start</p>
-                                <p class="text-white font-medium">01-01-2026</p>
+                                <p class="font-medium text-white">01-01-2026</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">End</p>
-                                <p class="text-white font-medium">01-02-2026</p>
+                                <p class="font-medium text-white">01-02-2026</p>
                             </div>
 
                         </div>
 
                         <!-- REVENUE -->
-                        <div class="flex justify-between items-center mt-4">
-                            <p class="text-gray-400 text-sm">Revenue</p>
-                            <p class="text-green-400 font-semibold">$10</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-sm text-gray-400">Revenue</p>
+                            <p class="font-semibold text-green-400">$10</p>
                         </div>
 
                         <!-- ACTIONS -->
-                        <div class="flex gap-3 mt-5">
+                        <div class="mt-5 flex gap-3">
 
-                            <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black transition hover:opacity-90">
                                 View
                             </button>
 
-                            <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg text-sm hover:bg-red-500/10 transition">
+                            <button class="flex-1 rounded-lg border border-red-500 py-2 text-sm text-red-400 transition hover:bg-red-500/10">
                                 Cancel
                             </button>
 
@@ -354,16 +354,16 @@
                     </div>
 
                     <!-- CARD -->
-                    <div class="bg-black/70 rounded-2xl p-5 CardShadow hover:scale-[1.02] transition">
+                    <div class="CardShadow rounded-2xl bg-black/70 p-5 transition hover:scale-[1.02]">
 
                         <!-- HEADER -->
-                        <div class="flex justify-between items-start mb-4">
+                        <div class="mb-4 flex items-start justify-between">
                             <div>
-                                <p class="text-white font-semibold text-lg">Ahmed Ali</p>
-                                <p class="text-gray-400 text-sm">Gold Gym</p>
+                                <p class="text-lg font-semibold text-white">Ahmed Ali</p>
+                                <p class="text-sm text-gray-400">Gold Gym</p>
                             </div>
 
-                            <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400">
+                            <span class="rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
                                 Active
                             </span>
                         </div>
@@ -371,42 +371,42 @@
                         <!-- INFO GRID -->
                         <div class="grid grid-cols-2 gap-3 text-sm">
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Plan</p>
-                                <p class="text-white font-medium">Premium</p>
+                                <p class="font-medium text-white">Premium</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Price</p>
-                                <p class="text-white font-medium">$100</p>
+                                <p class="font-medium text-white">$100</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Start</p>
-                                <p class="text-white font-medium">01-01-2026</p>
+                                <p class="font-medium text-white">01-01-2026</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">End</p>
-                                <p class="text-white font-medium">01-02-2026</p>
+                                <p class="font-medium text-white">01-02-2026</p>
                             </div>
 
                         </div>
 
                         <!-- REVENUE -->
-                        <div class="flex justify-between items-center mt-4">
-                            <p class="text-gray-400 text-sm">Revenue</p>
-                            <p class="text-green-400 font-semibold">$10</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-sm text-gray-400">Revenue</p>
+                            <p class="font-semibold text-green-400">$10</p>
                         </div>
 
                         <!-- ACTIONS -->
-                        <div class="flex gap-3 mt-5">
+                        <div class="mt-5 flex gap-3">
 
-                            <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black transition hover:opacity-90">
                                 View
                             </button>
 
-                            <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg text-sm hover:bg-red-500/10 transition">
+                            <button class="flex-1 rounded-lg border border-red-500 py-2 text-sm text-red-400 transition hover:bg-red-500/10">
                                 Cancel
                             </button>
 
@@ -415,55 +415,55 @@
                     </div>
 
                     <!-- Duplicate CARD (example 2) -->
-                    <div class="bg-black/70 rounded-2xl p-5 CardShadow hover:scale-[1.02] transition">
+                    <div class="CardShadow rounded-2xl bg-black/70 p-5 transition hover:scale-[1.02]">
 
-                        <div class="flex justify-between items-start mb-4">
+                        <div class="mb-4 flex items-start justify-between">
                             <div>
-                                <p class="text-white font-semibold text-lg">Sara Mohamed</p>
-                                <p class="text-gray-400 text-sm">Power Gym</p>
+                                <p class="text-lg font-semibold text-white">Sara Mohamed</p>
+                                <p class="text-sm text-gray-400">Power Gym</p>
                             </div>
 
-                            <span class="px-3 py-1 text-xs rounded-full bg-red-500/20 text-red-400">
+                            <span class="rounded-full bg-red-500/20 px-3 py-1 text-xs text-red-400">
                                 Expired
                             </span>
                         </div>
 
                         <div class="grid grid-cols-2 gap-3 text-sm">
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Plan</p>
-                                <p class="text-white font-medium">Basic</p>
+                                <p class="font-medium text-white">Basic</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Price</p>
-                                <p class="text-white font-medium">$60</p>
+                                <p class="font-medium text-white">$60</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">Start</p>
-                                <p class="text-white font-medium">10-01-2026</p>
+                                <p class="font-medium text-white">10-01-2026</p>
                             </div>
 
-                            <div class="bg-white/5 p-3 rounded-xl">
+                            <div class="rounded-xl bg-white/5 p-3">
                                 <p class="text-gray-400">End</p>
-                                <p class="text-white font-medium">10-02-2026</p>
+                                <p class="font-medium text-white">10-02-2026</p>
                             </div>
 
                         </div>
 
-                        <div class="flex justify-between items-center mt-4">
-                            <p class="text-gray-400 text-sm">Revenue</p>
-                            <p class="text-green-400 font-semibold">$6</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-sm text-gray-400">Revenue</p>
+                            <p class="font-semibold text-green-400">$6</p>
                         </div>
 
-                        <div class="flex gap-3 mt-5">
+                        <div class="mt-5 flex gap-3">
 
-                            <button class="flex-1 bg-primary text-black py-2 rounded-lg text-sm font-semibold">
+                            <button class="bg-primary flex-1 rounded-lg py-2 text-sm font-semibold text-black">
                                 View
                             </button>
 
-                            <button class="flex-1 border border-red-500 text-red-400 py-2 rounded-lg text-sm">
+                            <button class="flex-1 rounded-lg border border-red-500 py-2 text-sm text-red-400">
                                 Cancel
                             </button>
 

@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+    <link rel="icon" sizes="96x96" href="~/images/favicon-96x96.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Betania+Patmos&family=Fjalla+One&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link href="../css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/output.css" asp-append-version="true" />
 </head>
 <body class="relative">
 
@@ -17,12 +18,12 @@
     <nav id="mainNav" class="User-Nav-style">
         <div class="flex justify-start">
             <img src="../Images/White_Logo.png" alt="Logo"
-                 class="h-10 w-auto transition-transform duration-300 hover:scale-110 cursor-pointer">
+                 class="h-10 w-auto cursor-pointer transition-transform duration-300 hover:scale-110">
         </div>
         <!-- Hamburger for small screens -->
         <div class="ml-auto lg:hidden">
             <button id="burgerBtn"
-                    class="focus:outline-none cursor-pointer transition-transform duration-300 hover:scale-110">
+                    class="cursor-pointer transition-transform duration-300 hover:scale-110 focus:outline-none">
                 <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                      viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -31,23 +32,23 @@
             </button>
         </div>
 
-        <ul id="navLinks" class="hidden lg:flex justify-center space-x-10">
+        <ul id="navLinks" class="hidden justify-center space-x-10 lg:flex">
             <li><a asp-controller="User" asp-action="UserHome" class="font-primary Nav-link">Home</a></li>
             <li><a asp-controller="User" asp-action="Gyms" class="font-primary Nav-link">Gyms</a></li>
             <li><a asp-controller="User" asp-action="Subscription" class="font-primary Nav-link">Subscriptions</a></li>
             <li><a asp-controller="User" asp-action="Payments" class="font-primary Nav-link">Payments</a></li>
             <li><a asp-controller="User" asp-action="Contacts" class="font-primary Nav-link">Contact us</a></li>
         </ul>
-        <ul id="ctaLinks" class="hidden lg:flex justify-end items-center space-x-4">
+        <ul id="ctaLinks" class="hidden items-center justify-end space-x-4 lg:flex">
             <li>
                 <a href="profile.html">
-                    <div class="flex items-center cursor-pointer hover:scale-110 transition duration-300">
+                    <div class="flex cursor-pointer items-center transition duration-300 hover:scale-110">
                         <img src="../Images/Profile.jpg" class="h-10 w-10 rounded-full object-cover">
                     </div>
                 </a>
             </li>
             <li>
-                <a asp-controller="Home" asp-action="logout" class="font-primary hover:text-primary hover:bg-gray-600/80 text-2xl rounded-sm py-2 px-4 bg-primary text-black">
+                <a asp-controller="Home" asp-action="logout" class="font-primary bg-primary rounded-sm px-4 py-2 text-2xl text-black hover:text-primary hover:bg-gray-600/80">
                     Logout
                 </a>
             </li>
@@ -55,34 +56,34 @@
 
         <!-- Mobile Menu -->
         <div id="mobileMenu"
-             class="absolute top-full left-0 w-full bg-black/95 hidden flex flex-col items-center justify-center space-y-8 py-10 text-center transition-all duration-300 z-50">
+             class="absolute top-full left-0 z-50 flex hidden w-full flex-col items-center justify-center space-y-8 bg-black/95 py-10 text-center transition-all duration-300">
 
-            <a asp-controller="User" asp-action="UserHome" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+            <a asp-controller="User" asp-action="UserHome" class="font-primary text-2xl tracking-wide text-white transition hover:text-primary">
                 Home
             </a>
 
-            <a asp-controller="User" asp-action="Gyms" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+            <a asp-controller="User" asp-action="Gyms" class="font-primary text-2xl tracking-wide text-white transition hover:text-primary">
                 Gyms
             </a>
 
-            <a asp-controller="User" asp-action="Subscription" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+            <a asp-controller="User" asp-action="Subscription" class="font-primary text-2xl tracking-wide text-white transition hover:text-primary">
                 Subscriptions
             </a>
 
-            <a asp-controller="User" asp-action="Payments" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+            <a asp-controller="User" asp-action="Payments" class="font-primary text-2xl tracking-wide text-white transition hover:text-primary">
                 Payments
             </a>
 
-            <a asp-controller="User" asp-action="Profile" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+            <a asp-controller="User" asp-action="Profile" class="font-primary text-2xl tracking-wide text-white transition hover:text-primary">
                 Profile
             </a>
 
-            <a asp-controller="User" asp-action="Contacts" class="text-white text-2xl font-primary tracking-wide hover:text-primary transition">
+            <a asp-controller="User" asp-action="Contacts" class="font-primary text-2xl tracking-wide text-white transition hover:text-primary">
                 Contact us
             </a>
 
             <a asp-controller="Home" asp-action="index"
-               class="bg-primary text-black px-6 py-3 rounded-md text-xl font-primary">
+               class="bg-primary font-primary rounded-md px-6 py-3 text-xl text-black">
                 Logout
             </a>
 
@@ -91,58 +92,58 @@
 
     @RenderBody()
 
-    <footer id="footer" class="w-full bg-black/95 text-gray-400 pt-20 pb-8 px-6 lg:px-20">
+    <footer id="footer" class="w-full bg-black/95 px-6 pt-20 pb-8 text-gray-400 lg:px-20">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+        <div class="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
 
             <!-- ================= ABOUT ================= -->
             <div>
-                <h3 class="text-white text-2xl font-semibold mb-5 relative inline-block">
+                <h3 class="relative mb-5 inline-block text-2xl font-semibold text-white">
                     About FitFinder
-                    <span class="block w-12 h-[2px] bg-primary mt-2"></span>
+                    <span class="bg-primary mt-2 block h-[2px] w-12"></span>
                 </h3>
 
-                <p class="text-md leading-relaxed mb-5 text-gray-400/70">
-                    <span class="text-primary font-semibold text-xl">Smart Gym <span class="text-white">Discovery</span></span><br>
+                <p class="text-md mb-5 leading-relaxed text-gray-400/70">
+                    <span class="text-primary text-xl font-semibold">Smart Gym <span class="text-white">Discovery</span></span><br>
                     Find the best gyms near you based on your location, budget, and preferences.
                 </p>
 
-                <p class="text-md leading-relaxed mb-5 text-gray-400/70">
-                    <span class="text-primary font-semibold text-xl">Flexible <span class="text-white">Subscriptions</span></span><br>
+                <p class="text-md mb-5 leading-relaxed text-gray-400/70">
+                    <span class="text-primary text-xl font-semibold">Flexible <span class="text-white">Subscriptions</span></span><br>
                     Manage all your gym memberships easily in one place.
                 </p>
 
                 <p class="text-md leading-relaxed text-gray-400/70">
-                    <span class="text-primary font-semibold text-xl">Exclusive <span class="text-white">Offers</span></span><br>
+                    <span class="text-primary text-xl font-semibold">Exclusive <span class="text-white">Offers</span></span><br>
                     Enjoy discounts, free trials, and personalized deals.
                 </p>
             </div>
 
             <!-- ================= CONTACT INFO ================= -->
             <div>
-                <h3 class="text-white text-2xl font-semibold mb-5 relative inline-block">
+                <h3 class="relative mb-5 inline-block text-2xl font-semibold text-white">
                     Contact Us
-                    <span class="block w-12 h-[2px] bg-primary mt-2"></span>
+                    <span class="bg-primary mt-2 block h-[2px] w-12"></span>
                 </h3>
 
-                <div class="space-y-4 text-sm text-gray-400/70 tracking-wide">
+                <div class="space-y-4 text-sm tracking-wide text-gray-400/70">
 
-                    <p class="flex items-center gap-2 text-xl ">
+                    <p class="flex items-center gap-2 text-xl">
                         <span class="text-primary material-symbols-outlined">location_on</span> 123 Fitness Ave, Cairo, Egypt
                     </p>
 
-                    <p class="flex items-center gap-2 text-xl ">
+                    <p class="flex items-center gap-2 text-xl">
                         <span class="text-primary material-symbols-outlined">phone</span> +20 100 606 3107 / +20 122 345 6789
                     </p>
 
-                    <p class="flex items-center gap-2 text-xl ">
+                    <p class="flex items-center gap-2 text-xl">
                         <span class="text-primary material-symbols-outlined">email</span> support@fitfinder.com / info@fitfinder.com
                     </p>
 
                 </div>
 
                 <!-- Social -->
-                <div class="flex gap-4 mt-6 text-xl">
+                <div class="mt-6 flex gap-4 text-xl">
 
                     <!-- Facebook -->
                     <img src="../Images/001-facebook.png" alt="Facebook Icon" class="h-8 w-8">
@@ -160,25 +161,25 @@
 
             <!-- ================= CONTACT FORM ================= -->
             <div class="md:w-full">
-                <h3 class="text-white text-2xl font-semibold mb-5 relative inline-block">
+                <h3 class="relative mb-5 inline-block text-2xl font-semibold text-white">
                     Get In Touch
-                    <span class="block w-12 h-[2px] bg-primary mt-2"></span>
+                    <span class="bg-primary mt-2 block h-[2px] w-12"></span>
                 </h3>
 
                 <form class="space-y-4">
 
-                    <div class="flex flex-col sm:flex-row gap-3">
+                    <div class="flex flex-col gap-3 sm:flex-row">
                         <input type="text" placeholder="Full Name"
-                               class="w-full lg:w-1/2 bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary transition" />
+                               class="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-white transition outline-none focus:border-primary lg:w-1/2" />
 
                         <input type="email" placeholder="Email"
-                               class="w-full sm:w-1/2 bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary transition" />
+                               class="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-white transition outline-none focus:border-primary sm:w-1/2" />
                     </div>
 
                     <textarea placeholder="Write your message..."
-                              class="w-full resize-none bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white outline-none focus:border-primary h-32 transition"></textarea>
+                              class="h-32 w-full resize-none rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-white transition outline-none focus:border-primary"></textarea>
 
-                    <button class="bg-primary text-black px-8 py-3 font-primary rounded-lg font-medium text-2xl hover:opacity-90 transition w-full">
+                    <button class="bg-primary font-primary w-full rounded-lg px-8 py-3 text-2xl font-medium text-black transition hover:opacity-90">
                         Contact Us
                     </button>
 
@@ -188,23 +189,23 @@
         </div>
 
         <!-- ================= BOTTOM ================= -->
-        <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+        <div class="flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-6 text-sm md:flex-row">
 
             <!-- Logo -->
             <img src="../Images/White_Logo.png" class="h-12">
 
             <!-- Links -->
             <ul class="flex flex-wrap justify-center gap-5 text-gray-300">
-                <li><a href="UserHome.html" class="hover:text-primary transition">Home</a></li>
-                <li><a href="Gyms.html" class="hover:text-primary transition">Gyms</a></li>
-                <li><a href="Subscription.html" class="hover:text-primary transition">Subscriptions</a></li>
-                <li><a href="Payments.html" class="hover:text-primary transition">Payments</a></li>
-                <li><a href="profile.html" class="hover:text-primary transition">Profile</a></li>
-                <li><a href="Contacts.html" class="hover:text-primary transition">Contact</a></li>
+                <li><a asp-controller="User" asp-action="Index" class="transition hover:text-primary">Home</a></li>
+                <li><a asp-controller="User" asp-action="Gyms" class="transition hover:text-primary">Gyms</a></li>
+                <li><a asp-controller="User" asp-action="Subscription" class="transition hover:text-primary">Subscriptions</a></li>
+                <li><a asp-controller="User" asp-action="Payments" class="transition hover:text-primary">Payments</a></li>
+                <li><a asp-controller="User" asp-action="Profile" class="transition hover:text-primary">Profile</a></li>
+                <li><a asp-controller="User" asp-action="Contacts" class="transition hover:text-primary">Contact</a></li>
             </ul>
 
             <!-- Copyright -->
-            <p class="text-gray-500 text-center">
+            <p class="text-center text-gray-500">
                 © 2026 FitFinder. All rights reserved.
             </p>
 
@@ -213,7 +214,7 @@
     </footer>
 
     <a id="backToTopFixed" href="#mainBody">
-        <div class="BackToTop fixed bottom-5 right-5 text-black bg-primary p-4 rounded-md shadow-lg hover:bg-yellow-600 cursor-pointer">
+        <div class="BackToTop bg-primary fixed right-5 bottom-5 cursor-pointer rounded-md p-4 text-black shadow-lg hover:bg-yellow-600">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
             </svg>

@@ -572,3 +572,6 @@ D:\ezz\FitFInder\FitFinderProject\obj\Debug\net8.0\staticwebassets.upToDateCheck
 D:\ezz\FitFInder\FitFinderProject\obj\Debug\net8.0\FitFinde.443ECC1D.Up2Date
 D:\ezz\FitFInder\FitFinderProject\obj\Debug\net8.0\FitFinderProject.PL.genruntimeconfig.cache
 D:\ezz\FitFInder\FitFinderProject\obj\Debug\net8.0\ref\FitFinderProject.PL.dll
+D:\FitFinder\Back-End\FitFinderProject\bin\Debug\net8.0\package-lock.json
+D:\FitFinder\Back-End\FitFinderProject\bin\Debug\net8.0\package.json
+D:\FitFinder\Back-End\FitFinderProject\bin\Debug\net8.0\tailwind.extension.json

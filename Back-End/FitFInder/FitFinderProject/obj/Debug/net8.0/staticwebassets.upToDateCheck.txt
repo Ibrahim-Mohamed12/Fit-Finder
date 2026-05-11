@@ -1,7 +1,6 @@
 wwwroot\css\input.css
+wwwroot\css\input.output.css
 wwwroot\css\output.css
-wwwroot\css\site.css
-wwwroot\favicon.ico
 wwwroot\Images\001-facebook.png
 wwwroot\Images\002-instagram.png
 wwwroot\Images\003-linkedin.png
@@ -14,6 +13,7 @@ wwwroot\Images\Background8.jpg
 wwwroot\Images\Background9.jpg
 wwwroot\Images\dark_mode.png
 wwwroot\Images\facebook.png
+wwwroot\Images\favicon-96x96.png
 wwwroot\Images\google.png
 wwwroot\Images\Hero-background.jpg
 wwwroot\Images\Home_background.jpg
@@ -31,7 +31,6 @@ wwwroot\Images\White_Logo.png
 wwwroot\js\Admin\Admin.js
 wwwroot\js\Home\index.js
 wwwroot\js\Owner\ownerHome.js
-wwwroot\js\site.js
 wwwroot\js\User\Payment.js
 wwwroot\js\User\userHome.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

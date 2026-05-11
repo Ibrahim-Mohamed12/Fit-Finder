@@ -2989,23 +2989,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\a\\.nuget\\packages\\": {},
+    "C:\\Users\\Domain\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ezz\\FitFInder\\BLL\\FitFinderProject.BLL.csproj",
+      "projectUniqueName": "D:\\FitFinder\\Back-End\\BLL\\FitFinderProject.BLL.csproj",
       "projectName": "FitFinderProject.BLL",
-      "projectPath": "D:\\ezz\\FitFInder\\BLL\\FitFinderProject.BLL.csproj",
-      "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
-      "outputPath": "D:\\ezz\\FitFInder\\BLL\\obj\\",
+      "projectPath": "D:\\FitFinder\\Back-End\\BLL\\FitFinderProject.BLL.csproj",
+      "packagesPath": "C:\\Users\\Domain\\.nuget\\packages\\",
+      "outputPath": "D:\\FitFinder\\Back-End\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Domain\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3020,8 +3020,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\ezz\\FitFInder\\DAL\\FitFinderProject.DAL.csproj": {
-              "projectPath": "D:\\ezz\\FitFInder\\DAL\\FitFinderProject.DAL.csproj"
+            "D:\\FitFinder\\Back-End\\DAL\\FitFinderProject.DAL.csproj": {
+              "projectPath": "D:\\FitFinder\\Back-End\\DAL\\FitFinderProject.DAL.csproj"
             }
           }
         }
@@ -3057,7 +3057,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
